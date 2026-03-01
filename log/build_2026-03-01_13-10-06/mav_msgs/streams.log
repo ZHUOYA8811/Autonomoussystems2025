@@ -1,0 +1,474 @@
+[0.012s] Invoking command in '/home/wen/chall/build/mav_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/chall/src/mav_msgs -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/mav_msgs
+[0.054s] -- The C compiler identification is GNU 13.3.0
+[0.094s] -- The CXX compiler identification is GNU 13.3.0
+[0.106s] -- Detecting C compiler ABI info
+[0.168s] -- Detecting C compiler ABI info - done
+[0.173s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.173s] -- Detecting C compile features
+[0.173s] -- Detecting C compile features - done
+[0.181s] -- Detecting CXX compiler ABI info
+[0.254s] -- Detecting CXX compiler ABI info - done
+[0.260s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.260s] -- Detecting CXX compile features
+[0.260s] -- Detecting CXX compile features - done
+[0.262s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.365s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.440s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.445s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.481s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.510s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.513s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.545s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.571s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.038s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.389s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.857s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.858s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.954s] -- Found PythonExtra: /usr/bin/python3  
+[2.238s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.286s] -- Configuring done (2.3s)
+[2.322s] -- Generating done (0.0s)
+[2.331s] -- Build files have been written to: /home/wen/chall/build/mav_msgs
+[2.337s] Invoked command in '/home/wen/chall/build/mav_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/chall/src/mav_msgs -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/mav_msgs
+[2.338s] Invoking command in '/home/wen/chall/build/mav_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/chall/build/mav_msgs -- -j4 -l4
+[2.380s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.384s] [  1%] Built target ament_cmake_python_copy_mav_msgs
+[2.518s] running egg_info
+[2.518s] creating mav_msgs.egg-info
+[2.530s] writing mav_msgs.egg-info/PKG-INFO
+[2.531s] writing dependency_links to mav_msgs.egg-info/dependency_links.txt
+[2.531s] writing top-level names to mav_msgs.egg-info/top_level.txt
+[2.533s] writing manifest file 'mav_msgs.egg-info/SOURCES.txt'
+[2.565s] reading manifest file 'mav_msgs.egg-info/SOURCES.txt'
+[2.566s] writing manifest file 'mav_msgs.egg-info/SOURCES.txt'
+[2.585s] [  1%] Built target ament_cmake_python_build_mav_msgs_egg
+[2.778s] [  1%] Built target mav_msgs__rosidl_generator_type_description
+[2.787s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.798s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.405s] [  2%] Built target mav_msgs__cpp
+[3.501s] [  3%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/actuators__description.c.o[0m
+[3.501s] [  4%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/actuators__type_support.c.o[0m
+[3.504s] [  5%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/actuators__functions.c.o[0m
+[3.505s] [  6%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/attitude_thrust__description.c.o[0m
+[3.530s] [  7%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/attitude_thrust__type_support.c.o[0m
+[3.531s] [  8%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/attitude_thrust__functions.c.o[0m
+[3.555s] [  9%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/filtered_sensor_data__description.c.o[0m
+[3.563s] [ 10%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/filtered_sensor_data__type_support.c.o[0m
+[3.564s] [ 11%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/filtered_sensor_data__functions.c.o[0m
+[3.565s] [ 12%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/gps_waypoint__description.c.o[0m
+[3.588s] [ 13%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/gps_waypoint__type_support.c.o[0m
+[3.593s] [ 14%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/gps_waypoint__functions.c.o[0m
+[3.610s] [ 15%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/rate_thrust__description.c.o[0m
+[3.613s] [ 16%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/rate_thrust__type_support.c.o[0m
+[3.620s] [ 17%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/rate_thrust__functions.c.o[0m
+[3.640s] [ 18%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__functions.c.o[0m
+[3.641s] [ 19%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__description.c.o[0m
+[3.653s] [ 20%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.c.o[0m
+[3.678s] [ 21%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/status__functions.c.o[0m
+[3.679s] [ 22%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/status__type_support.c.o[0m
+[3.682s] [ 23%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/status__description.c.o[0m
+[3.708s] [ 24%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/torque_thrust__description.c.o[0m
+[3.709s] [ 25%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/torque_thrust__functions.c.o[0m
+[3.712s] [ 25%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_msgs/msg/detail/torque_thrust__type_support.c.o[0m
+[3.747s] [ 26%] [32m[1mLinking C shared library libmav_msgs__rosidl_generator_c.so[0m
+[3.781s] [ 26%] Built target mav_msgs__rosidl_generator_c
+[3.790s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.790s] [ 28%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.793s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.798s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.307s] [ 30%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/actuators__type_support.cpp.o[0m
+[4.339s] [ 31%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/attitude_thrust__type_support.cpp.o[0m
+[4.371s] [ 32%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/filtered_sensor_data__type_support.cpp.o[0m
+[4.408s] [ 33%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/actuators__type_support.cpp.o[0m
+[4.417s] [ 34%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/gps_waypoint__type_support.cpp.o[0m
+[4.472s] [ 35%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/rate_thrust__type_support.cpp.o[0m
+[4.511s] [ 36%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/roll_pitch_yawrate_thrust__type_support.cpp.o[0m
+[4.560s] [ 37%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/status__type_support.cpp.o[0m
+[4.596s] [ 38%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_msgs/msg/torque_thrust__type_support.cpp.o[0m
+[4.606s] [ 39%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/actuators__type_support.c.o[0m
+[4.630s] [ 40%] [32m[1mLinking CXX shared library libmav_msgs__rosidl_typesupport_c.so[0m
+[4.637s] [ 41%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/attitude_thrust__type_support.cpp.o[0m
+[4.651s] [ 42%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/attitude_thrust__type_support.c.o[0m
+[4.667s] [ 42%] Built target mav_msgs__rosidl_typesupport_c
+[4.685s] [ 43%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.685s] [ 44%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/actuators__type_support_c.cpp.o[0m
+[4.705s] [ 45%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/filtered_sensor_data__type_support.c.o[0m
+[4.762s] [ 46%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/gps_waypoint__type_support.c.o[0m
+[4.819s] [ 47%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/rate_thrust__type_support.c.o[0m
+[4.830s] [ 48%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/filtered_sensor_data__type_support.cpp.o[0m
+[4.877s] [ 49%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.c.o[0m
+[4.924s] [ 50%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/status__type_support.c.o[0m
+[4.955s] [ 51%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/torque_thrust__type_support.c.o[0m
+[4.975s] [ 52%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/attitude_thrust__type_support_c.cpp.o[0m
+[4.983s] [ 53%] [32m[1mLinking C shared library libmav_msgs__rosidl_typesupport_introspection_c.so[0m
+[5.009s] [ 53%] Built target mav_msgs__rosidl_typesupport_introspection_c
+[5.016s] [ 53%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/gps_waypoint__type_support.cpp.o[0m
+[5.092s] [ 54%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.261s] [ 55%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/rate_thrust__type_support.cpp.o[0m
+[5.292s] [ 56%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/filtered_sensor_data__type_support_c.cpp.o[0m
+[5.536s] [ 57%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/roll_pitch_yawrate_thrust__type_support.cpp.o[0m
+[5.584s] [ 58%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/actuators__type_support.cpp.o[0m
+[5.613s] [ 59%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/gps_waypoint__type_support_c.cpp.o[0m
+[5.753s] [ 60%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/status__type_support.cpp.o[0m
+[5.874s] [ 61%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/actuators__type_support.cpp.o[0m
+[5.914s] [ 62%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/attitude_thrust__type_support.cpp.o[0m
+[5.937s] [ 63%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/rate_thrust__type_support_c.cpp.o[0m
+[5.967s] [ 64%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_msgs/msg/torque_thrust__type_support.cpp.o[0m
+[6.208s] [ 65%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/filtered_sensor_data__type_support.cpp.o[0m
+[6.234s] [ 66%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support_c.cpp.o[0m
+[6.239s] [ 67%] [32m[1mLinking CXX shared library libmav_msgs__rosidl_typesupport_cpp.so[0m
+[6.253s] [ 68%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/attitude_thrust__type_support.cpp.o[0m
+[6.274s] [ 68%] Built target mav_msgs__rosidl_typesupport_cpp
+[6.290s] [ 69%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/filtered_sensor_data__type_support.cpp.o[0m
+[6.533s] [ 70%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/gps_waypoint__type_support.cpp.o[0m
+[6.567s] [ 71%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/gps_waypoint__type_support.cpp.o[0m
+[6.577s] [ 72%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/status__type_support_c.cpp.o[0m
+[6.579s] [ 73%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/rate_thrust__type_support.cpp.o[0m
+[6.778s] [ 74%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.cpp.o[0m
+[6.838s] [ 75%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/rate_thrust__type_support.cpp.o[0m
+[6.875s] [ 76%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/status__type_support.cpp.o[0m
+[6.994s] [ 77%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/torque_thrust__type_support_c.cpp.o[0m
+[7.023s] [ 78%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_msgs/msg/detail/torque_thrust__type_support.cpp.o[0m
+[7.107s] [ 79%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/roll_pitch_yawrate_thrust__type_support.cpp.o[0m
+[7.175s] [ 80%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[7.217s] [ 81%] [32m[1mLinking CXX shared library libmav_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[7.315s] [ 81%] Built target mav_msgs__rosidl_typesupport_introspection_cpp
+[7.321s] [ 82%] [32mBuilding CXX object CMakeFiles/mav_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/dds_fastrtps/torque_thrust__type_support.cpp.o[0m
+[7.360s] [ 83%] [32m[1mLinking CXX shared library libmav_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[7.416s] [ 83%] Built target mav_msgs__rosidl_typesupport_fastrtps_c
+[7.585s] [ 84%] [32m[1mLinking CXX shared library libmav_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[7.659s] [ 84%] Built target mav_msgs__rosidl_typesupport_fastrtps_cpp
+[7.677s] [ 84%] Built target mav_msgs
+[7.692s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.552s] [ 85%] Built target mav_msgs__py
+[8.569s] [ 89%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_actuators_s.c.o[0m
+[8.570s] [ 89%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_gps_waypoint_s.c.o[0m
+[8.570s] [ 89%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_filtered_sensor_data_s.c.o[0m
+[8.570s] [ 89%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_attitude_thrust_s.c.o[0m
+[8.646s] [ 90%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_rate_thrust_s.c.o[0m
+[8.651s] [ 91%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_roll_pitch_yawrate_thrust_s.c.o[0m
+[8.651s] [ 92%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_status_s.c.o[0m
+[8.664s] [ 93%] [32mBuilding C object CMakeFiles/mav_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_msgs/msg/_torque_thrust_s.c.o[0m
+[8.747s] [ 94%] [32m[1mLinking C shared library libmav_msgs__rosidl_generator_py.so[0m
+[8.786s] [ 94%] Built target mav_msgs__rosidl_generator_py
+[8.803s] [ 96%] [32mBuilding C object CMakeFiles/mav_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.803s] [ 96%] [32mBuilding C object CMakeFiles/mav_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.805s] [ 97%] [32mBuilding C object CMakeFiles/mav_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.883s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/mav_msgs/mav_msgs_s__rosidl_typesupport_c.so[0m
+[8.886s] [ 99%] [32m[1mLinking C shared module rosidl_generator_py/mav_msgs/mav_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[8.886s] [100%] [32m[1mLinking C shared module rosidl_generator_py/mav_msgs/mav_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[8.908s] [100%] Built target mav_msgs_s__rosidl_typesupport_c
+[8.911s] [100%] Built target mav_msgs_s__rosidl_typesupport_fastrtps_c
+[8.911s] [100%] Built target mav_msgs_s__rosidl_typesupport_introspection_c
+[8.921s] Invoked command in '/home/wen/chall/build/mav_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/chall/build/mav_msgs -- -j4 -l4
+[8.922s] Invoking command in '/home/wen/chall/build/mav_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/chall/build/mav_msgs
+[8.927s] -- Install configuration: ""
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/ament_index/resource_index/rosidl_interfaces/mav_msgs
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Actuators.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/AttitudeThrust.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/FilteredSensorData.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/GpsWaypoint.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RateThrust.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RollPitchYawrateThrust.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Status.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/TorqueThrust.json
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.928s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/torque_thrust.h
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/attitude_thrust.h
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__functions.c
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__type_support.c
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__type_support.h
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__type_support.c
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__struct.h
+[8.929s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__struct.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__functions.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__description.c
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__functions.c
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__struct.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__description.c
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__type_support.c
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__type_support.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__struct.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__description.c
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__functions.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__functions.h
+[8.930s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__functions.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__description.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__type_support.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__functions.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__functions.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__struct.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__functions.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__type_support.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__type_support.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__functions.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__type_support.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__struct.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__description.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__functions.c
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__type_support.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__type_support.h
+[8.931s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__functions.h
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__description.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__type_support.h
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__functions.h
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__description.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__functions.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__description.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.h
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__functions.h
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__type_support.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__functions.c
+[8.932s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__struct.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__struct.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__type_support.c
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/gps_waypoint.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/roll_pitch_yawrate_thrust.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rate_thrust.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/status.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/actuators.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/filtered_sensor_data.h
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/library_path.sh
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/library_path.dsv
+[8.933s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_generator_c.so
+[8.934s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_generator_c.so" to ""
+[8.934s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.934s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.934s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__rosidl_typesupport_fastrtps_c.h
+[8.934s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_fastrtps_c.so
+[8.935s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[8.935s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.935s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.935s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__rosidl_typesupport_introspection_c.h
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__type_support.c
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__type_support.c
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__rosidl_typesupport_introspection_c.h
+[8.935s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__type_support.c
+[8.936s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_introspection_c.so
+[8.937s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_introspection_c.so" to ""
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_c.so
+[8.937s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_c.so" to ""
+[8.937s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.937s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/torque_thrust.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/attitude_thrust.hpp
+[8.937s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__traits.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__builder.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__builder.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__type_support.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__struct.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__type_support.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__traits.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__type_support.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__builder.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__builder.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__traits.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__struct.hpp
+[8.937s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__traits.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__traits.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__type_support.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__type_support.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__type_support.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__builder.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__struct.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__traits.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__builder.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__traits.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__builder.hpp
+[8.938s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__traits.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__builder.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__type_support.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/gps_waypoint.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/roll_pitch_yawrate_thrust.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/filtered_sensor_data.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rate_thrust.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/status.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/actuators.hpp
+[8.939s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[8.939s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.940s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[8.940s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/dds_fastrtps
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[8.940s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.941s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[8.941s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.941s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg
+[8.941s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__rosidl_typesupport_introspection_cpp.hpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__type_support.cpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__rosidl_typesupport_introspection_cpp.hpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__rosidl_typesupport_introspection_cpp.hpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__type_support.cpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/attitude_thrust__type_support.cpp
+[8.941s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__type_support.cpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/rate_thrust__rosidl_typesupport_introspection_cpp.hpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__rosidl_typesupport_introspection_cpp.hpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__rosidl_typesupport_introspection_cpp.hpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/gps_waypoint__type_support.cpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__type_support.cpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/filtered_sensor_data__type_support.cpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/actuators__type_support.cpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/msg/detail/torque_thrust__rosidl_typesupport_introspection_cpp.hpp
+[8.942s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_introspection_cpp.so
+[8.942s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_cpp.so
+[8.943s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_typesupport_cpp.so" to ""
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/pythonpath.sh
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/pythonpath.dsv
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs-3.3.3-py3.12.egg-info
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs-3.3.3-py3.12.egg-info/PKG-INFO
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs-3.3.3-py3.12.egg-info/SOURCES.txt
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs-3.3.3-py3.12.egg-info/dependency_links.txt
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs-3.3.3-py3.12.egg-info/top_level.txt
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_fastrtps_c.so
+[8.943s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_c.c
+[8.944s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg
+[8.944s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_torque_thrust.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_filtered_sensor_data.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_attitude_thrust_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_roll_pitch_yawrate_thrust_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_attitude_thrust.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_status_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_filtered_sensor_data_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_actuators.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_rate_thrust.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_rate_thrust_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/__init__.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_roll_pitch_yawrate_thrust.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_status.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_gps_waypoint_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_torque_thrust_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_actuators_s.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_gps_waypoint.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_c.so
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/__init__.py
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_introspection_c.so
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[8.945s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/_mav_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[8.981s] Listing '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/__init__.py'...
+[8.981s] Listing '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/__init__.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_actuators.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_attitude_thrust.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_filtered_sensor_data.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_gps_waypoint.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_rate_thrust.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_roll_pitch_yawrate_thrust.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_status.py'...
+[8.981s] Compiling '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/msg/_torque_thrust.py'...
+[8.984s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_fastrtps_c.so
+[8.984s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[8.984s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_introspection_c.so
+[8.984s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[8.985s] -- Installing: /home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_c.so
+[8.985s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages/mav_msgs/mav_msgs_s__rosidl_typesupport_c.so" to ""
+[8.985s] -- Installing: /home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_generator_py.so
+[8.985s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_msgs/lib/libmav_msgs__rosidl_generator_py.so" to ""
+[8.985s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Actuators.idl
+[8.985s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/AttitudeThrust.idl
+[8.985s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/FilteredSensorData.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/GpsWaypoint.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RateThrust.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RollPitchYawrateThrust.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Status.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/TorqueThrust.idl
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Actuators.msg
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/AttitudeThrust.msg
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/FilteredSensorData.msg
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/GpsWaypoint.msg
+[8.986s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RateThrust.msg
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/RollPitchYawrateThrust.msg
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/Status.msg
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/msg/TorqueThrust.msg
+[8.987s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs
+[8.987s] -- Up-to-date: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/eigen_mav_msgs.hpp
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/conversions.hpp
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/common.hpp
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/default_values.hpp
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/include/mav_msgs/mav_msgs/default_topics.hpp
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/share/ament_index/resource_index/package_run_dependencies/mav_msgs
+[8.987s] -- Installing: /home/wen/chall/install/mav_msgs/share/ament_index/resource_index/parent_prefix_path/mav_msgs
+[8.988s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/ament_prefix_path.sh
+[8.988s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/ament_prefix_path.dsv
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/path.sh
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/environment/path.dsv
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/local_setup.bash
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/local_setup.sh
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/local_setup.zsh
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/local_setup.dsv
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/package.dsv
+[8.989s] -- Installing: /home/wen/chall/install/mav_msgs/share/ament_index/resource_index/packages/mav_msgs
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_generator_cExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_cExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_generator_cppExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.990s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_cppExport.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_generator_pyExport.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/export_mav_msgs__rosidl_generator_pyExport-noconfig.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/rosidl_cmake-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[8.991s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig.cmake
+[8.992s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig-version.cmake
+[8.992s] -- Installing: /home/wen/chall/install/mav_msgs/share/mav_msgs/package.xml
+[8.992s] Invoked command in '/home/wen/chall/build/mav_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/chall/build/mav_msgs

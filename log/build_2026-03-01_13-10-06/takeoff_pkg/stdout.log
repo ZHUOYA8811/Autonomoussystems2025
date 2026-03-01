@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/wen/chall/build/takeoff_pkg
+[ 50%] [32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable takeoff_node[0m
+[100%] Built target takeoff_node
+-- Install configuration: ""
+-- Installing: /home/wen/chall/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node
+-- Set non-toolchain portion of runtime path of "/home/wen/chall/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node" to ""
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml
+-- Installing: /home/wen/chall/install/takeoff_pkg/include
+-- Installing: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg
+-- Installing: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.dsv
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake
+-- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.xml

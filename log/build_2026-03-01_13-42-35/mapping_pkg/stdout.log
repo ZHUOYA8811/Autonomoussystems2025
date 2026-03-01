@@ -1,0 +1,25 @@
+-- Install configuration: ""
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/__pycache__
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/__pycache__/pointcloud.launch.cpython-312.pyc
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/pointcloud.launch.py
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/mapping.launch.py
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/octomap.launch.py
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config/voxel_params.yaml
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config/octomap_params.yaml
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/package_run_dependencies/mapping_pkg
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/parent_prefix_path/mapping_pkg
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/path.sh
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/path.dsv
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.bash
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.sh
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.zsh
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.dsv
+-- Installing: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/package.dsv
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/packages/mapping_pkg
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/cmake/mapping_pkgConfig.cmake
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/cmake/mapping_pkgConfig-version.cmake
+-- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/package.xml

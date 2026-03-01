@@ -1,0 +1,30 @@
+[0.016s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg -- -j4 -l4
+[0.045s] [0mCMake Error: The current CMakeCache.txt directory /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg/CMakeCache.txt is different than the directory /home/wen/chall/build/mapping_pkg where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.091s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg -- -j4 -l4
+[0.111s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg
+[0.126s] -- Install configuration: ""
+[0.127s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/__pycache__
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/__pycache__/pointcloud.launch.cpython-312.pyc
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/pointcloud.launch.py
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/mapping.launch.py
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/launch/octomap.launch.py
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config/voxel_params.yaml
+[0.128s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/config/octomap_params.yaml
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/package_run_dependencies/mapping_pkg
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/parent_prefix_path/mapping_pkg
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/ament_prefix_path.sh
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/path.sh
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/environment/path.dsv
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.bash
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.sh
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.zsh
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/local_setup.dsv
+[0.129s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/package.dsv
+[0.130s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/ament_index/resource_index/packages/mapping_pkg
+[0.132s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/cmake/mapping_pkgConfig.cmake
+[0.132s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/cmake/mapping_pkgConfig-version.cmake
+[0.132s] -- Up-to-date: /home/wen/chall/install/mapping_pkg/share/mapping_pkg/package.xml
+[0.133s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg

@@ -1,0 +1,17 @@
+{
+  "package_name": "mav_planning_msgs",
+  "non_idl_tuples": [
+    "/home/wen/chall/src/mav_planning_msgs:msg/Point2D.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PointCloudWithPose.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/Polygon2D.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolygonWithHoles.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolygonWithHolesStamped.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolynomialSegment.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolynomialSegment4D.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolynomialTrajectory.msg",
+    "/home/wen/chall/src/mav_planning_msgs:msg/PolynomialTrajectory4D.msg",
+    "/home/wen/chall/src/mav_planning_msgs:srv/PlannerService.srv",
+    "/home/wen/chall/src/mav_planning_msgs:srv/PolygonService.srv",
+    "/home/wen/chall/src/mav_planning_msgs:srv/ChangeNameService.srv"
+  ]
+}

@@ -1,0 +1,517 @@
+[0.069s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.069s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71b6c0b73e30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71b6c0d53110>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71b6c0d53110>>, mixin_verb=('build',))
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.094s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extension 'ignore_ament_install'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extensions ['colcon_pkg']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extension 'colcon_pkg'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extensions ['colcon_meta']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extension 'colcon_meta'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extensions ['ros']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller_pkg) by extension 'ros'
+[0.113s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller_pkg' with type 'ros.ament_cmake' and name 'controller_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapping_pkg) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mapping_pkg' with type 'ros.ament_cmake' and name 'mapping_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_msgs) by extension 'ros'
+[0.115s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mav_msgs' with type 'ros.ament_cmake' and name 'mav_msgs'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mav_planning_msgs) by extension 'ros'
+[0.116s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mav_planning_msgs' with type 'ros.ament_cmake' and name 'mav_planning_msgs'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ignore'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ignore_ament_install'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['colcon_pkg']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'colcon_pkg'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['colcon_meta']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'colcon_meta'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['ros']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ros'
+[0.116s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulation' with type 'ros.ament_cmake' and name 'simulation'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extension 'ignore'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extension 'ignore_ament_install'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extensions ['colcon_pkg']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extension 'colcon_pkg'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extensions ['colcon_meta']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extension 'colcon_meta'
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extensions ['ros']
+[0.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/takeoff_pkg) by extension 'ros'
+[0.117s] DEBUG:colcon.colcon_core.package_identification:Package 'src/takeoff_pkg' with type 'ros.ament_cmake' and name 'takeoff_pkg'
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.130s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/wen/ws/install
+[0.131s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 288 installed packages in /opt/ros/jazzy
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.156s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'mav_planning_msgs' is in: /home/wen/ws/install/mav_planning_msgs
+	'mav_msgs' is in: /home/wen/ws/install/mav_msgs
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding mav_msgs mav_planning_msgs
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_target' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mapping_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.156s] DEBUG:colcon.colcon_core.verb:Building package 'mapping_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mapping_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'mav_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'takeoff_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'takeoff_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'controller_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'controller_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/controller_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mav_planning_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'mav_planning_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_planning_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.158s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.158s] DEBUG:colcon.colcon_core.verb:Building package 'simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation', 'merge_install': False, 'path': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation', 'symlink_install': False, 'test_result_base': None}
+[0.158s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.158s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.159s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_msgs' with build type 'ament_cmake'
+[0.159s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_msgs'
+[0.160s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.161s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.161s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.165s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mapping_pkg' with build type 'ament_cmake'
+[0.165s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mapping_pkg'
+[0.165s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.165s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.168s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg' with build type 'ament_cmake'
+[0.168s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg'
+[0.168s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.168s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs -- -j4 -l4
+[0.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg -- -j4 -l4
+[0.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg -- -j4 -l4
+[0.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg -- -j4 -l4
+[0.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg
+[0.227s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mapping_pkg)
+[0.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mapping_pkg
+[0.229s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg' for CMake module files
+[0.230s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg' for CMake config files
+[0.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('mapping_pkg', 'cmake_prefix_path')
+[0.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.ps1'
+[0.231s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.dsv'
+[0.233s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.sh'
+[0.234s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/bin'
+[0.234s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/lib/pkgconfig/mapping_pkg.pc'
+[0.234s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/lib/python3.12/site-packages'
+[0.234s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/bin'
+[0.234s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.ps1'
+[0.234s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.dsv'
+[0.236s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.sh'
+[0.236s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.bash'
+[0.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.zsh'
+[0.237s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/colcon-core/packages/mapping_pkg)
+[0.237s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mapping_pkg)
+[0.237s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg' for CMake module files
+[0.238s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg' for CMake config files
+[0.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('mapping_pkg', 'cmake_prefix_path')
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.ps1'
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.dsv'
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/hook/cmake_prefix_path.sh'
+[0.239s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/bin'
+[0.239s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/lib/pkgconfig/mapping_pkg.pc'
+[0.239s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/lib/python3.12/site-packages'
+[0.239s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/bin'
+[0.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.ps1'
+[0.240s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.dsv'
+[0.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.sh'
+[0.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.bash'
+[0.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/mapping_pkg/package.zsh'
+[0.241s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg/share/colcon-core/packages/mapping_pkg)
+[0.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg -- -j4 -l4
+[0.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg
+[0.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(takeoff_pkg)
+[0.268s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg' for CMake module files
+[0.269s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg' for CMake config files
+[0.269s] Level 1:colcon.colcon_core.shell:create_environment_hook('takeoff_pkg', 'cmake_prefix_path')
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.ps1'
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.dsv'
+[0.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg
+[0.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.sh'
+[0.275s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib'
+[0.275s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/bin'
+[0.275s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/pkgconfig/takeoff_pkg.pc'
+[0.275s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/python3.12/site-packages'
+[0.275s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/bin'
+[0.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.ps1'
+[0.276s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.dsv'
+[0.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.sh'
+[0.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.bash'
+[0.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.zsh'
+[0.279s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/colcon-core/packages/takeoff_pkg)
+[0.279s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(takeoff_pkg)
+[0.279s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg' for CMake module files
+[0.280s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg' for CMake config files
+[0.280s] Level 1:colcon.colcon_core.shell:create_environment_hook('takeoff_pkg', 'cmake_prefix_path')
+[0.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.ps1'
+[0.280s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.dsv'
+[0.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/hook/cmake_prefix_path.sh'
+[0.281s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib'
+[0.281s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/bin'
+[0.281s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/pkgconfig/takeoff_pkg.pc'
+[0.281s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/python3.12/site-packages'
+[0.282s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/bin'
+[0.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.ps1'
+[0.282s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.dsv'
+[0.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.sh'
+[0.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.bash'
+[0.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.zsh'
+[0.283s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/colcon-core/packages/takeoff_pkg)
+[0.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs -- -j4 -l4
+[0.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs
+[0.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mav_msgs)
+[0.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_msgs
+[0.485s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs' for CMake module files
+[0.485s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs' for CMake config files
+[0.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'cmake_prefix_path')
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.ps1'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.dsv'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.sh'
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib'
+[0.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'ld_library_path_lib')
+[0.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.ps1'
+[0.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.dsv'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.sh'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/bin'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/pkgconfig/mav_msgs.pc'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages'
+[0.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'pythonpath')
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.ps1'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.dsv'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.sh'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/bin'
+[0.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.ps1'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.dsv'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.sh'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.bash'
+[0.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.zsh'
+[0.491s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/colcon-core/packages/mav_msgs)
+[0.491s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mav_msgs)
+[0.491s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs' for CMake module files
+[0.492s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs' for CMake config files
+[0.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'cmake_prefix_path')
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.ps1'
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.dsv'
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/cmake_prefix_path.sh'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib'
+[0.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'ld_library_path_lib')
+[0.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.ps1'
+[0.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.dsv'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/ld_library_path_lib.sh'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/bin'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/pkgconfig/mav_msgs.pc'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages'
+[0.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_msgs', 'pythonpath')
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.ps1'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.dsv'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/hook/pythonpath.sh'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/bin'
+[0.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.dsv'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.sh'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.bash'
+[0.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/package.zsh'
+[0.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/colcon-core/packages/mav_msgs)
+[0.497s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/controller_pkg' with build type 'ament_cmake'
+[0.497s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/controller_pkg'
+[0.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.500s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_planning_msgs' with build type 'ament_cmake'
+[0.501s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/mav_planning_msgs'
+[0.501s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.501s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.504s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation' with build type 'ament_cmake'
+[0.504s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation'
+[0.504s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.504s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg -- -j4 -l4
+[0.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs -- -j4 -l4
+[0.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation -- -j4 -l4
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg -- -j4 -l4
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg
+[0.589s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller_pkg)
+[0.590s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg' for CMake module files
+[0.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg
+[0.590s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg' for CMake config files
+[0.591s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_pkg', 'cmake_prefix_path')
+[0.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.ps1'
+[0.591s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.dsv'
+[0.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.sh'
+[0.592s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib'
+[0.592s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_pkg', 'ld_library_path_lib')
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.ps1'
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.dsv'
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.sh'
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/bin'
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/pkgconfig/controller_pkg.pc'
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/python3.12/site-packages'
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/bin'
+[0.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.ps1'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.dsv'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.sh'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.bash'
+[0.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.zsh'
+[0.595s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/colcon-core/packages/controller_pkg)
+[0.595s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller_pkg)
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg' for CMake module files
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg' for CMake config files
+[0.596s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_pkg', 'cmake_prefix_path')
+[0.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.ps1'
+[0.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.dsv'
+[0.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/cmake_prefix_path.sh'
+[0.597s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib'
+[0.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller_pkg', 'ld_library_path_lib')
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.ps1'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.dsv'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/hook/ld_library_path_lib.sh'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/bin'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/pkgconfig/controller_pkg.pc'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/python3.12/site-packages'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/bin'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.dsv'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.sh'
+[0.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.bash'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.zsh'
+[0.605s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/colcon-core/packages/controller_pkg)
+[0.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation -- -j4 -l4
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation
+[0.665s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation' for CMake module files
+[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation' for CMake config files
+[0.666s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[0.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[0.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation
+[0.667s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[0.667s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[0.667s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib'
+[0.667s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'ld_library_path_lib')
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.ps1'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.dsv'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.sh'
+[0.668s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/bin'
+[0.668s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/pkgconfig/simulation.pc'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/python3.12/site-packages'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/bin'
+[0.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.ps1'
+[0.669s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.dsv'
+[0.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.sh'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.bash'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.zsh'
+[0.670s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/colcon-core/packages/simulation)
+[0.671s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[0.671s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation' for CMake module files
+[0.671s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation' for CMake config files
+[0.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[0.673s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib'
+[0.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'ld_library_path_lib')
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.dsv'
+[0.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/hook/ld_library_path_lib.sh'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/bin'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/pkgconfig/simulation.pc'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/python3.12/site-packages'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/bin'
+[0.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.ps1'
+[0.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.dsv'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.sh'
+[0.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.bash'
+[0.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/simulation/package.zsh'
+[0.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/share/colcon-core/packages/simulation)
+[0.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs -- -j4 -l4
+[0.815s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs
+[0.868s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mav_planning_msgs)
+[0.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/mav_planning_msgs
+[0.869s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs' for CMake module files
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs' for CMake config files
+[0.871s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'cmake_prefix_path')
+[0.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.ps1'
+[0.871s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.dsv'
+[0.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.sh'
+[0.872s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib'
+[0.872s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'ld_library_path_lib')
+[0.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.ps1'
+[0.872s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.dsv'
+[0.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.sh'
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/bin'
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/pkgconfig/mav_planning_msgs.pc'
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages'
+[0.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'pythonpath')
+[0.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.ps1'
+[0.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.dsv'
+[0.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.sh'
+[0.874s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/bin'
+[0.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.ps1'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.dsv'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.sh'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.bash'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.zsh'
+[0.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/colcon-core/packages/mav_planning_msgs)
+[0.877s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mav_planning_msgs)
+[0.877s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs' for CMake module files
+[0.877s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs' for CMake config files
+[0.877s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'cmake_prefix_path')
+[0.877s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.ps1'
+[0.878s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.dsv'
+[0.878s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/cmake_prefix_path.sh'
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib'
+[0.878s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'ld_library_path_lib')
+[0.878s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.ps1'
+[0.879s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.dsv'
+[0.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/ld_library_path_lib.sh'
+[0.879s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/bin'
+[0.880s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/pkgconfig/mav_planning_msgs.pc'
+[0.880s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages'
+[0.880s] Level 1:colcon.colcon_core.shell:create_environment_hook('mav_planning_msgs', 'pythonpath')
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.ps1'
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.dsv'
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/hook/pythonpath.sh'
+[0.881s] Level 1:colcon.colcon_core.environment:checking '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/bin'
+[0.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.ps1'
+[0.882s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.dsv'
+[0.882s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.sh'
+[0.882s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.bash'
+[0.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/mav_planning_msgs/package.zsh'
+[0.883s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/share/colcon-core/packages/mav_planning_msgs)
+[0.883s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.884s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.884s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.884s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.890s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.891s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.891s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.910s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.910s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/local_setup.ps1'
+[0.911s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/_local_setup_util_ps1.py'
+[0.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/setup.ps1'
+[0.913s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/local_setup.sh'
+[0.913s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/_local_setup_util_sh.py'
+[0.913s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/setup.sh'
+[0.914s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/local_setup.bash'
+[0.914s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/setup.bash'
+[0.915s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/local_setup.zsh'
+[0.915s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/setup.zsh'

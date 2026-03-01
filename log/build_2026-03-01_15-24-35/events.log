@@ -1,0 +1,119 @@
+[0.000000] (-) TimerEvent: {}
+[0.000112] (-) JobUnselected: {'identifier': 'controller_pkg'}
+[0.000134] (-) JobUnselected: {'identifier': 'mapping_pkg'}
+[0.000147] (-) JobUnselected: {'identifier': 'mav_msgs'}
+[0.000157] (-) JobUnselected: {'identifier': 'mav_planning_msgs'}
+[0.000167] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000179] (takeoff_pkg) JobQueued: {'identifier': 'takeoff_pkg', 'dependencies': OrderedDict()}
+[0.000192] (takeoff_pkg) JobStarted: {'identifier': 'takeoff_pkg'}
+[0.015398] (takeoff_pkg) JobProgress: {'identifier': 'takeoff_pkg', 'progress': 'cmake'}
+[0.016636] (takeoff_pkg) JobProgress: {'identifier': 'takeoff_pkg', 'progress': 'build'}
+[0.016971] (takeoff_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', '--', '-j4', '-l4'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2447', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=122b91f147940e5c7259213069a44b0a', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2447,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2447', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/69c9bd43_87b3_4823_97a7_38a7e28b8884', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RJVQL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.104', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=122b91f147940e5c7259213069a44b0a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099226] (-) TimerEvent: {}
+[0.163827] (takeoff_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o\x1b[0m\n'}
+[0.199363] (-) TimerEvent: {}
+[0.299651] (-) TimerEvent: {}
+[0.401104] (-) TimerEvent: {}
+[0.501412] (-) TimerEvent: {}
+[0.601945] (-) TimerEvent: {}
+[0.703380] (-) TimerEvent: {}
+[0.803734] (-) TimerEvent: {}
+[0.904058] (-) TimerEvent: {}
+[1.004940] (-) TimerEvent: {}
+[1.105743] (-) TimerEvent: {}
+[1.206021] (-) TimerEvent: {}
+[1.306517] (-) TimerEvent: {}
+[1.407917] (-) TimerEvent: {}
+[1.508798] (-) TimerEvent: {}
+[1.609102] (-) TimerEvent: {}
+[1.710746] (-) TimerEvent: {}
+[1.811772] (-) TimerEvent: {}
+[1.912839] (-) TimerEvent: {}
+[2.013766] (-) TimerEvent: {}
+[2.114416] (-) TimerEvent: {}
+[2.216303] (-) TimerEvent: {}
+[2.317175] (-) TimerEvent: {}
+[2.418197] (-) TimerEvent: {}
+[2.518734] (-) TimerEvent: {}
+[2.619578] (-) TimerEvent: {}
+[2.720395] (-) TimerEvent: {}
+[2.821270] (-) TimerEvent: {}
+[2.922107] (-) TimerEvent: {}
+[3.023240] (-) TimerEvent: {}
+[3.123551] (-) TimerEvent: {}
+[3.223876] (-) TimerEvent: {}
+[3.324113] (-) TimerEvent: {}
+[3.424987] (-) TimerEvent: {}
+[3.525813] (-) TimerEvent: {}
+[3.626633] (-) TimerEvent: {}
+[3.727380] (-) TimerEvent: {}
+[3.828291] (-) TimerEvent: {}
+[3.929558] (-) TimerEvent: {}
+[4.030343] (-) TimerEvent: {}
+[4.131961] (-) TimerEvent: {}
+[4.233251] (-) TimerEvent: {}
+[4.333565] (-) TimerEvent: {}
+[4.434423] (-) TimerEvent: {}
+[4.534752] (-) TimerEvent: {}
+[4.635778] (-) TimerEvent: {}
+[4.736008] (-) TimerEvent: {}
+[4.836312] (-) TimerEvent: {}
+[4.936903] (-) TimerEvent: {}
+[5.037221] (-) TimerEvent: {}
+[5.139303] (-) TimerEvent: {}
+[5.239554] (-) TimerEvent: {}
+[5.339848] (-) TimerEvent: {}
+[5.440276] (-) TimerEvent: {}
+[5.541326] (-) TimerEvent: {}
+[5.641654] (-) TimerEvent: {}
+[5.742532] (-) TimerEvent: {}
+[5.843264] (-) TimerEvent: {}
+[5.944044] (-) TimerEvent: {}
+[6.044237] (-) TimerEvent: {}
+[6.144478] (-) TimerEvent: {}
+[6.244707] (-) TimerEvent: {}
+[6.345000] (-) TimerEvent: {}
+[6.445569] (-) TimerEvent: {}
+[6.546053] (-) TimerEvent: {}
+[6.646992] (-) TimerEvent: {}
+[6.747844] (-) TimerEvent: {}
+[6.848111] (-) TimerEvent: {}
+[6.878511] (takeoff_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable takeoff_node\x1b[0m\n'}
+[6.948399] (-) TimerEvent: {}
+[7.048700] (-) TimerEvent: {}
+[7.148943] (-) TimerEvent: {}
+[7.193447] (takeoff_pkg) StdoutLine: {'line': b'[100%] Built target takeoff_node\n'}
+[7.252948] (-) TimerEvent: {}
+[7.280458] (takeoff_pkg) CommandEnded: {'returncode': 0}
+[7.337634] (takeoff_pkg) JobProgress: {'identifier': 'takeoff_pkg', 'progress': 'install'}
+[7.353143] (-) TimerEvent: {}
+[7.362976] (takeoff_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2447', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=122b91f147940e5c7259213069a44b0a', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2447,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2447', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/69c9bd43_87b3_4823_97a7_38a7e28b8884', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RJVQL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.104', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=122b91f147940e5c7259213069a44b0a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[7.377314] (takeoff_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.377617] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node\n'}
+[7.381370] (takeoff_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node" to ""\n'}
+[7.381511] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch\n'}
+[7.381926] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py\n'}
+[7.382262] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config\n'}
+[7.382592] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml\n'}
+[7.382949] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include\n'}
+[7.383049] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg\n'}
+[7.383233] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp\n'}
+[7.383472] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg\n'}
+[7.383931] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg\n'}
+[7.384318] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh\n'}
+[7.384903] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv\n'}
+[7.385608] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh\n'}
+[7.386048] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv\n'}
+[7.386454] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash\n'}
+[7.386824] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh\n'}
+[7.387200] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh\n'}
+[7.388544] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv\n'}
+[7.388814] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.dsv\n'}
+[7.389343] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg\n'}
+[7.389760] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake\n'}
+[7.390043] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake\n'}
+[7.391067] (takeoff_pkg) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.xml\n'}
+[7.396306] (takeoff_pkg) CommandEnded: {'returncode': 0}
+[7.455472] (-) TimerEvent: {}
+[7.494218] (takeoff_pkg) JobEnded: {'identifier': 'takeoff_pkg', 'rc': 0}
+[7.506752] (-) EventReactorShutdown: {}

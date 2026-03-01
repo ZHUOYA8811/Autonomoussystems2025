@@ -1,0 +1,71 @@
+[0.013s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/controller_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg
+[0.113s] -- The C compiler identification is GNU 13.3.0
+[0.171s] -- The CXX compiler identification is GNU 13.3.0
+[0.197s] -- Detecting C compiler ABI info
+[0.281s] -- Detecting C compiler ABI info - done
+[0.287s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.288s] -- Detecting C compile features
+[0.288s] -- Detecting C compile features - done
+[0.298s] -- Detecting CXX compiler ABI info
+[0.395s] -- Detecting CXX compiler ABI info - done
+[0.398s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.400s] -- Detecting CXX compile features
+[0.400s] -- Detecting CXX compile features - done
+[0.413s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.533s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.649s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.720s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.738s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.763s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.790s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.883s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.888s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.981s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.000s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.021s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.110s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.129s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.150s] -- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+[1.156s] -- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[1.300s] -- Found tf2_eigen: 0.36.19 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+[1.309s] -- Found mav_msgs: 3.3.3 (/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/cmake)
+[1.363s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.385s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.463s] -- Configuring done (1.4s)
+[1.477s] -- Generating done (0.0s)
+[1.481s] -- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg
+[1.489s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/controller_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg
+[1.490s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg -- -j4 -l4
+[1.541s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_wrapper.cpp.o[0m
+[4.100s] [100%] [32m[1mLinking CXX executable controller_node[0m
+[4.350s] [100%] Built target controller_node
+[4.363s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg -- -j4 -l4
+[4.374s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg
+[4.382s] -- Install configuration: ""
+[4.382s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/controller_pkg/controller_node
+[4.382s] -- Set non-toolchain portion of runtime path of "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/controller_pkg/controller_node" to ""
+[4.382s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib/libcontroller_lib.so
+[4.390s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/include/controller_pkg
+[4.390s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/include/controller_pkg/controller_pkg
+[4.390s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/include/controller_pkg/controller_pkg/controller_node.hpp
+[4.391s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/launch
+[4.391s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/launch/controller.launch.py
+[4.394s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/config
+[4.394s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/config/controller_params.yaml
+[4.394s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/ament_index/resource_index/package_run_dependencies/controller_pkg
+[4.394s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/ament_index/resource_index/parent_prefix_path/controller_pkg
+[4.395s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/environment/ament_prefix_path.sh
+[4.395s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/environment/ament_prefix_path.dsv
+[4.395s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/environment/path.sh
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/environment/path.dsv
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/local_setup.bash
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/local_setup.sh
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/local_setup.zsh
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/local_setup.dsv
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.dsv
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/ament_index/resource_index/packages/controller_pkg
+[4.396s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.397s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig.cmake
+[4.397s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig-version.cmake
+[4.397s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/share/controller_pkg/package.xml
+[4.398s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg

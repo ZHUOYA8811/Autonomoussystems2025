@@ -1,0 +1,9 @@
+/home/wen/chall/build/mapping_pkg/CMakeFiles/uninstall.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/mapping_pkg_uninstall.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/test.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/edit_cache.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/rebuild_cache.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/list_install_components.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/install.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/install/local.dir
+/home/wen/chall/build/mapping_pkg/CMakeFiles/install/strip.dir

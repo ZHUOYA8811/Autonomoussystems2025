@@ -1,0 +1,492 @@
+[0.000000] (-) TimerEvent: {}
+[0.001002] (-) JobUnselected: {'identifier': 'controller_pkg'}
+[0.001154] (-) JobUnselected: {'identifier': 'mapping_pkg'}
+[0.001185] (-) JobUnselected: {'identifier': 'mav_msgs'}
+[0.001207] (-) JobUnselected: {'identifier': 'mav_planning_msgs'}
+[0.001230] (-) JobUnselected: {'identifier': 'takeoff_pkg'}
+[0.001255] (simulation) JobQueued: {'identifier': 'simulation', 'dependencies': OrderedDict({'mav_msgs': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs'})}
+[0.001283] (simulation) JobStarted: {'identifier': 'simulation'}
+[0.017104] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'cmake'}
+[0.017684] (simulation) Command: {'cmd': ['/usr/bin/cmake', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation', '-DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'FONTCONFIG_PATH': '/etc/fonts', 'GIO_MODULE_DIR': '/home/wen/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'OLDPWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/226/usr/lib/x86_64-linux-gnu/gtk-3.0', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/wen/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/226/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2243', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=cd270dcef835538cada5387869a43b9b', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/home/wen/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/wen/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2243,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2243', 'GTK_EXE_PREFIX': '/snap/code/226/usr', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/042de01d_bc7d_4f2d_b008_a16e714d5afd', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/226/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/wen/snap/code/226/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.2ZUML3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d8347291e0.sock', 'GNOME_TERMINAL_SERVICE': ':1.127', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/wen/snap/code/226/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/wen/chall/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=cd270dcef835538cada5387869a43b9b', 'XDG_DATA_DIRS': '/home/wen/snap/code/226/.local/share:/home/wen/snap/code/226:/snap/code/226/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.104716] (-) TimerEvent: {}
+[0.148430] (simulation) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.205111] (-) TimerEvent: {}
+[0.253813] (simulation) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.279642] (simulation) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.305233] (-) TimerEvent: {}
+[0.379459] (simulation) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.386818] (simulation) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.387660] (simulation) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.388240] (simulation) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.398806] (simulation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.405344] (-) TimerEvent: {}
+[0.495791] (simulation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.501495] (simulation) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.501949] (simulation) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.502612] (simulation) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.505438] (-) TimerEvent: {}
+[0.519559] (simulation) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.605631] (-) TimerEvent: {}
+[0.659736] (simulation) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.705708] (-) TimerEvent: {}
+[0.806195] (-) TimerEvent: {}
+[0.806698] (simulation) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.878669] (simulation) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.897603] (simulation) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.906355] (-) TimerEvent: {}
+[0.929714] (simulation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.956826] (simulation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.006561] (-) TimerEvent: {}
+[1.066383] (simulation) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.072756] (simulation) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.106704] (-) TimerEvent: {}
+[1.179214] (simulation) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.198435] (simulation) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.206817] (-) TimerEvent: {}
+[1.219297] (simulation) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.307335] (-) TimerEvent: {}
+[1.328204] (simulation) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.350623] (simulation) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[1.377259] (simulation) StdoutLine: {'line': b'-- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[1.384380] (simulation) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[1.407456] (-) TimerEvent: {}
+[1.507737] (-) TimerEvent: {}
+[1.558191] (simulation) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[1.578105] (simulation) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.579872] (simulation) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.580006] (simulation) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.582986] (simulation) StdoutLine: {'line': b'-- Found mav_msgs: 3.3.3 (/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/cmake)\n'}
+[1.607850] (-) TimerEvent: {}
+[1.644363] (simulation) StdoutLine: {'line': b'-- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)\n'}
+[1.668328] (simulation) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[1.708409] (-) TimerEvent: {}
+[1.729824] (simulation) StdoutLine: {'line': b'-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)\n'}
+[1.745635] (simulation) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.6.0") \n'}
+[1.774499] (simulation) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.808617] (-) TimerEvent: {}
+[1.909510] (-) TimerEvent: {}
+[1.946085] (simulation) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.946307] (simulation) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.009617] (-) TimerEvent: {}
+[2.053402] (simulation) StdoutLine: {'line': b'-- Configuring done (2.0s)\n'}
+[2.082033] (simulation) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.089742] (simulation) StdoutLine: {'line': b'-- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation\n'}
+[2.102080] (simulation) CommandEnded: {'returncode': 0}
+[2.102415] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'build'}
+[2.102431] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', '--', '-j4', '-l4'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'FONTCONFIG_PATH': '/etc/fonts', 'GIO_MODULE_DIR': '/home/wen/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'OLDPWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/226/usr/lib/x86_64-linux-gnu/gtk-3.0', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/wen/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/226/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2243', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=cd270dcef835538cada5387869a43b9b', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/home/wen/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/wen/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2243,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2243', 'GTK_EXE_PREFIX': '/snap/code/226/usr', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/042de01d_bc7d_4f2d_b008_a16e714d5afd', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/226/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/wen/snap/code/226/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.2ZUML3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d8347291e0.sock', 'GNOME_TERMINAL_SERVICE': ':1.127', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/wen/snap/code/226/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/wen/chall/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=cd270dcef835538cada5387869a43b9b', 'XDG_DATA_DIRS': '/home/wen/snap/code/226/.local/share:/home/wen/snap/code/226:/snap/code/226/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.109721] (-) TimerEvent: {}
+[2.159496] (simulation) StdoutLine: {'line': b"[  5%] \x1b[34m\x1b[1mCreating directories for 'libsocket'\x1b[0m\n"}
+[2.164731] (simulation) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/state_estimate_corruptor_node.dir/src/state_estimate_corruptor_node.cpp.o\x1b[0m\n'}
+[2.189152] (simulation) StdoutLine: {'line': b"[ 16%] \x1b[34m\x1b[1mPerforming download step (git clone) for 'libsocket'\x1b[0m\n"}
+[2.209889] (-) TimerEvent: {}
+[2.214856] (simulation) StderrLine: {'line': b"Cloning into 'libsocket'...\n"}
+[2.309979] (-) TimerEvent: {}
+[2.410465] (-) TimerEvent: {}
+[2.510981] (-) TimerEvent: {}
+[2.611683] (-) TimerEvent: {}
+[2.711993] (-) TimerEvent: {}
+[2.812657] (-) TimerEvent: {}
+[2.913516] (-) TimerEvent: {}
+[3.014436] (-) TimerEvent: {}
+[3.115116] (-) TimerEvent: {}
+[3.215902] (-) TimerEvent: {}
+[3.316791] (-) TimerEvent: {}
+[3.340446] (simulation) StderrLine: {'line': b"Already on 'master'\n"}
+[3.341497] (simulation) StdoutLine: {'line': b"Your branch is up to date with 'origin/master'.\n"}
+[3.417246] (-) TimerEvent: {}
+[3.488828] (simulation) StdoutLine: {'line': b"[ 22%] \x1b[34m\x1b[1mNo update step for 'libsocket'\x1b[0m\n"}
+[3.517372] (-) TimerEvent: {}
+[3.578418] (simulation) StdoutLine: {'line': b"[ 27%] \x1b[34m\x1b[1mNo patch step for 'libsocket'\x1b[0m\n"}
+[3.617474] (-) TimerEvent: {}
+[3.651857] (simulation) StdoutLine: {'line': b"[ 33%] \x1b[34m\x1b[1mPerforming configure step for 'libsocket'\x1b[0m\n"}
+[3.686791] (simulation) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:1 (PROJECT):\n'}
+[3.686968] (simulation) StderrLine: {'line': b'  cmake_minimum_required() should be called prior to this top-level project()\n'}
+[3.687023] (simulation) StderrLine: {'line': b'  call.  Please see the cmake-commands(7) manual for usage documentation of\n'}
+[3.687072] (simulation) StderrLine: {'line': b'  both commands.\n'}
+[3.687120] (simulation) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[3.687169] (simulation) StderrLine: {'line': b'\x1b[0m\n'}
+[3.717583] (-) TimerEvent: {}
+[3.774794] (simulation) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[3.817712] (-) TimerEvent: {}
+[3.858517] (simulation) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[3.880871] (simulation) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.931099] (-) TimerEvent: {}
+[4.017001] (simulation) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.025259] (simulation) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.025628] (simulation) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.026180] (simulation) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.031370] (-) TimerEvent: {}
+[4.039255] (simulation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.131475] (-) TimerEvent: {}
+[4.176765] (simulation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.189184] (simulation) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.189352] (simulation) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.189578] (simulation) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.189876] (simulation) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:2 (CMAKE_MINIMUM_REQUIRED):\n'}
+[4.189956] (simulation) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[4.190006] (simulation) StderrLine: {'line': b'  CMake.\n'}
+[4.190052] (simulation) StderrLine: {'line': b'\n'}
+[4.190098] (simulation) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[4.190142] (simulation) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[4.190185] (simulation) StderrLine: {'line': b'\n'}
+[4.190229] (simulation) StderrLine: {'line': b'\x1b[0m\n'}
+[4.192067] (simulation) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at C/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):\n'}
+[4.192164] (simulation) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[4.192210] (simulation) StderrLine: {'line': b'  CMake.\n'}
+[4.192256] (simulation) StderrLine: {'line': b'\n'}
+[4.192298] (simulation) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[4.192343] (simulation) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[4.192386] (simulation) StderrLine: {'line': b'\n'}
+[4.192429] (simulation) StderrLine: {'line': b'\x1b[0m\n'}
+[4.192783] (simulation) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at headers/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):\n'}
+[4.192849] (simulation) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[4.192894] (simulation) StderrLine: {'line': b'  CMake.\n'}
+[4.192954] (simulation) StderrLine: {'line': b'\n'}
+[4.193098] (simulation) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[4.193145] (simulation) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[4.193265] (simulation) StderrLine: {'line': b'\n'}
+[4.193342] (simulation) StderrLine: {'line': b'\x1b[0m\n'}
+[4.193727] (simulation) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at C++/CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[4.193815] (simulation) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[4.193875] (simulation) StderrLine: {'line': b'  CMake.\n'}
+[4.193919] (simulation) StderrLine: {'line': b'\n'}
+[4.193965] (simulation) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[4.194011] (simulation) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[4.194055] (simulation) StderrLine: {'line': b'\n'}
+[4.194101] (simulation) StderrLine: {'line': b'\x1b[0m\n'}
+[4.209741] (simulation) StdoutLine: {'line': b'-- Configuring done (0.5s)\n'}
+[4.220766] (simulation) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.222159] (simulation) StdoutLine: {'line': b'-- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-build\n'}
+[4.231675] (-) TimerEvent: {}
+[4.248689] (simulation) StdoutLine: {'line': b"[ 38%] \x1b[34m\x1b[1mPerforming build step for 'libsocket'\x1b[0m\n"}
+[4.325712] (simulation) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/dgramclient.cpp.o\x1b[0m\n'}
+[4.327835] (simulation) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/dgramoverstream.cpp.o\x1b[0m\n'}
+[4.328599] (simulation) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object C/CMakeFiles/socket_o.dir/inet/libinetsocket.c.o\x1b[0m\n'}
+[4.331703] (-) TimerEvent: {}
+[4.432470] (-) TimerEvent: {}
+[4.533280] (-) TimerEvent: {}
+[4.554682] (simulation) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object C/CMakeFiles/socket_o.dir/unix/libunixsocket.c.o\x1b[0m\n'}
+[4.607550] (simulation) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/framing.cpp.o\x1b[0m\n'}
+[4.633408] (-) TimerEvent: {}
+[4.723496] (simulation) StdoutLine: {'line': b'[ 20%] Built target socket_o\n'}
+[4.733524] (-) TimerEvent: {}
+[4.745831] (simulation) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetbase.cpp.o\x1b[0m\n'}
+[4.758743] (simulation) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetclientstream.cpp.o\x1b[0m\n'}
+[4.833678] (-) TimerEvent: {}
+[4.869796] (simulation) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetserverdgram.cpp.o\x1b[0m\n'}
+[4.933828] (-) TimerEvent: {}
+[4.941436] (simulation) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/select.cpp.o\x1b[0m\n'}
+[5.033945] (-) TimerEvent: {}
+[5.103727] (simulation) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/streamclient.cpp.o\x1b[0m\n'}
+[5.134254] (-) TimerEvent: {}
+[5.142411] (simulation) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixclientdgram.cpp.o\x1b[0m\n'}
+[5.234355] (-) TimerEvent: {}
+[5.334721] (-) TimerEvent: {}
+[5.435129] (-) TimerEvent: {}
+[5.452706] (simulation) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixdgram.cpp.o\x1b[0m\n'}
+[5.503078] (simulation) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixserverstream.cpp.o\x1b[0m\n'}
+[5.535256] (-) TimerEvent: {}
+[5.594358] (simulation) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/exception.cpp.o\x1b[0m\n'}
+[5.635388] (-) TimerEvent: {}
+[5.736836] (-) TimerEvent: {}
+[5.774770] (simulation) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetclientdgram.cpp.o\x1b[0m\n'}
+[5.836999] (-) TimerEvent: {}
+[5.939609] (-) TimerEvent: {}
+[6.039879] (-) TimerEvent: {}
+[6.073887] (simulation) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetdgram.cpp.o\x1b[0m\n'}
+[6.101622] (simulation) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetserverstream.cpp.o\x1b[0m\n'}
+[6.140780] (-) TimerEvent: {}
+[6.238717] (simulation) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/socket.cpp.o\x1b[0m\n'}
+[6.240811] (-) TimerEvent: {}
+[6.342497] (-) TimerEvent: {}
+[6.444046] (-) TimerEvent: {}
+[6.473801] (simulation) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixbase.cpp.o\x1b[0m\n'}
+[6.545805] (-) TimerEvent: {}
+[6.602944] (simulation) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixclientstream.cpp.o\x1b[0m\n'}
+[6.646745] (-) TimerEvent: {}
+[6.667794] (simulation) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixserverdgram.cpp.o\x1b[0m\n'}
+[6.707019] (simulation) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C static library libsocket_int.a\x1b[0m\n'}
+[6.746848] (-) TimerEvent: {}
+[6.804019] (simulation) StdoutLine: {'line': b'[ 91%] Built target socket_int\n'}
+[6.846952] (-) TimerEvent: {}
+[6.864523] (simulation) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library libsocket.so\x1b[0m\n'}
+[6.913003] (simulation) StdoutLine: {'line': b'[ 95%] Built target socket++_o\n'}
+[6.925889] (simulation) StdoutLine: {'line': b'[ 95%] Built target socket\n'}
+[6.947054] (-) TimerEvent: {}
+[6.955953] (simulation) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libsocket++.so\x1b[0m\n'}
+[7.039908] (simulation) StdoutLine: {'line': b'[100%] Built target socket++\n'}
+[7.047727] (-) TimerEvent: {}
+[7.081877] (simulation) StdoutLine: {'line': b"[ 44%] \x1b[34m\x1b[1mPerforming install step for 'libsocket'\x1b[0m\n"}
+[7.145126] (simulation) StdoutLine: {'line': b'[  8%] Built target socket_o\n'}
+[7.148808] (-) TimerEvent: {}
+[7.185264] (simulation) StdoutLine: {'line': b'[ 87%] Built target socket++_o\n'}
+[7.190952] (simulation) StdoutLine: {'line': b'[ 91%] Built target socket_int\n'}
+[7.195767] (simulation) StdoutLine: {'line': b'[ 95%] Built target socket\n'}
+[7.228057] (simulation) StdoutLine: {'line': b'[100%] Built target socket++\n'}
+[7.249757] (-) TimerEvent: {}
+[7.253771] (simulation) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[7.267781] (simulation) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[7.269097] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/libsocket.so\n'}
+[7.269978] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixdgram.hpp\n'}
+[7.270364] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/exception.hpp\n'}
+[7.270476] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetclientdgram.hpp\n'}
+[7.270836] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/libinetsocket.h\n'}
+[7.271038] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixserverstream.hpp\n'}
+[7.271129] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/dgramclient.hpp\n'}
+[7.271242] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/streamclient.hpp\n'}
+[7.272021] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetserverstream.hpp\n'}
+[7.272162] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixclientdgram.hpp\n'}
+[7.272412] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/socket.hpp\n'}
+[7.272461] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetbase.hpp\n'}
+[7.272507] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetserverdgram.hpp\n'}
+[7.273589] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixclientstream.hpp\n'}
+[7.274080] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/libunixsocket.h\n'}
+[7.274187] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/select.hpp\n'}
+[7.274240] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetclientstream.hpp\n'}
+[7.274287] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixbase.hpp\n'}
+[7.274332] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixserverdgram.hpp\n'}
+[7.274378] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetdgram.hpp\n'}
+[7.274758] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/dgramoverstream.hpp\n'}
+[7.275223] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/framing.hpp\n'}
+[7.275289] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/epoll.hpp\n'}
+[7.275336] (simulation) StdoutLine: {'line': b'-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/libsocket++.so\n'}
+[7.303797] (simulation) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mCompleted 'libsocket'\x1b[0m\n"}
+[7.347565] (simulation) StdoutLine: {'line': b'[ 50%] Built target libsocket\n'}
+[7.350007] (-) TimerEvent: {}
+[7.377336] (simulation) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/w_to_unity.dir/src/w_to_unity.cpp.o\x1b[0m\n'}
+[7.382691] (simulation) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object tcpimage/CMakeFiles/tcpstreamreader.dir/TCPStreamReader.cpp.o\x1b[0m\n'}
+[7.450901] (-) TimerEvent: {}
+[7.551210] (-) TimerEvent: {}
+[7.652237] (-) TimerEvent: {}
+[7.756144] (-) TimerEvent: {}
+[7.856908] (-) TimerEvent: {}
+[7.957591] (-) TimerEvent: {}
+[8.058256] (-) TimerEvent: {}
+[8.132970] (simulation) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX static library libtcpstreamreader.a\x1b[0m\n'}
+[8.158458] (-) TimerEvent: {}
+[8.183049] (simulation) StdoutLine: {'line': b'[ 66%] Built target tcpstreamreader\n'}
+[8.209631] (simulation) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object tcpimage/CMakeFiles/tcpimage.dir/TCPImageServer.cpp.o\x1b[0m\n'}
+[8.258718] (-) TimerEvent: {}
+[8.360243] (-) TimerEvent: {}
+[8.460569] (-) TimerEvent: {}
+[8.563003] (-) TimerEvent: {}
+[8.663687] (-) TimerEvent: {}
+[8.764533] (-) TimerEvent: {}
+[8.822736] (simulation) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX static library libtcpimage.a\x1b[0m\n'}
+[8.864642] (-) TimerEvent: {}
+[8.880774] (simulation) StdoutLine: {'line': b'[ 77%] Built target tcpimage\n'}
+[8.923795] (simulation) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/unity_ros.dir/src/unity_ros.cpp.o\x1b[0m\n'}
+[8.964709] (-) TimerEvent: {}
+[9.065294] (-) TimerEvent: {}
+[9.166222] (-) TimerEvent: {}
+[9.267970] (-) TimerEvent: {}
+[9.376505] (-) TimerEvent: {}
+[9.477147] (-) TimerEvent: {}
+[9.580077] (-) TimerEvent: {}
+[9.680387] (-) TimerEvent: {}
+[9.780874] (-) TimerEvent: {}
+[9.881512] (-) TimerEvent: {}
+[9.985751] (-) TimerEvent: {}
+[10.090470] (-) TimerEvent: {}
+[10.190856] (-) TimerEvent: {}
+[10.292031] (-) TimerEvent: {}
+[10.393865] (-) TimerEvent: {}
+[10.494361] (-) TimerEvent: {}
+[10.594600] (-) TimerEvent: {}
+[10.695964] (-) TimerEvent: {}
+[10.796301] (-) TimerEvent: {}
+[10.899298] (-) TimerEvent: {}
+[10.999879] (-) TimerEvent: {}
+[11.100509] (-) TimerEvent: {}
+[11.202092] (-) TimerEvent: {}
+[11.302745] (-) TimerEvent: {}
+[11.403223] (-) TimerEvent: {}
+[11.503959] (-) TimerEvent: {}
+[11.604311] (-) TimerEvent: {}
+[11.704947] (-) TimerEvent: {}
+[11.805746] (-) TimerEvent: {}
+[11.907095] (-) TimerEvent: {}
+[12.008742] (-) TimerEvent: {}
+[12.109725] (-) TimerEvent: {}
+[12.210110] (-) TimerEvent: {}
+[12.310466] (-) TimerEvent: {}
+[12.410785] (-) TimerEvent: {}
+[12.512203] (-) TimerEvent: {}
+[12.612477] (-) TimerEvent: {}
+[12.712854] (-) TimerEvent: {}
+[12.817498] (-) TimerEvent: {}
+[12.919874] (-) TimerEvent: {}
+[13.020387] (-) TimerEvent: {}
+[13.122612] (-) TimerEvent: {}
+[13.224461] (-) TimerEvent: {}
+[13.325351] (-) TimerEvent: {}
+[13.429440] (-) TimerEvent: {}
+[13.530736] (-) TimerEvent: {}
+[13.632436] (-) TimerEvent: {}
+[13.735165] (-) TimerEvent: {}
+[13.835586] (-) TimerEvent: {}
+[13.937139] (-) TimerEvent: {}
+[14.037567] (-) TimerEvent: {}
+[14.137910] (-) TimerEvent: {}
+[14.238344] (-) TimerEvent: {}
+[14.338680] (-) TimerEvent: {}
+[14.439532] (-) TimerEvent: {}
+[14.540403] (-) TimerEvent: {}
+[14.670772] (-) TimerEvent: {}
+[14.783972] (-) TimerEvent: {}
+[14.896381] (-) TimerEvent: {}
+[15.027767] (-) TimerEvent: {}
+[15.216992] (-) TimerEvent: {}
+[15.361015] (-) TimerEvent: {}
+[15.549730] (-) TimerEvent: {}
+[15.841326] (-) TimerEvent: {}
+[15.959937] (-) TimerEvent: {}
+[16.108114] (-) TimerEvent: {}
+[16.495492] (-) TimerEvent: {}
+[16.717617] (-) TimerEvent: {}
+[16.966848] (-) TimerEvent: {}
+[17.310167] (-) TimerEvent: {}
+[17.438161] (-) TimerEvent: {}
+[17.572849] (-) TimerEvent: {}
+[17.723924] (-) TimerEvent: {}
+[17.891437] (-) TimerEvent: {}
+[18.019056] (-) TimerEvent: {}
+[18.158775] (-) TimerEvent: {}
+[18.592702] (-) TimerEvent: {}
+[18.845644] (-) TimerEvent: {}
+[18.976119] (-) TimerEvent: {}
+[19.111033] (-) TimerEvent: {}
+[19.359016] (-) TimerEvent: {}
+[19.837901] (-) TimerEvent: {}
+[20.588727] (-) TimerEvent: {}
+[20.843231] (-) TimerEvent: {}
+[21.332021] (-) TimerEvent: {}
+[21.659080] (-) TimerEvent: {}
+[22.098439] (-) TimerEvent: {}
+[22.228150] (-) TimerEvent: {}
+[22.364195] (-) TimerEvent: {}
+[22.732082] (-) TimerEvent: {}
+[23.487797] (-) TimerEvent: {}
+[23.633941] (-) TimerEvent: {}
+[24.669624] (-) TimerEvent: {}
+[25.206672] (-) TimerEvent: {}
+[25.586885] (-) TimerEvent: {}
+[25.735117] (-) TimerEvent: {}
+[26.092344] (-) TimerEvent: {}
+[26.366080] (-) TimerEvent: {}
+[28.294661] (-) TimerEvent: {}
+[29.259842] (-) TimerEvent: {}
+[29.386388] (-) TimerEvent: {}
+[29.550040] (-) TimerEvent: {}
+[31.029345] (-) TimerEvent: {}
+[31.882620] (-) TimerEvent: {}
+[32.001757] (-) TimerEvent: {}
+[32.775943] (-) TimerEvent: {}
+[33.573284] (-) TimerEvent: {}
+[34.194691] (-) TimerEvent: {}
+[34.973469] (-) TimerEvent: {}
+[35.673965] (-) TimerEvent: {}
+[36.527951] (-) TimerEvent: {}
+[36.717366] (-) TimerEvent: {}
+[37.002301] (-) TimerEvent: {}
+[37.504694] (-) TimerEvent: {}
+[37.891673] (-) TimerEvent: {}
+[38.141541] (-) TimerEvent: {}
+[38.792550] (-) TimerEvent: {}
+[39.033187] (-) TimerEvent: {}
+[39.851628] (-) TimerEvent: {}
+[40.665855] (-) TimerEvent: {}
+[41.639978] (-) TimerEvent: {}
+[41.848227] (-) TimerEvent: {}
+[42.869638] (-) TimerEvent: {}
+[43.287815] (-) TimerEvent: {}
+[43.449224] (-) TimerEvent: {}
+[43.627333] (-) TimerEvent: {}
+[43.853409] (-) TimerEvent: {}
+[45.525920] (-) TimerEvent: {}
+[45.675908] (-) TimerEvent: {}
+[45.850459] (-) TimerEvent: {}
+[45.979552] (-) TimerEvent: {}
+[46.748945] (-) TimerEvent: {}
+[48.204169] (-) TimerEvent: {}
+[48.493110] (-) TimerEvent: {}
+[48.896475] (-) TimerEvent: {}
+[49.512093] (-) TimerEvent: {}
+[49.661684] (-) TimerEvent: {}
+[50.020577] (-) TimerEvent: {}
+[51.888612] (-) TimerEvent: {}
+[52.361396] (-) TimerEvent: {}
+[52.494635] (-) TimerEvent: {}
+[53.482595] (-) TimerEvent: {}
+[54.124264] (-) TimerEvent: {}
+[54.536321] (-) TimerEvent: {}
+[55.644985] (-) TimerEvent: {}
+[56.007620] (-) TimerEvent: {}
+[56.197879] (-) TimerEvent: {}
+[56.315311] (-) TimerEvent: {}
+[56.546177] (-) TimerEvent: {}
+[56.671345] (-) TimerEvent: {}
+[56.872946] (-) TimerEvent: {}
+[58.353801] (-) TimerEvent: {}
+[59.692136] (-) TimerEvent: {}
+[59.846598] (-) TimerEvent: {}
+[61.386140] (-) TimerEvent: {}
+[61.731882] (-) TimerEvent: {}
+[61.900327] (-) TimerEvent: {}
+[62.722313] (-) TimerEvent: {}
+[63.065731] (-) TimerEvent: {}
+[63.423636] (-) TimerEvent: {}
+[63.904767] (-) TimerEvent: {}
+[64.157146] (-) TimerEvent: {}
+[64.290476] (-) TimerEvent: {}
+[65.135762] (-) TimerEvent: {}
+[67.436412] (-) TimerEvent: {}
+[67.558393] (-) TimerEvent: {}
+[67.679000] (-) TimerEvent: {}
+[67.888032] (-) TimerEvent: {}
+[68.013405] (-) TimerEvent: {}
+[68.131737] (-) TimerEvent: {}
+[68.270415] (-) TimerEvent: {}
+[68.474705] (-) TimerEvent: {}
+[68.920909] (-) TimerEvent: {}
+[69.350506] (-) TimerEvent: {}
+[70.285653] (-) TimerEvent: {}
+[70.919450] (-) TimerEvent: {}
+[71.043694] (-) TimerEvent: {}
+[71.371606] (-) TimerEvent: {}
+[71.774193] (-) TimerEvent: {}
+[71.911498] (-) TimerEvent: {}
+[72.059726] (-) TimerEvent: {}
+[74.011301] (-) TimerEvent: {}
+[74.235949] (-) TimerEvent: {}
+[74.363808] (-) TimerEvent: {}
+[74.481764] (-) TimerEvent: {}
+[74.605634] (-) TimerEvent: {}
+[74.795030] (-) TimerEvent: {}
+[74.982765] (-) TimerEvent: {}
+[75.410359] (-) TimerEvent: {}
+[75.606724] (-) TimerEvent: {}
+[76.709252] (-) TimerEvent: {}
+[77.154237] (-) TimerEvent: {}
+[79.250143] (-) TimerEvent: {}
+[79.387661] (-) TimerEvent: {}
+[79.598587] (-) TimerEvent: {}
+[80.957307] (-) TimerEvent: {}
+[81.318621] (-) TimerEvent: {}
+[81.466904] (-) TimerEvent: {}
+[81.892050] (-) TimerEvent: {}
+[82.235638] (-) TimerEvent: {}
+[82.392218] (-) TimerEvent: {}
+[84.460040] (-) TimerEvent: {}
+[84.961514] (-) TimerEvent: {}
+[85.288056] (-) TimerEvent: {}
+[85.548954] (-) TimerEvent: {}
+[85.851311] (-) TimerEvent: {}
+[87.642154] (-) TimerEvent: {}
+[88.013271] (-) TimerEvent: {}
+[88.140133] (-) TimerEvent: {}
+[88.439221] (-) TimerEvent: {}
+[88.570427] (-) TimerEvent: {}
+[88.857676] (-) TimerEvent: {}
+[89.352928] (-) TimerEvent: {}
+[90.511976] (-) TimerEvent: {}

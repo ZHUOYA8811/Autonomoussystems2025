@@ -1,0 +1,3 @@
+voxel_grid:
+  ros__parameters:
+    leaf_size: 0.05

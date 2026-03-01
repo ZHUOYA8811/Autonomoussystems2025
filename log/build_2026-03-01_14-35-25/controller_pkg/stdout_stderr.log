@@ -1,0 +1,28 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/controller_pkg/CMakeCache.txt is different than the directory /home/wen/chall/build/controller_pkg where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[100%] Built target controller_node
+-- Install configuration: ""
+-- Up-to-date: /home/wen/chall/install/controller_pkg/lib/controller_pkg/controller_node
+-- Up-to-date: /home/wen/chall/install/controller_pkg/lib/libcontroller_lib.so
+-- Up-to-date: /home/wen/chall/install/controller_pkg/include/controller_pkg
+-- Up-to-date: /home/wen/chall/install/controller_pkg/include/controller_pkg/controller_pkg
+-- Up-to-date: /home/wen/chall/install/controller_pkg/include/controller_pkg/controller_pkg/controller_node.hpp
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/launch
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/launch/controller.launch.py
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/config
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/config/controller_params.yaml
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/ament_index/resource_index/package_run_dependencies/controller_pkg
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/ament_index/resource_index/parent_prefix_path/controller_pkg
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/environment/path.sh
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/environment/path.dsv
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/local_setup.bash
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/local_setup.sh
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/local_setup.zsh
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/local_setup.dsv
+-- Installing: /home/wen/chall/install/controller_pkg/share/controller_pkg/package.dsv
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/ament_index/resource_index/packages/controller_pkg
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig.cmake
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig-version.cmake
+-- Up-to-date: /home/wen/chall/install/controller_pkg/share/controller_pkg/package.xml

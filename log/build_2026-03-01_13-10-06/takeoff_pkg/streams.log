@@ -1,0 +1,63 @@
+[0.010s] Invoking command in '/home/wen/chall/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/chall/src/takeoff_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/takeoff_pkg
+[0.049s] -- The C compiler identification is GNU 13.3.0
+[0.085s] -- The CXX compiler identification is GNU 13.3.0
+[0.099s] -- Detecting C compiler ABI info
+[0.163s] -- Detecting C compiler ABI info - done
+[0.168s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.168s] -- Detecting C compile features
+[0.169s] -- Detecting C compile features - done
+[0.176s] -- Detecting CXX compiler ABI info
+[0.251s] -- Detecting CXX compiler ABI info - done
+[0.257s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.257s] -- Detecting CXX compile features
+[0.257s] -- Detecting CXX compile features - done
+[0.259s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.367s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.454s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.480s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.490s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.502s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.515s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.564s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.566s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.627s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.640s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.655s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.706s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.746s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[0.825s] -- Configuring done (0.8s)
+[0.834s] -- Generating done (0.0s)
+[0.836s] -- Build files have been written to: /home/wen/chall/build/takeoff_pkg
+[0.843s] Invoked command in '/home/wen/chall/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/chall/src/takeoff_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/takeoff_pkg
+[0.844s] Invoking command in '/home/wen/chall/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/chall/build/takeoff_pkg -- -j4 -l4
+[0.887s] [ 50%] [32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o[0m
+[6.934s] [100%] [32m[1mLinking CXX executable takeoff_node[0m
+[7.249s] [100%] Built target takeoff_node
+[7.270s] Invoked command in '/home/wen/chall/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/chall/build/takeoff_pkg -- -j4 -l4
+[7.273s] Invoking command in '/home/wen/chall/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/chall/build/takeoff_pkg
+[7.288s] -- Install configuration: ""
+[7.288s] -- Installing: /home/wen/chall/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node
+[7.294s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node" to ""
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/include
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg
+[7.295s] -- Installing: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh
+[7.297s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv
+[7.298s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.dsv
+[7.298s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg
+[7.298s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake
+[7.298s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake
+[7.298s] -- Installing: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.xml
+[7.301s] Invoked command in '/home/wen/chall/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/chall/build/takeoff_pkg

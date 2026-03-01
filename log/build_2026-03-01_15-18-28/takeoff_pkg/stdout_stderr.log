@@ -1,0 +1,26 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeCache.txt is different than the directory /home/wen/chall/build/takeoff_pkg where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[100%] Built target takeoff_node
+-- Install configuration: ""
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/include
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.dsv
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake
+-- Up-to-date: /home/wen/chall/install/takeoff_pkg/share/takeoff_pkg/package.xml

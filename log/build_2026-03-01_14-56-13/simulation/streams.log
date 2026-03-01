@@ -1,0 +1,180 @@
+[0.018s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation
+[0.147s] -- The C compiler identification is GNU 13.3.0
+[0.253s] -- The CXX compiler identification is GNU 13.3.0
+[0.278s] -- Detecting C compiler ABI info
+[0.378s] -- Detecting C compiler ABI info - done
+[0.386s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.386s] -- Detecting C compile features
+[0.387s] -- Detecting C compile features - done
+[0.399s] -- Detecting CXX compiler ABI info
+[0.495s] -- Detecting CXX compiler ABI info - done
+[0.500s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.501s] -- Detecting CXX compile features
+[0.501s] -- Detecting CXX compile features - done
+[0.518s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.659s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.806s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.878s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.896s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.929s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.956s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.065s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.072s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.178s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.197s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.218s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.327s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.349s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.376s] -- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+[1.383s] -- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[1.557s] -- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[1.577s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.579s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.579s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.582s] -- Found mav_msgs: 3.3.3 (/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/share/mav_msgs/cmake)
+[1.643s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.667s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[1.729s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[1.745s] -- Found OpenCV: /usr (found version "4.6.0") 
+[1.773s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.945s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.945s] -- Found Threads: TRUE  
+[2.052s] -- Configuring done (2.0s)
+[2.081s] -- Generating done (0.0s)
+[2.089s] -- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation
+[2.101s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation' returned '0': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation
+[2.101s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/wen/chall/install/mav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_msgs/lib/python3.12/site-packages:/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation -- -j4 -l4
+[2.158s] [  5%] [34m[1mCreating directories for 'libsocket'[0m
+[2.164s] [ 11%] [32mBuilding CXX object CMakeFiles/state_estimate_corruptor_node.dir/src/state_estimate_corruptor_node.cpp.o[0m
+[2.188s] [ 16%] [34m[1mPerforming download step (git clone) for 'libsocket'[0m
+[2.214s] Cloning into 'libsocket'...
+[3.339s] Already on 'master'
+[3.341s] Your branch is up to date with 'origin/master'.
+[3.488s] [ 22%] [34m[1mNo update step for 'libsocket'[0m
+[3.577s] [ 27%] [34m[1mNo patch step for 'libsocket'[0m
+[3.651s] [ 33%] [34m[1mPerforming configure step for 'libsocket'[0m
+[3.686s] [33mCMake Warning (dev) at CMakeLists.txt:1 (PROJECT):
+[3.686s]   cmake_minimum_required() should be called prior to this top-level project()
+[3.686s]   call.  Please see the cmake-commands(7) manual for usage documentation of
+[3.686s]   both commands.
+[3.686s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.686s] [0m
+[3.774s] -- The C compiler identification is GNU 13.3.0
+[3.857s] -- The CXX compiler identification is GNU 13.3.0
+[3.880s] -- Detecting C compiler ABI info
+[4.016s] -- Detecting C compiler ABI info - done
+[4.024s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.024s] -- Detecting C compile features
+[4.025s] -- Detecting C compile features - done
+[4.038s] -- Detecting CXX compiler ABI info
+[4.176s] -- Detecting CXX compiler ABI info - done
+[4.188s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.188s] -- Detecting CXX compile features
+[4.188s] -- Detecting CXX compile features - done
+[4.189s] [0mCMake Deprecation Warning at CMakeLists.txt:2 (CMAKE_MINIMUM_REQUIRED):
+[4.189s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[4.189s]   CMake.
+[4.189s] 
+[4.189s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[4.189s]   CMake that the project does not need compatibility with older versions.
+[4.189s] 
+[4.189s] [0m
+[4.191s] [0mCMake Deprecation Warning at C/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+[4.191s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[4.191s]   CMake.
+[4.191s] 
+[4.191s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[4.191s]   CMake that the project does not need compatibility with older versions.
+[4.191s] 
+[4.191s] [0m
+[4.192s] [0mCMake Deprecation Warning at headers/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+[4.192s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[4.192s]   CMake.
+[4.192s] 
+[4.192s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[4.192s]   CMake that the project does not need compatibility with older versions.
+[4.192s] 
+[4.192s] [0m
+[4.193s] [0mCMake Deprecation Warning at C++/CMakeLists.txt:1 (cmake_minimum_required):
+[4.193s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[4.193s]   CMake.
+[4.193s] 
+[4.193s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[4.193s]   CMake that the project does not need compatibility with older versions.
+[4.193s] 
+[4.193s] [0m
+[4.209s] -- Configuring done (0.5s)
+[4.220s] -- Generating done (0.0s)
+[4.221s] -- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-build
+[4.248s] [ 38%] [34m[1mPerforming build step for 'libsocket'[0m
+[4.325s] [  4%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/dgramclient.cpp.o[0m
+[4.327s] [  8%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/dgramoverstream.cpp.o[0m
+[4.327s] [ 12%] [32mBuilding C object C/CMakeFiles/socket_o.dir/inet/libinetsocket.c.o[0m
+[4.554s] [ 16%] [32mBuilding C object C/CMakeFiles/socket_o.dir/unix/libunixsocket.c.o[0m
+[4.606s] [ 20%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/framing.cpp.o[0m
+[4.722s] [ 20%] Built target socket_o
+[4.745s] [ 25%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetbase.cpp.o[0m
+[4.758s] [ 29%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetclientstream.cpp.o[0m
+[4.869s] [ 33%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetserverdgram.cpp.o[0m
+[4.940s] [ 37%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/select.cpp.o[0m
+[5.103s] [ 41%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/streamclient.cpp.o[0m
+[5.141s] [ 45%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixclientdgram.cpp.o[0m
+[5.452s] [ 50%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixdgram.cpp.o[0m
+[5.502s] [ 54%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixserverstream.cpp.o[0m
+[5.593s] [ 58%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/exception.cpp.o[0m
+[5.774s] [ 62%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetclientdgram.cpp.o[0m
+[6.073s] [ 66%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetdgram.cpp.o[0m
+[6.100s] [ 70%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/inetserverstream.cpp.o[0m
+[6.238s] [ 75%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/socket.cpp.o[0m
+[6.473s] [ 79%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixbase.cpp.o[0m
+[6.602s] [ 83%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixclientstream.cpp.o[0m
+[6.667s] [ 87%] [32mBuilding CXX object C++/CMakeFiles/socket++_o.dir/unixserverdgram.cpp.o[0m
+[6.706s] [ 91%] [32m[1mLinking C static library libsocket_int.a[0m
+[6.803s] [ 91%] Built target socket_int
+[6.863s] [ 95%] [32m[1mLinking C shared library libsocket.so[0m
+[6.912s] [ 95%] Built target socket++_o
+[6.925s] [ 95%] Built target socket
+[6.955s] [100%] [32m[1mLinking CXX shared library libsocket++.so[0m
+[7.039s] [100%] Built target socket++
+[7.081s] [ 44%] [34m[1mPerforming install step for 'libsocket'[0m
+[7.144s] [  8%] Built target socket_o
+[7.184s] [ 87%] Built target socket++_o
+[7.190s] [ 91%] Built target socket_int
+[7.195s] [ 95%] Built target socket
+[7.227s] [100%] Built target socket++
+[7.253s] [36mInstall the project...[0m
+[7.267s] -- Install configuration: "Release"
+[7.268s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/libsocket.so
+[7.269s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixdgram.hpp
+[7.269s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/exception.hpp
+[7.270s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetclientdgram.hpp
+[7.270s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/libinetsocket.h
+[7.270s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixserverstream.hpp
+[7.270s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/dgramclient.hpp
+[7.270s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/streamclient.hpp
+[7.271s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetserverstream.hpp
+[7.271s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixclientdgram.hpp
+[7.271s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/socket.hpp
+[7.271s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetbase.hpp
+[7.272s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetserverdgram.hpp
+[7.272s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixclientstream.hpp
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/libunixsocket.h
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/select.hpp
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetclientstream.hpp
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixbase.hpp
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/unixserverdgram.hpp
+[7.273s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/inetdgram.hpp
+[7.274s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/dgramoverstream.hpp
+[7.274s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/framing.hpp
+[7.274s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/include/libsocket/epoll.hpp
+[7.274s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/simulation/lib/libsocket++.so
+[7.303s] [ 50%] [34m[1mCompleted 'libsocket'[0m
+[7.346s] [ 50%] Built target libsocket
+[7.376s] [ 55%] [32mBuilding CXX object CMakeFiles/w_to_unity.dir/src/w_to_unity.cpp.o[0m
+[7.382s] [ 61%] [32mBuilding CXX object tcpimage/CMakeFiles/tcpstreamreader.dir/TCPStreamReader.cpp.o[0m
+[8.132s] [ 66%] [32m[1mLinking CXX static library libtcpstreamreader.a[0m
+[8.182s] [ 66%] Built target tcpstreamreader
+[8.208s] [ 72%] [32mBuilding CXX object tcpimage/CMakeFiles/tcpimage.dir/TCPImageServer.cpp.o[0m
+[8.822s] [ 77%] [32m[1mLinking CXX static library libtcpimage.a[0m
+[8.880s] [ 77%] Built target tcpimage
+[8.923s] [ 83%] [32mBuilding CXX object CMakeFiles/unity_ros.dir/src/unity_ros.cpp.o[0m

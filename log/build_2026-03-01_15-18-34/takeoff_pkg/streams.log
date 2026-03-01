@@ -1,0 +1,33 @@
+[0.010s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg
+[0.146s] -- The C compiler identification is GNU 13.3.0
+[0.257s] -- The CXX compiler identification is GNU 13.3.0
+[0.282s] -- Detecting C compiler ABI info
+[0.383s] -- Detecting C compiler ABI info - done
+[0.391s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.393s] -- Detecting C compile features
+[0.393s] -- Detecting C compile features - done
+[0.409s] -- Detecting CXX compiler ABI info
+[0.515s] -- Detecting CXX compiler ABI info - done
+[0.521s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.521s] -- Detecting CXX compile features
+[0.522s] -- Detecting CXX compile features - done
+[0.542s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.689s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.856s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.934s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.952s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.982s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.006s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.136s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.142s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.258s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.276s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.296s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.390s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.467s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.590s] -- Configuring done (1.6s)
+[1.598s] -- Generating done (0.0s)
+[1.601s] -- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg
+[1.611s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg -DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg
+[1.611s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg -- -j4 -l4
+[1.664s] [ 50%] [32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o[0m

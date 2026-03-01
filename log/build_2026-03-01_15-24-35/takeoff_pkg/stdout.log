@@ -1,0 +1,28 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable takeoff_node[0m
+[100%] Built target takeoff_node
+-- Install configuration: ""
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node
+-- Set non-toolchain portion of runtime path of "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node" to ""
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.dsv
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake
+-- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.xml

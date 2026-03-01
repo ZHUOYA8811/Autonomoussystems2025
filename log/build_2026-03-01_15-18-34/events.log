@@ -1,0 +1,262 @@
+[0.000000] (-) TimerEvent: {}
+[0.000558] (-) JobUnselected: {'identifier': 'controller_pkg'}
+[0.000663] (-) JobUnselected: {'identifier': 'mapping_pkg'}
+[0.000698] (-) JobUnselected: {'identifier': 'mav_msgs'}
+[0.000721] (-) JobUnselected: {'identifier': 'mav_planning_msgs'}
+[0.000742] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000764] (takeoff_pkg) JobQueued: {'identifier': 'takeoff_pkg', 'dependencies': OrderedDict()}
+[0.000789] (takeoff_pkg) JobStarted: {'identifier': 'takeoff_pkg'}
+[0.008914] (takeoff_pkg) JobProgress: {'identifier': 'takeoff_pkg', 'progress': 'cmake'}
+[0.009363] (takeoff_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/takeoff_pkg', '-DCMAKE_INSTALL_PREFIX=/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'FONTCONFIG_PATH': '/etc/fonts', 'GIO_MODULE_DIR': '/home/wen/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'OLDPWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/226/usr/lib/x86_64-linux-gnu/gtk-3.0', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/wen/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/226/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2486', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6da71f1493d87ef7fe2ecf8e69a44737', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/home/wen/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/wen/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2486,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2486', 'GTK_EXE_PREFIX': '/snap/code/226/usr', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/d6303b7e_6b10_4ac6_88f1_d5e0d9d6ff75', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/226/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/wen/snap/code/226/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.W5KXL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d8347291e0.sock', 'GNOME_TERMINAL_SERVICE': ':1.98', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/wen/snap/code/226/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6da71f1493d87ef7fe2ecf8e69a44737', 'XDG_DATA_DIRS': '/home/wen/snap/code/226/.local/share:/home/wen/snap/code/226:/snap/code/226/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099573] (-) TimerEvent: {}
+[0.147150] (takeoff_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199707] (-) TimerEvent: {}
+[0.257659] (takeoff_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.282772] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299859] (-) TimerEvent: {}
+[0.383737] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.391681] (takeoff_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.393697] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.394002] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.399970] (-) TimerEvent: {}
+[0.409835] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500100] (-) TimerEvent: {}
+[0.515689] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.521800] (takeoff_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.521984] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.522339] (takeoff_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.542609] (takeoff_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.600212] (-) TimerEvent: {}
+[0.690051] (takeoff_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.700390] (-) TimerEvent: {}
+[0.801734] (-) TimerEvent: {}
+[0.857011] (takeoff_pkg) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.902325] (-) TimerEvent: {}
+[0.934889] (takeoff_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.952805] (takeoff_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.982828] (takeoff_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.002425] (-) TimerEvent: {}
+[1.006746] (takeoff_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.102536] (-) TimerEvent: {}
+[1.137151] (takeoff_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.142800] (takeoff_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.202616] (-) TimerEvent: {}
+[1.258768] (takeoff_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.276933] (takeoff_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.296687] (takeoff_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.302759] (-) TimerEvent: {}
+[1.390372] (takeoff_pkg) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[1.402870] (-) TimerEvent: {}
+[1.467456] (takeoff_pkg) StdoutLine: {'line': b'-- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)\n'}
+[1.502983] (-) TimerEvent: {}
+[1.590158] (takeoff_pkg) StdoutLine: {'line': b'-- Configuring done (1.6s)\n'}
+[1.599138] (takeoff_pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.602016] (takeoff_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg\n'}
+[1.603099] (-) TimerEvent: {}
+[1.610712] (takeoff_pkg) CommandEnded: {'returncode': 0}
+[1.611716] (takeoff_pkg) JobProgress: {'identifier': 'takeoff_pkg', 'progress': 'build'}
+[1.611733] (takeoff_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', '--', '-j4', '-l4'], 'cwd': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'wen', 'LC_TIME': 'en_US.UTF-8', 'FONTCONFIG_PATH': '/etc/fonts', 'GIO_MODULE_DIR': '/home/wen/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/wen', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'OLDPWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/226/usr/lib/x86_64-linux-gnu/gtk-3.0', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/wen/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/226/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2486', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6da71f1493d87ef7fe2ecf8e69a44737', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/wen/ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'wen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'wen', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/home/wen/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/wen/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/wen-VMware-Virtual-Platform:@/tmp/.ICE-unix/2486,unix/wen-VMware-Virtual-Platform:/tmp/.ICE-unix/2486', 'GTK_EXE_PREFIX': '/snap/code/226/usr', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/d6303b7e_6b10_4ac6_88f1_d5e0d9d6ff75', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/226/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/wen/snap/code/226/.local/share', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.W5KXL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d8347291e0.sock', 'GNOME_TERMINAL_SERVICE': ':1.98', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/wen/snap/code/226/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=6da71f1493d87ef7fe2ecf8e69a44737', 'XDG_DATA_DIRS': '/home/wen/snap/code/226/.local/share:/home/wen/snap/code/226:/snap/code/226/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.665105] (takeoff_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o\x1b[0m\n'}
+[1.703217] (-) TimerEvent: {}
+[1.803511] (-) TimerEvent: {}
+[1.904169] (-) TimerEvent: {}
+[2.004727] (-) TimerEvent: {}
+[2.105080] (-) TimerEvent: {}
+[2.205776] (-) TimerEvent: {}
+[2.306586] (-) TimerEvent: {}
+[2.406881] (-) TimerEvent: {}
+[2.507133] (-) TimerEvent: {}
+[2.608386] (-) TimerEvent: {}
+[2.709026] (-) TimerEvent: {}
+[2.811066] (-) TimerEvent: {}
+[2.911325] (-) TimerEvent: {}
+[3.011630] (-) TimerEvent: {}
+[3.111908] (-) TimerEvent: {}
+[3.212300] (-) TimerEvent: {}
+[3.312571] (-) TimerEvent: {}
+[3.413148] (-) TimerEvent: {}
+[3.513677] (-) TimerEvent: {}
+[3.614309] (-) TimerEvent: {}
+[3.714905] (-) TimerEvent: {}
+[3.815281] (-) TimerEvent: {}
+[3.916228] (-) TimerEvent: {}
+[4.016710] (-) TimerEvent: {}
+[4.117181] (-) TimerEvent: {}
+[4.218147] (-) TimerEvent: {}
+[4.319684] (-) TimerEvent: {}
+[4.419995] (-) TimerEvent: {}
+[4.522815] (-) TimerEvent: {}
+[4.623843] (-) TimerEvent: {}
+[4.724132] (-) TimerEvent: {}
+[4.824452] (-) TimerEvent: {}
+[4.925001] (-) TimerEvent: {}
+[5.025940] (-) TimerEvent: {}
+[5.129076] (-) TimerEvent: {}
+[5.229847] (-) TimerEvent: {}
+[5.330545] (-) TimerEvent: {}
+[5.433317] (-) TimerEvent: {}
+[5.533583] (-) TimerEvent: {}
+[5.634006] (-) TimerEvent: {}
+[5.735968] (-) TimerEvent: {}
+[5.838892] (-) TimerEvent: {}
+[5.939278] (-) TimerEvent: {}
+[6.039663] (-) TimerEvent: {}
+[6.141235] (-) TimerEvent: {}
+[6.245607] (-) TimerEvent: {}
+[6.346456] (-) TimerEvent: {}
+[6.447279] (-) TimerEvent: {}
+[6.548627] (-) TimerEvent: {}
+[6.653427] (-) TimerEvent: {}
+[6.774720] (-) TimerEvent: {}
+[6.877185] (-) TimerEvent: {}
+[6.977771] (-) TimerEvent: {}
+[7.079634] (-) TimerEvent: {}
+[7.183337] (-) TimerEvent: {}
+[7.288618] (-) TimerEvent: {}
+[7.392237] (-) TimerEvent: {}
+[7.500986] (-) TimerEvent: {}
+[7.603348] (-) TimerEvent: {}
+[7.719887] (-) TimerEvent: {}
+[7.985110] (-) TimerEvent: {}
+[8.141046] (-) TimerEvent: {}
+[8.272257] (-) TimerEvent: {}
+[8.411443] (-) TimerEvent: {}
+[8.552213] (-) TimerEvent: {}
+[8.763491] (-) TimerEvent: {}
+[8.900950] (-) TimerEvent: {}
+[9.143135] (-) TimerEvent: {}
+[9.307337] (-) TimerEvent: {}
+[9.459296] (-) TimerEvent: {}
+[9.672216] (-) TimerEvent: {}
+[10.090160] (-) TimerEvent: {}
+[10.337146] (-) TimerEvent: {}
+[10.588102] (-) TimerEvent: {}
+[10.784475] (-) TimerEvent: {}
+[11.056358] (-) TimerEvent: {}
+[11.192672] (-) TimerEvent: {}
+[11.331506] (-) TimerEvent: {}
+[11.468130] (-) TimerEvent: {}
+[11.616434] (-) TimerEvent: {}
+[11.755984] (-) TimerEvent: {}
+[12.182037] (-) TimerEvent: {}
+[13.418887] (-) TimerEvent: {}
+[13.652384] (-) TimerEvent: {}
+[13.934213] (-) TimerEvent: {}
+[15.073407] (-) TimerEvent: {}
+[15.364470] (-) TimerEvent: {}
+[16.826416] (-) TimerEvent: {}
+[19.198978] (-) TimerEvent: {}
+[19.569876] (-) TimerEvent: {}
+[20.168373] (-) TimerEvent: {}
+[20.353136] (-) TimerEvent: {}
+[20.669013] (-) TimerEvent: {}
+[20.894603] (-) TimerEvent: {}
+[21.488918] (-) TimerEvent: {}
+[22.386319] (-) TimerEvent: {}
+[23.026171] (-) TimerEvent: {}
+[23.960330] (-) TimerEvent: {}
+[24.134972] (-) TimerEvent: {}
+[24.273003] (-) TimerEvent: {}
+[24.651439] (-) TimerEvent: {}
+[25.164816] (-) TimerEvent: {}
+[25.772596] (-) TimerEvent: {}
+[25.999735] (-) TimerEvent: {}
+[26.132928] (-) TimerEvent: {}
+[26.712829] (-) TimerEvent: {}
+[26.912582] (-) TimerEvent: {}
+[28.089201] (-) TimerEvent: {}
+[28.428651] (-) TimerEvent: {}
+[28.665933] (-) TimerEvent: {}
+[29.009902] (-) TimerEvent: {}
+[29.906636] (-) TimerEvent: {}
+[30.490070] (-) TimerEvent: {}
+[30.856072] (-) TimerEvent: {}
+[31.257616] (-) TimerEvent: {}
+[31.368604] (-) TimerEvent: {}
+[31.513976] (-) TimerEvent: {}
+[31.624156] (-) TimerEvent: {}
+[31.986884] (-) TimerEvent: {}
+[32.368104] (-) TimerEvent: {}
+[32.620427] (-) TimerEvent: {}
+[33.008906] (-) TimerEvent: {}
+[33.403576] (-) TimerEvent: {}
+[33.779353] (-) TimerEvent: {}
+[34.298677] (-) TimerEvent: {}
+[34.729792] (-) TimerEvent: {}
+[34.885453] (-) TimerEvent: {}
+[35.054915] (-) TimerEvent: {}
+[35.213499] (-) TimerEvent: {}
+[35.404758] (-) TimerEvent: {}
+[35.551443] (-) TimerEvent: {}
+[35.656354] (-) TimerEvent: {}
+[35.862250] (-) TimerEvent: {}
+[36.009915] (-) TimerEvent: {}
+[36.540481] (-) TimerEvent: {}
+[36.688526] (-) TimerEvent: {}
+[36.974875] (-) TimerEvent: {}
+[37.131419] (-) TimerEvent: {}
+[37.323341] (-) TimerEvent: {}
+[37.460527] (-) TimerEvent: {}
+[37.722681] (-) TimerEvent: {}
+[37.899950] (-) TimerEvent: {}
+[38.132896] (-) TimerEvent: {}
+[38.631874] (-) TimerEvent: {}
+[38.993677] (-) TimerEvent: {}
+[39.144184] (-) TimerEvent: {}
+[40.173279] (-) TimerEvent: {}
+[40.322427] (-) TimerEvent: {}
+[40.530606] (-) TimerEvent: {}
+[40.664595] (-) TimerEvent: {}
+[40.806742] (-) TimerEvent: {}
+[40.972111] (-) TimerEvent: {}
+[41.146533] (-) TimerEvent: {}
+[41.633746] (-) TimerEvent: {}
+[41.882007] (-) TimerEvent: {}
+[42.875988] (-) TimerEvent: {}
+[43.633014] (-) TimerEvent: {}
+[43.986977] (-) TimerEvent: {}
+[44.350845] (-) TimerEvent: {}
+[45.788374] (-) TimerEvent: {}
+[46.067633] (-) TimerEvent: {}
+[46.509503] (-) TimerEvent: {}
+[47.776407] (-) TimerEvent: {}
+[47.934132] (-) TimerEvent: {}
+[48.287585] (-) TimerEvent: {}
+[48.444506] (-) TimerEvent: {}
+[48.691391] (-) TimerEvent: {}
+[48.955576] (-) TimerEvent: {}
+[49.191879] (-) TimerEvent: {}
+[49.376404] (-) TimerEvent: {}
+[49.557280] (-) TimerEvent: {}
+[49.775215] (-) TimerEvent: {}
+[49.898795] (-) TimerEvent: {}
+[50.038261] (-) TimerEvent: {}
+[50.189933] (-) TimerEvent: {}
+[50.330384] (-) TimerEvent: {}
+[50.825564] (-) TimerEvent: {}
+[51.715149] (-) TimerEvent: {}
+[52.115054] (-) TimerEvent: {}
+[52.220526] (-) TimerEvent: {}
+[52.341953] (-) TimerEvent: {}
+[52.442875] (-) TimerEvent: {}
+[52.577601] (-) TimerEvent: {}
+[52.706028] (-) TimerEvent: {}
+[52.852516] (-) TimerEvent: {}
+[52.960508] (-) TimerEvent: {}
+[53.146823] (-) TimerEvent: {}
+[53.250240] (-) TimerEvent: {}
+[53.351305] (-) TimerEvent: {}
+[53.451829] (-) TimerEvent: {}
+[53.554000] (-) TimerEvent: {}
+[53.655454] (-) TimerEvent: {}
+[53.842354] (-) TimerEvent: {}
+[54.057468] (-) TimerEvent: {}
+[54.432624] (-) TimerEvent: {}
+[54.538964] (-) TimerEvent: {}
+[54.652543] (-) TimerEvent: {}
+[54.752809] (-) TimerEvent: {}
+[54.853137] (-) TimerEvent: {}
+[54.955361] (-) TimerEvent: {}
+[55.058718] (-) TimerEvent: {}
+[55.159017] (-) TimerEvent: {}
+[55.260274] (-) TimerEvent: {}

@@ -1,0 +1,13 @@
+{
+  "package_name": "mav_msgs",
+  "non_idl_tuples": [
+    "/home/wen/chall/src/mav_msgs:msg/Actuators.msg",
+    "/home/wen/chall/src/mav_msgs:msg/AttitudeThrust.msg",
+    "/home/wen/chall/src/mav_msgs:msg/FilteredSensorData.msg",
+    "/home/wen/chall/src/mav_msgs:msg/GpsWaypoint.msg",
+    "/home/wen/chall/src/mav_msgs:msg/RateThrust.msg",
+    "/home/wen/chall/src/mav_msgs:msg/RollPitchYawrateThrust.msg",
+    "/home/wen/chall/src/mav_msgs:msg/Status.msg",
+    "/home/wen/chall/src/mav_msgs:msg/TorqueThrust.msg"
+  ]
+}

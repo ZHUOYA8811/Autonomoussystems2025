@@ -1,0 +1,633 @@
+[0.010s] Invoking command in '/home/wen/chall/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/wen/chall/src/mav_planning_msgs -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/mav_planning_msgs
+[0.052s] -- The C compiler identification is GNU 13.3.0
+[0.093s] -- The CXX compiler identification is GNU 13.3.0
+[0.106s] -- Detecting C compiler ABI info
+[0.177s] -- Detecting C compiler ABI info - done
+[0.181s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.181s] -- Detecting C compile features
+[0.182s] -- Detecting C compile features - done
+[0.189s] -- Detecting CXX compiler ABI info
+[0.260s] -- Detecting CXX compiler ABI info - done
+[0.263s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.264s] -- Detecting CXX compile features
+[0.264s] -- Detecting CXX compile features - done
+[0.266s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.370s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.447s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.452s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.490s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.519s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.522s] -- Found builtin_interfaces: 2.0.3 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+[0.531s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.574s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.576s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.636s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.650s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.669s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.722s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.742s] -- Found mav_msgs: 3.3.3 (/home/wen/chall/install/mav_msgs/share/mav_msgs/cmake)
+[0.779s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.795s] -- Found trajectory_msgs: 5.3.6 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.332s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.749s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.390s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.393s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.492s] -- Found PythonExtra: /usr/bin/python3  
+[2.826s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.942s] -- Configuring done (2.9s)
+[3.014s] -- Generating done (0.0s)
+[3.031s] -- Build files have been written to: /home/wen/chall/build/mav_planning_msgs
+[3.041s] Invoked command in '/home/wen/chall/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/wen/chall/src/mav_planning_msgs -DCMAKE_INSTALL_PREFIX=/home/wen/chall/install/mav_planning_msgs
+[3.041s] Invoking command in '/home/wen/chall/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/wen/chall/build/mav_planning_msgs -- -j4 -l4
+[3.143s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.172s] [  1%] Built target ament_cmake_python_copy_mav_planning_msgs
+[3.479s] running egg_info
+[3.480s] creating mav_planning_msgs.egg-info
+[3.505s] writing mav_planning_msgs.egg-info/PKG-INFO
+[3.505s] writing dependency_links to mav_planning_msgs.egg-info/dependency_links.txt
+[3.505s] writing top-level names to mav_planning_msgs.egg-info/top_level.txt
+[3.505s] writing manifest file 'mav_planning_msgs.egg-info/SOURCES.txt'
+[3.558s] reading manifest file 'mav_planning_msgs.egg-info/SOURCES.txt'
+[3.558s] writing manifest file 'mav_planning_msgs.egg-info/SOURCES.txt'
+[3.587s] [  1%] Built target ament_cmake_python_build_mav_planning_msgs_egg
+[3.869s] [  1%] Built target mav_planning_msgs__rosidl_generator_type_description
+[3.886s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.904s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.246s] [  2%] Built target mav_planning_msgs__cpp
+[5.278s] [  2%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point2_d__description.c.o[0m
+[5.283s] [  3%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point2_d__functions.c.o[0m
+[5.284s] [  3%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point_cloud_with_pose__description.c.o[0m
+[5.286s] [  4%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point2_d__type_support.c.o[0m
+[5.337s] [  5%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point_cloud_with_pose__functions.c.o[0m
+[5.359s] [  5%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon2_d__description.c.o[0m
+[5.359s] [  6%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.c.o[0m
+[5.367s] [  7%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon2_d__functions.c.o[0m
+[5.419s] [  8%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon2_d__type_support.c.o[0m
+[5.428s] [  9%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes__description.c.o[0m
+[5.453s] [  9%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes__functions.c.o[0m
+[5.477s] [ 10%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.c.o[0m
+[5.478s] [ 11%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__description.c.o[0m
+[5.518s] [ 11%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__functions.c.o[0m
+[5.544s] [ 12%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.c.o[0m
+[5.554s] [ 13%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment__description.c.o[0m
+[5.555s] [ 13%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment__functions.c.o[0m
+[5.598s] [ 14%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment__type_support.c.o[0m
+[5.619s] [ 15%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment4_d__description.c.o[0m
+[5.630s] [ 15%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment4_d__functions.c.o[0m
+[5.651s] [ 16%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.c.o[0m
+[5.653s] [ 17%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory__description.c.o[0m
+[5.694s] [ 18%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory__functions.c.o[0m
+[5.700s] [ 18%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.c.o[0m
+[5.701s] [ 19%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__description.c.o[0m
+[5.725s] [ 20%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__functions.c.o[0m
+[5.754s] [ 20%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.c.o[0m
+[5.757s] [ 21%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/planner_service__description.c.o[0m
+[5.757s] [ 22%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/planner_service__functions.c.o[0m
+[5.803s] [ 22%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/planner_service__type_support.c.o[0m
+[5.803s] [ 23%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/polygon_service__description.c.o[0m
+[5.883s] [ 24%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/polygon_service__functions.c.o[0m
+[5.888s] [ 24%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/change_name_service__description.c.o[0m
+[5.888s] [ 25%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/change_name_service__functions.c.o[0m
+[5.888s] [ 26%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/polygon_service__type_support.c.o[0m
+[5.961s] [ 27%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_planning_msgs/srv/detail/change_name_service__type_support.c.o[0m
+[6.001s] [ 27%] [32m[1mLinking C shared library libmav_planning_msgs__rosidl_generator_c.so[0m
+[6.040s] [ 27%] Built target mav_planning_msgs__rosidl_generator_c
+[6.056s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[6.060s] [ 28%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.065s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[6.065s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.812s] [ 30%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/point2_d__type_support.cpp.o[0m
+[6.883s] [ 31%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/point_cloud_with_pose__type_support.cpp.o[0m
+[6.960s] [ 32%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polygon2_d__type_support.cpp.o[0m
+[7.028s] [ 32%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polygon_with_holes__type_support.cpp.o[0m
+[7.081s] [ 33%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/point2_d__type_support.cpp.o[0m
+[7.091s] [ 34%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polygon_with_holes_stamped__type_support.cpp.o[0m
+[7.091s] [ 34%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/point2_d__type_support.c.o[0m
+[7.156s] [ 35%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polynomial_segment__type_support.cpp.o[0m
+[7.165s] [ 36%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.c.o[0m
+[7.222s] [ 37%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polynomial_segment4_d__type_support.cpp.o[0m
+[7.242s] [ 38%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polygon2_d__type_support.c.o[0m
+[7.297s] [ 38%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polynomial_trajectory__type_support.cpp.o[0m
+[7.327s] [ 38%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.c.o[0m
+[7.374s] [ 39%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/msg/polynomial_trajectory4_d__type_support.cpp.o[0m
+[7.383s] [ 40%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.c.o[0m
+[7.457s] [ 41%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/srv/planner_service__type_support.cpp.o[0m
+[7.463s] [ 42%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polynomial_segment__type_support.c.o[0m
+[7.468s] [ 43%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/point_cloud_with_pose__type_support.cpp.o[0m
+[7.497s] [ 44%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/point2_d__type_support_c.cpp.o[0m
+[7.530s] [ 44%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/srv/polygon_service__type_support.cpp.o[0m
+[7.550s] [ 44%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.c.o[0m
+[7.595s] [ 45%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_planning_msgs/srv/change_name_service__type_support.cpp.o[0m
+[7.619s] [ 46%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.c.o[0m
+[7.664s] [ 47%] [32m[1mLinking CXX shared library libmav_planning_msgs__rosidl_typesupport_c.so[0m
+[7.681s] [ 48%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.c.o[0m
+[7.735s] [ 48%] Built target mav_planning_msgs__rosidl_typesupport_c
+[7.750s] [ 49%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/srv/detail/planner_service__type_support.c.o[0m
+[7.752s] [ 50%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.792s] [ 51%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polygon2_d__type_support.cpp.o[0m
+[7.819s] [ 51%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/srv/detail/polygon_service__type_support.c.o[0m
+[7.901s] [ 52%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_planning_msgs/srv/detail/change_name_service__type_support.c.o[0m
+[7.979s] [ 53%] [32m[1mLinking C shared library libmav_planning_msgs__rosidl_typesupport_introspection_c.so[0m
+[8.025s] [ 54%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support_c.cpp.o[0m
+[8.041s] [ 54%] Built target mav_planning_msgs__rosidl_typesupport_introspection_c
+[8.065s] [ 54%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[8.187s] [ 54%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polygon_with_holes__type_support.cpp.o[0m
+[8.445s] [ 55%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polygon_with_holes_stamped__type_support.cpp.o[0m
+[8.517s] [ 55%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polygon2_d__type_support_c.cpp.o[0m
+[8.875s] [ 56%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polynomial_segment__type_support.cpp.o[0m
+[9.205s] [ 57%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polygon_with_holes__type_support_c.cpp.o[0m
+[9.272s] [ 58%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/point2_d__type_support.cpp.o[0m
+[9.278s] [ 58%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polynomial_segment4_d__type_support.cpp.o[0m
+[9.302s] [ 59%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/point2_d__type_support.cpp.o[0m
+[9.688s] [ 60%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.cpp.o[0m
+[9.764s] [ 61%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polynomial_trajectory__type_support.cpp.o[0m
+[9.768s] [ 61%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/point_cloud_with_pose__type_support.cpp.o[0m
+[9.857s] [ 62%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support_c.cpp.o[0m
+[9.985s] [ 62%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polygon2_d__type_support.cpp.o[0m
+[10.293s] [ 63%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/msg/polynomial_trajectory4_d__type_support.cpp.o[0m
+[10.311s] [ 64%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.cpp.o[0m
+[10.533s] [ 65%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polygon2_d__type_support.cpp.o[0m
+[10.554s] [ 65%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polynomial_segment__type_support_c.cpp.o[0m
+[10.748s] [ 65%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/srv/planner_service__type_support.cpp.o[0m
+[10.930s] [ 66%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.cpp.o[0m
+[10.961s] [ 67%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support_c.cpp.o[0m
+[11.067s] [ 68%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polygon_with_holes__type_support.cpp.o[0m
+[11.274s] [ 69%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/srv/polygon_service__type_support.cpp.o[0m
+[11.365s] [ 69%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polynomial_segment__type_support.cpp.o[0m
+[11.519s] [ 69%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polygon_with_holes_stamped__type_support.cpp.o[0m
+[11.546s] [ 70%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support_c.cpp.o[0m
+[11.761s] [ 71%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.cpp.o[0m
+[11.783s] [ 72%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_planning_msgs/srv/change_name_service__type_support.cpp.o[0m
+[12.041s] [ 73%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polynomial_segment__type_support.cpp.o[0m
+[12.162s] [ 73%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support_c.cpp.o[0m
+[12.257s] [ 74%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.cpp.o[0m
+[12.282s] [ 74%] [32m[1mLinking CXX shared library libmav_planning_msgs__rosidl_typesupport_cpp.so[0m
+[12.443s] [ 74%] Built target mav_planning_msgs__rosidl_typesupport_cpp
+[12.461s] [ 75%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.cpp.o[0m
+[12.786s] [ 75%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/srv/detail/planner_service__type_support.cpp.o[0m
+[12.786s] [ 76%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polynomial_segment4_d__type_support.cpp.o[0m
+[12.847s] [ 77%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/srv/detail/polygon_service__type_support.cpp.o[0m
+[12.876s] [ 78%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/srv/detail/planner_service__type_support_c.cpp.o[0m
+[13.304s] [ 79%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/srv/detail/polygon_service__type_support_c.cpp.o[0m
+[13.447s] [ 79%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polynomial_trajectory__type_support.cpp.o[0m
+[13.547s] [ 80%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_planning_msgs/srv/detail/change_name_service__type_support.cpp.o[0m
+[13.748s] [ 80%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_planning_msgs/srv/detail/change_name_service__type_support_c.cpp.o[0m
+[13.818s] [ 80%] [32m[1mLinking CXX shared library libmav_planning_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[13.862s] [ 81%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/msg/detail/dds_fastrtps/polynomial_trajectory4_d__type_support.cpp.o[0m
+[14.005s] [ 81%] Built target mav_planning_msgs__rosidl_typesupport_introspection_cpp
+[14.022s] [ 82%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/srv/detail/dds_fastrtps/planner_service__type_support.cpp.o[0m
+[14.110s] [ 83%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/srv/detail/dds_fastrtps/polygon_service__type_support.cpp.o[0m
+[14.182s] [ 84%] [32m[1mLinking CXX shared library libmav_planning_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[14.310s] [ 84%] Built target mav_planning_msgs__rosidl_typesupport_fastrtps_c
+[14.325s] [ 84%] [32mBuilding CXX object CMakeFiles/mav_planning_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_planning_msgs/srv/detail/dds_fastrtps/change_name_service__type_support.cpp.o[0m
+[14.704s] [ 85%] [32m[1mLinking CXX shared library libmav_planning_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[14.776s] [ 85%] Built target mav_planning_msgs__rosidl_typesupport_fastrtps_cpp
+[14.794s] [ 85%] Built target mav_planning_msgs
+[14.812s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[15.790s] [ 86%] Built target mav_planning_msgs__py
+[15.810s] [ 87%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_point_cloud_with_pose_s.c.o[0m
+[15.813s] [ 87%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polygon2_d_s.c.o[0m
+[15.814s] [ 88%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polygon_with_holes_s.c.o[0m
+[15.815s] [ 89%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_point2_d_s.c.o[0m
+[15.906s] [ 90%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polygon_with_holes_stamped_s.c.o[0m
+[15.911s] [ 90%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polynomial_segment_s.c.o[0m
+[15.943s] [ 91%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polynomial_segment4_d_s.c.o[0m
+[15.948s] [ 92%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polynomial_trajectory_s.c.o[0m
+[16.018s] [ 93%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/msg/_polynomial_trajectory4_d_s.c.o[0m
+[16.046s] [ 93%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/srv/_planner_service_s.c.o[0m
+[16.084s] [ 94%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/srv/_polygon_service_s.c.o[0m
+[16.124s] [ 95%] [32mBuilding C object CMakeFiles/mav_planning_msgs__rosidl_generator_py.dir/rosidl_generator_py/mav_planning_msgs/srv/_change_name_service_s.c.o[0m
+[16.231s] [ 95%] [32m[1mLinking C shared library libmav_planning_msgs__rosidl_generator_py.so[0m
+[16.285s] [ 95%] Built target mav_planning_msgs__rosidl_generator_py
+[16.303s] [ 97%] [32mBuilding C object CMakeFiles/mav_planning_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[16.303s] [ 97%] [32mBuilding C object CMakeFiles/mav_planning_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[16.306s] [ 97%] [32mBuilding C object CMakeFiles/mav_planning_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[16.404s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_c.so[0m
+[16.407s] [ 99%] [32m[1mLinking C shared module rosidl_generator_py/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[16.411s] [100%] [32m[1mLinking C shared module rosidl_generator_py/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[16.430s] [100%] Built target mav_planning_msgs_s__rosidl_typesupport_c
+[16.435s] [100%] Built target mav_planning_msgs_s__rosidl_typesupport_introspection_c
+[16.437s] [100%] Built target mav_planning_msgs_s__rosidl_typesupport_fastrtps_c
+[16.446s] Invoked command in '/home/wen/chall/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/wen/chall/build/mav_planning_msgs -- -j4 -l4
+[16.448s] Invoking command in '/home/wen/chall/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/wen/chall/build/mav_planning_msgs
+[16.455s] -- Install configuration: ""
+[16.455s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/ament_index/resource_index/rosidl_interfaces/mav_planning_msgs
+[16.455s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Point2D.json
+[16.456s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PointCloudWithPose.json
+[16.456s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Polygon2D.json
+[16.456s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHoles.json
+[16.457s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHolesStamped.json
+[16.457s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment.json
+[16.457s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment4D.json
+[16.458s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory.json
+[16.458s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory4D.json
+[16.459s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PlannerService.json
+[16.459s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PolygonService.json
+[16.459s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/ChangeNameService.json
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/point2_d.h
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon2_d.h
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.460s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__description.c
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__functions.h
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__struct.h
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__struct.h
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__functions.c
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.c
+[16.461s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__functions.c
+[16.462s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__description.c
+[16.462s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__type_support.h
+[16.462s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__type_support.h
+[16.462s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__functions.h
+[16.462s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__type_support.c
+[16.464s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.h
+[16.464s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__type_support.c
+[16.464s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__functions.c
+[16.464s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__functions.c
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.h
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.h
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__functions.h
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__description.c
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__functions.c
+[16.465s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__description.c
+[16.466s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__struct.h
+[16.466s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__type_support.c
+[16.466s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.c
+[16.466s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__description.c
+[16.467s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__struct.h
+[16.467s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__functions.c
+[16.467s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.c
+[16.467s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__type_support.h
+[16.467s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.c
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.h
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__functions.h
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__functions.h
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.c
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__description.c
+[16.468s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__struct.h
+[16.470s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.c
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__functions.h
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__functions.c
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__functions.c
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__functions.h
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__description.c
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__struct.h
+[16.471s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__description.c
+[16.472s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__struct.h
+[16.472s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__struct.h
+[16.472s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__functions.h
+[16.472s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.h
+[16.473s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__functions.h
+[16.473s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.h
+[16.473s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__description.c
+[16.473s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__struct.h
+[16.474s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__functions.c
+[16.474s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon_with_holes.h
+[16.474s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/rosidl_generator_c__visibility_control.h
+[16.474s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_trajectory.h
+[16.474s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon_with_holes_stamped.h
+[16.475s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_trajectory4_d.h
+[16.475s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/point_cloud_with_pose.h
+[16.475s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_segment4_d.h
+[16.475s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_segment.h
+[16.475s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.476s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.476s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__struct.h
+[16.476s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__description.c
+[16.476s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__functions.c
+[16.476s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__functions.c
+[16.477s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__functions.h
+[16.477s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__type_support.h
+[16.477s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__description.c
+[16.477s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__functions.c
+[16.478s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__type_support.c
+[16.478s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__description.c
+[16.479s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__functions.h
+[16.479s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__functions.h
+[16.480s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__struct.h
+[16.480s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__struct.h
+[16.480s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__type_support.c
+[16.480s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__type_support.c
+[16.481s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__type_support.h
+[16.481s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__type_support.h
+[16.481s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/planner_service.h
+[16.481s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/change_name_service.h
+[16.481s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/polygon_service.h
+[16.482s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/library_path.sh
+[16.482s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/library_path.dsv
+[16.482s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_generator_c.so
+[16.483s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_generator_c.so" to ""
+[16.483s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.483s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.483s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.483s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__rosidl_typesupport_fastrtps_c.h
+[16.483s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__rosidl_typesupport_fastrtps_c.h
+[16.484s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__rosidl_typesupport_fastrtps_c.h
+[16.484s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__rosidl_typesupport_fastrtps_c.h
+[16.485s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__rosidl_typesupport_fastrtps_c.h
+[16.485s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__rosidl_typesupport_fastrtps_c.h
+[16.485s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__rosidl_typesupport_fastrtps_c.h
+[16.486s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__rosidl_typesupport_fastrtps_c.h
+[16.486s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__rosidl_typesupport_fastrtps_c.h
+[16.486s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[16.486s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.486s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.486s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__rosidl_typesupport_fastrtps_c.h
+[16.486s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__rosidl_typesupport_fastrtps_c.h
+[16.487s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__rosidl_typesupport_fastrtps_c.h
+[16.487s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_fastrtps_c.so
+[16.487s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[16.487s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.487s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.487s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.487s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.c
+[16.489s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__rosidl_typesupport_introspection_c.h
+[16.489s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__rosidl_typesupport_introspection_c.h
+[16.489s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__type_support.c
+[16.490s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__type_support.c
+[16.490s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__type_support.c
+[16.490s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.c
+[16.490s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.c
+[16.490s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.c
+[16.491s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__rosidl_typesupport_introspection_c.h
+[16.491s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.c
+[16.491s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__rosidl_typesupport_introspection_c.h
+[16.491s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.c
+[16.491s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__rosidl_typesupport_introspection_c.h
+[16.492s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__rosidl_typesupport_introspection_c.h
+[16.492s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__rosidl_typesupport_introspection_c.h
+[16.492s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__rosidl_typesupport_introspection_c.h
+[16.492s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__rosidl_typesupport_introspection_c.h
+[16.493s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[16.493s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.493s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.493s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__rosidl_typesupport_introspection_c.h
+[16.493s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__type_support.c
+[16.493s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__rosidl_typesupport_introspection_c.h
+[16.494s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__rosidl_typesupport_introspection_c.h
+[16.494s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__type_support.c
+[16.494s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__type_support.c
+[16.495s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_introspection_c.so
+[16.495s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_introspection_c.so" to ""
+[16.495s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_c.so
+[16.495s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_c.so" to ""
+[16.495s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.495s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.496s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon2_d.hpp
+[16.496s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon_with_holes_stamped.hpp
+[16.496s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.496s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__type_support.hpp
+[16.496s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__builder.hpp
+[16.496s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__builder.hpp
+[16.497s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.hpp
+[16.497s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__builder.hpp
+[16.497s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__struct.hpp
+[16.497s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__traits.hpp
+[16.498s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__type_support.hpp
+[16.498s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__struct.hpp
+[16.498s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__traits.hpp
+[16.498s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__struct.hpp
+[16.498s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__struct.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__builder.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__struct.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__struct.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__struct.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__struct.hpp
+[16.499s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__traits.hpp
+[16.500s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.hpp
+[16.500s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.hpp
+[16.500s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__builder.hpp
+[16.500s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__struct.hpp
+[16.501s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__traits.hpp
+[16.501s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__builder.hpp
+[16.501s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__traits.hpp
+[16.501s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__traits.hpp
+[16.502s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__builder.hpp
+[16.502s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__traits.hpp
+[16.502s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__builder.hpp
+[16.502s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__builder.hpp
+[16.502s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__traits.hpp
+[16.503s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__type_support.hpp
+[16.503s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.hpp
+[16.503s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__traits.hpp
+[16.503s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/point2_d.hpp
+[16.503s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_segment.hpp
+[16.504s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polygon_with_holes.hpp
+[16.504s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_segment4_d.hpp
+[16.504s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_trajectory.hpp
+[16.504s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/polynomial_trajectory4_d.hpp
+[16.505s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/point_cloud_with_pose.hpp
+[16.505s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[16.506s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.506s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.506s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__builder.hpp
+[16.506s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__traits.hpp
+[16.506s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__type_support.hpp
+[16.506s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__type_support.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__struct.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__builder.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__type_support.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__builder.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__traits.hpp
+[16.507s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__traits.hpp
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__struct.hpp
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__struct.hpp
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/polygon_service.hpp
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/planner_service.hpp
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/change_name_service.hpp
+[16.508s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.508s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.508s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[16.509s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__rosidl_typesupport_fastrtps_cpp.hpp
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__rosidl_typesupport_fastrtps_cpp.hpp
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[16.509s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[16.510s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[16.510s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__rosidl_typesupport_fastrtps_cpp.hpp
+[16.510s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/dds_fastrtps
+[16.510s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__rosidl_typesupport_fastrtps_cpp.hpp
+[16.510s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.510s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.511s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__rosidl_typesupport_fastrtps_cpp.hpp
+[16.511s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__rosidl_typesupport_fastrtps_cpp.hpp
+[16.511s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__rosidl_typesupport_fastrtps_cpp.hpp
+[16.511s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/dds_fastrtps
+[16.511s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_fastrtps_cpp.so
+[16.512s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[16.512s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.512s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg
+[16.512s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail
+[16.512s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__rosidl_typesupport_introspection_cpp.hpp
+[16.512s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__rosidl_typesupport_introspection_cpp.hpp
+[16.512s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__type_support.cpp
+[16.513s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__rosidl_typesupport_introspection_cpp.hpp
+[16.513s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[16.513s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__rosidl_typesupport_introspection_cpp.hpp
+[16.513s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__type_support.cpp
+[16.514s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon2_d__type_support.cpp
+[16.514s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__rosidl_typesupport_introspection_cpp.hpp
+[16.514s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes__rosidl_typesupport_introspection_cpp.hpp
+[16.515s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__type_support.cpp
+[16.515s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__rosidl_typesupport_introspection_cpp.hpp
+[16.515s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment4_d__rosidl_typesupport_introspection_cpp.hpp
+[16.515s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory4_d__type_support.cpp
+[16.515s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_segment__type_support.cpp
+[16.516s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point2_d__type_support.cpp
+[16.517s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/polynomial_trajectory__type_support.cpp
+[16.517s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/msg/detail/point_cloud_with_pose__type_support.cpp
+[16.517s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv
+[16.517s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail
+[16.517s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__type_support.cpp
+[16.517s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/planner_service__rosidl_typesupport_introspection_cpp.hpp
+[16.518s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__type_support.cpp
+[16.518s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/change_name_service__rosidl_typesupport_introspection_cpp.hpp
+[16.518s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__type_support.cpp
+[16.518s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/srv/detail/polygon_service__rosidl_typesupport_introspection_cpp.hpp
+[16.518s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_introspection_cpp.so
+[16.519s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[16.519s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_cpp.so
+[16.520s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_typesupport_cpp.so" to ""
+[16.520s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/pythonpath.sh
+[16.520s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/pythonpath.dsv
+[16.520s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs-3.3.3-py3.12.egg-info
+[16.520s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs-3.3.3-py3.12.egg-info/PKG-INFO
+[16.520s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs-3.3.3-py3.12.egg-info/SOURCES.txt
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs-3.3.3-py3.12.egg-info/dependency_links.txt
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs-3.3.3-py3.12.egg-info/top_level.txt
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_c.c
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg
+[16.521s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon2_d.py
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory.py
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point_cloud_with_pose.py
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes_stamped_s.c
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment_s.c
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes.py
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment4_d_s.c
+[16.522s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon2_d_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes_stamped.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point2_d_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory4_d_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment4_d.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/__init__.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory4_d.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point_cloud_with_pose_s.c
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point2_d.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_fastrtps_c.so
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_introspection_c.so
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/__init__.py
+[16.524s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_planner_service.py
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_polygon_service_s.c
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_change_name_service.py
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_planner_service_s.c
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/__init__.py
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_polygon_service.py
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_change_name_service_s.c
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[16.525s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_c.so
+[16.564s] Listing '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/__init__.py'...
+[16.564s] Listing '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/__init__.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point2_d.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_point_cloud_with_pose.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon2_d.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polygon_with_holes_stamped.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_segment4_d.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory.py'...
+[16.564s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/msg/_polynomial_trajectory4_d.py'...
+[16.565s] Listing '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv'...
+[16.565s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/__init__.py'...
+[16.565s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_change_name_service.py'...
+[16.565s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_planner_service.py'...
+[16.565s] Compiling '/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/srv/_polygon_service.py'...
+[16.568s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_fastrtps_c.so
+[16.569s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[16.571s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_introspection_c.so
+[16.571s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[16.571s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_c.so
+[16.571s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages/mav_planning_msgs/mav_planning_msgs_s__rosidl_typesupport_c.so" to ""
+[16.571s] -- Installing: /home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_generator_py.so
+[16.572s] -- Set non-toolchain portion of runtime path of "/home/wen/chall/install/mav_planning_msgs/lib/libmav_planning_msgs__rosidl_generator_py.so" to ""
+[16.572s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Point2D.idl
+[16.572s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PointCloudWithPose.idl
+[16.572s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Polygon2D.idl
+[16.573s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHoles.idl
+[16.573s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHolesStamped.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment4D.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory4D.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PlannerService.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PolygonService.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/ChangeNameService.idl
+[16.574s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Point2D.msg
+[16.575s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PointCloudWithPose.msg
+[16.575s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/Polygon2D.msg
+[16.576s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHoles.msg
+[16.576s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHolesStamped.msg
+[16.576s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment.msg
+[16.577s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment4D.msg
+[16.578s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory.msg
+[16.578s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory4D.msg
+[16.579s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PlannerService.srv
+[16.579s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/PolygonService.srv
+[16.580s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/srv/ChangeNameService.srv
+[16.580s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs
+[16.580s] -- Up-to-date: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs
+[16.580s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/conversions.hpp
+[16.580s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/conversions_deprecated.hpp
+[16.581s] -- Installing: /home/wen/chall/install/mav_planning_msgs/include/mav_planning_msgs/mav_planning_msgs/eigen_planning_msgs.hpp
+[16.581s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/ament_index/resource_index/package_run_dependencies/mav_planning_msgs
+[16.581s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/ament_index/resource_index/parent_prefix_path/mav_planning_msgs
+[16.582s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/ament_prefix_path.sh
+[16.582s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/ament_prefix_path.dsv
+[16.583s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/path.sh
+[16.583s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/environment/path.dsv
+[16.585s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/local_setup.bash
+[16.585s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/local_setup.sh
+[16.585s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/local_setup.zsh
+[16.586s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/local_setup.dsv
+[16.586s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/package.dsv
+[16.586s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/ament_index/resource_index/packages/mav_planning_msgs
+[16.586s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_generator_cExport.cmake
+[16.587s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_generator_cExport-noconfig.cmake
+[16.587s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[16.587s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[16.587s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_introspection_cExport.cmake
+[16.588s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[16.588s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_cExport.cmake
+[16.588s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[16.589s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_generator_cppExport.cmake
+[16.589s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[16.589s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[16.589s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[16.590s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[16.591s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_cppExport.cmake
+[16.591s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[16.591s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_generator_pyExport.cmake
+[16.591s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/export_mav_planning_msgs__rosidl_generator_pyExport-noconfig.cmake
+[16.592s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/rosidl_cmake-extras.cmake
+[16.592s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.593s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.593s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[16.593s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[16.593s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[16.594s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[16.594s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig.cmake
+[16.594s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig-version.cmake
+[16.594s] -- Installing: /home/wen/chall/install/mav_planning_msgs/share/mav_planning_msgs/package.xml
+[16.596s] Invoked command in '/home/wen/chall/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/wen/chall/install/mav_msgs:/home/wen/chall/install/takeoff_pkg:/home/wen/chall/install/simulation:/home/wen/chall/install/mav_planning_msgs:/home/wen/chall/install/controller_pkg:/home/wen/chall/install/mapping_pkg:/home/wen/ws/install/trajectory_planner_pkg:/home/wen/ws/install/state_estimator_pkg:/home/wen/ws/install/simulation:/home/wen/ws/install/mission_planner_pkg:/home/wen/ws/install/mav_planning_msgs:/home/wen/ws/install/controller_pkg:/home/wen/ws/install/mav_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/wen/chall/install/mav_msgs/lib:/home/wen/chall/install/simulation/lib:/home/wen/chall/install/mav_planning_msgs/lib:/home/wen/chall/install/controller_pkg/lib:/home/wen/ws/install/simulation/lib:/home/wen/ws/install/mav_planning_msgs/lib:/home/wen/ws/install/controller_pkg/lib:/home/wen/ws/install/mav_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/wen/chall/install/mav_msgs/lib/python3.12/site-packages:/home/wen/chall/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_planning_msgs/lib/python3.12/site-packages:/home/wen/ws/install/mav_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/wen/chall/build/mav_planning_msgs

@@ -1,0 +1,143 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3bbf19caa32e90bc0a81.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						5,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "tcpimage",
+					"jsonFile" : "directory-tcpimage-0c84051489a2f33699e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tcpimage",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "simulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "libsocket::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-libsocket-23b21b3151409394e9a4.json",
+					"name" : "libsocket",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulation_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulation_uninstall-519aedf3ea7dc44fa5cb.json",
+					"name" : "simulation_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "state_estimate_corruptor_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-state_estimate_corruptor_node-1ffde55f86f36f049c20.json",
+					"name" : "state_estimate_corruptor_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tcpimage::@4d86012fa59e23668e03",
+					"jsonFile" : "target-tcpimage-c110b1592ee8ddd7453f.json",
+					"name" : "tcpimage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tcpstreamreader::@4d86012fa59e23668e03",
+					"jsonFile" : "target-tcpstreamreader-9a5831cf2068a43e3283.json",
+					"name" : "tcpstreamreader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a21e912ba67f15dae051.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unity_ros::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unity_ros-4eac27a926535d3db79c.json",
+					"name" : "unity_ros",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "w_to_unity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-w_to_unity-eb5093a7638d972876a6.json",
+					"name" : "w_to_unity",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation",
+		"source" : "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/src/simulation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

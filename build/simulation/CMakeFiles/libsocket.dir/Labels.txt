@@ -1,0 +1,13 @@
+# Target labels
+ libsocket
+# Source files and their labels
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/CMakeFiles/libsocket
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/CMakeFiles/libsocket.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/CMakeFiles/libsocket-complete.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-build.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-configure.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-download.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-install.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-mkdir.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-patch.rule
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-update.rule

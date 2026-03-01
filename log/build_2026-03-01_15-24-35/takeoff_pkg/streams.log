@@ -1,0 +1,32 @@
+[0.017s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg -- -j4 -l4
+[0.164s] [ 50%] [32mBuilding CXX object CMakeFiles/takeoff_node.dir/src/takeoff_node.cpp.o[0m
+[6.894s] [100%] [32m[1mLinking CXX executable takeoff_node[0m
+[7.193s] [100%] Built target takeoff_node
+[7.292s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg -- -j4 -l4
+[7.367s] Invoking command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg
+[7.377s] -- Install configuration: ""
+[7.377s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node
+[7.381s] -- Set non-toolchain portion of runtime path of "/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/lib/takeoff_pkg/takeoff_node" to ""
+[7.381s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch
+[7.382s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/launch/takeoff.launch.py
+[7.382s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config
+[7.382s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/config/takeoff_params.yaml
+[7.383s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include
+[7.383s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg
+[7.383s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/include/takeoff_pkg/takeoff_node.hpp
+[7.383s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/package_run_dependencies/takeoff_pkg
+[7.384s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/parent_prefix_path/takeoff_pkg
+[7.384s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.sh
+[7.385s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/ament_prefix_path.dsv
+[7.385s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.sh
+[7.386s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/environment/path.dsv
+[7.386s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.bash
+[7.387s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.sh
+[7.387s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.zsh
+[7.388s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/local_setup.dsv
+[7.389s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.dsv
+[7.389s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/ament_index/resource_index/packages/takeoff_pkg
+[7.390s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig.cmake
+[7.390s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/cmake/takeoff_pkgConfig-version.cmake
+[7.391s] -- Installing: /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/install/takeoff_pkg/share/takeoff_pkg/package.xml
+[7.396s] Invoked command in '/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg

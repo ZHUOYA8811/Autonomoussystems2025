@@ -1,0 +1,10 @@
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/uninstall.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/takeoff_pkg_uninstall.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/takeoff_node.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/test.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/edit_cache.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/rebuild_cache.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/list_install_components.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/install.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/install/local.dir
+/home/wen/Desktop/as project/autonomoussystems2025/ros2_ws/build/takeoff_pkg/CMakeFiles/install/strip.dir
