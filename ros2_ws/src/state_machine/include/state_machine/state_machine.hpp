@@ -10,10 +10,11 @@
 #include <visualization_msgs/msg/marker.hpp>
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <eigen3/Eigen/Dense>
+#include <vector>
 
-// 注意：这些包含必须匹配你 msg 文件夹下的定义
 #include "state_machine/msg/command.hpp"
 #include "state_machine/msg/answer.hpp"
+#include "geometry_msgs/msg/point_stamped.hpp"
 
 namespace drone_mission {
 
@@ -74,7 +75,7 @@ private:
     // --- 回调函数 ---
     void handleAnswer(const state_machine::msg::Answer::SharedPtr msg);
     void onCurrentStateEst(const nav_msgs::msg::Odometry::SharedPtr msg);
-    void onLanternDetections(const geometry_msgs::msg::PoseArray::SharedPtr msg);
+    void onLanternDetections(const geometry_msgs::msg::PointStamped::SharedPtr msg);
 
     // --- 动作与命令 ---
     void sendCommand(std::string receiver_node_name, Commands command_enum);
@@ -94,19 +95,24 @@ private:
     rclcpp::Publisher<state_machine::msg::Command>::SharedPtr pub_cmd_;
     rclcpp::Subscription<state_machine::msg::Answer>::SharedPtr sub_node_health_;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr sub_current_state_est_;
-    rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr sub_lantern_detections_;
+    rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr sub_lantern_detections_;
 
     // --- 内部变量 ---
     MissionStates current_mission_state_ = MissionStates::WAITING;
     std::vector<NodeInfo> monitored_nodes_;
     std::vector<Eigen::Vector3d> active_checkpoint_positions_m_;
+    std::vector<geometry_msgs::msg::Point> discovered_lanterns_;
     geometry_msgs::msg::Point current_position_m_;
     bool has_received_current_pose_ = false;
     int active_checkpoint_index_ = -1;
     double alive_tol_sec_ = 10.0; // 心跳超时阈值
+
     size_t latest_lantern_count_ = 0;
+    const size_t kRequiredLanternCount = 5;    // 目标达成需要的数量：5
+
     bool is_checkpoint_reached_ = false;
     double checkpoint_reach_dist_m_ = 0.5;
+    
 };
 
 } // namespace drone_mission
