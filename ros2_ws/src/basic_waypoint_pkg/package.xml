@@ -13,19 +13,30 @@
   <!-- Node implementation -->
   <depend>rclcpp</depend>
 
-  <!-- Mav-related packages (ROS2 ports assumed) -->
+  <!-- Messages -->
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <!-- MAV planning/trajectory -->
   <depend>mav_msgs</depend>
   <depend>mav_planning_msgs</depend>
   <depend>mav_trajectory_generation</depend>
 
-  <!-- Linear algebra -->
-  <depend>Eigen3</depend>
+  <!-- TF -->
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_eigen</depend>
+  <depend>tf2_geometry_msgs</depend>
 
-  <!-- YAML library: replaces yaml_cpp_catkin -->
+  <!-- Non-ament CMake libs used in code -->
+  <depend>Eigen3</depend>
   <depend>yaml-cpp</depend>
 
-    <export>
+  <depend>state_machine</depend>
+
+  <export>
     <build_type>ament_cmake</build_type>
   </export>
-
 </package>

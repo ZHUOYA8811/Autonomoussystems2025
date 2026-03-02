@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <iostream>
+#include <string>
 
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
@@ -14,7 +15,7 @@
 #include "mav_msgs/conversions.hpp"
 #include "mav_planning_msgs/msg/polynomial_trajectory4_d.hpp"
 #include <tf2_eigen/tf2_eigen.hpp>
-
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #include "mav_trajectory_generation/polynomial_optimization_nonlinear.h"
 #include "mav_trajectory_generation/trajectory_sampling.h"
@@ -61,6 +62,7 @@ private:
   Eigen::Vector3d current_angular_velocity_;
   
   bool has_odom_{false};
+  //bool use_param_waypoints_{false};
   double max_v_;      // m/s
   double max_a_;      // m/s^2
   double max_ang_v_;

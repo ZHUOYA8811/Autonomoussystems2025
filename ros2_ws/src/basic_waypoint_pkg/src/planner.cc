@@ -110,16 +110,8 @@ bool BasicPlanner::planTrajectory(
   vertices.push_back(start);
 
   /******* Load waypoint parameters *******/
-  std::vector<double> positions;
-  node_->get_parameter("waypoints.positions", positions);
-
-  int stop_index = -1;
-  node_->get_parameter("waypoints.stop_index", stop_index);
-
-  const bool has_waypoints =
-    (positions.size() >= 3) && ((positions.size() % 3) == 0);
-  const size_t waypoint_count =
-    has_waypoints ? (positions.size() / 3) : 0;
+  const bool has_waypoints = false;
+  const size_t waypoint_count = 0;
 
   /******* Decide final goal (external goal vs. last waypoint fallback) *******/
   const bool has_goal_pos = isFiniteVec3(goal_pos_in);
@@ -131,13 +123,10 @@ bool BasicPlanner::planTrajectory(
   if (has_goal_pos) {
     goal_pos = goal_pos_in.head<3>();
   } else if (has_waypoints) {
-    // Fallback: use last waypoint as goal position
-    goal_pos << positions[(waypoint_count - 1) * 3],
-                positions[(waypoint_count - 1) * 3 + 1],
-                positions[(waypoint_count - 1) * 3 + 2];
+    (void)waypoint_count;
   } else {
     RCLCPP_ERROR(node_->get_logger(),
-      "No valid goal_pos provided and waypoints.positions is empty/invalid.");
+      "No valid goal_pos provided and waypoints are disabled.");
     return false;
   }
 
@@ -146,40 +135,6 @@ bool BasicPlanner::planTrajectory(
   } else {
     // Fallback: stop at goal by default
     goal_vel.setZero();
-  }
-
-  /******* Configure trajectory (intermediate waypoints) *******/
-  // - If external goal_pos is provided: all waypoints are treated as intermediate points.
-  // - If external goal_pos is not provided: the last waypoint is reserved for the end vertex.
-  if (has_waypoints) {
-    const size_t middle_count = has_goal_pos ? waypoint_count
-                                            : (waypoint_count > 0 ? (waypoint_count - 1) : 0);
-
-    for (size_t i = 0; i < middle_count; ++i) {
-      Eigen::Vector3d pos(
-        positions[3 * i],
-        positions[3 * i + 1],
-        positions[3 * i + 2]);
-
-      mav_trajectory_generation::Vertex middle(dimension);
-
-      // Always constrain position for intermediate vertices
-      middle.addConstraint(
-        mav_trajectory_generation::derivative_order::POSITION,
-        pos);
-
-      // Stop waypoint: enforce V=0, A=0 at that waypoint
-      if (static_cast<int>(i) == stop_index) {
-        middle.addConstraint(
-          mav_trajectory_generation::derivative_order::VELOCITY,
-          Eigen::Vector3d::Zero());
-        middle.addConstraint(
-          mav_trajectory_generation::derivative_order::ACCELERATION,
-          Eigen::Vector3d::Zero());
-      }
-
-      vertices.push_back(middle);
-    }
   }
 
   /******* Configure end point *******/
@@ -191,13 +146,6 @@ bool BasicPlanner::planTrajectory(
   end.addConstraint(
     mav_trajectory_generation::derivative_order::VELOCITY,
     goal_vel);
-
-  // If the last waypoint is also a stop target (only in fallback mode), enforce A=0 at the end
-  if (!has_goal_pos && has_waypoints && stop_index == static_cast<int>(waypoint_count - 1)) {
-    end.addConstraint(
-      mav_trajectory_generation::derivative_order::ACCELERATION,
-      Eigen::Vector3d::Zero());
-  }
 
   vertices.push_back(end);
 

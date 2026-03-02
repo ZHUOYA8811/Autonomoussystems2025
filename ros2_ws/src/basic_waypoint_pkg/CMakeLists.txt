@@ -18,9 +18,12 @@ find_package(rclcpp REQUIRED)
 # ROS2 versions of your mav-related packages
 find_package(mav_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(mav_planning_msgs REQUIRED)
 find_package(mav_trajectory_generation REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(state_machine REQUIRED)
 
 find_package(tf2 REQUIRED)
 find_package(tf2_eigen REQUIRED)
@@ -53,6 +56,8 @@ ament_target_dependencies(basic_waypoint_node
   rclcpp
   mav_msgs
   std_msgs
+  geometry_msgs
+  nav_msgs
   mav_planning_msgs
   mav_trajectory_generation
   visualization_msgs
@@ -62,6 +67,7 @@ ament_target_dependencies(basic_waypoint_node
   tf2_geometry_msgs
   Eigen3
   yaml-cpp
+  state_machine
 )
 
 # ==== Installation ====
