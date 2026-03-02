@@ -17,6 +17,8 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(mav_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(state_machine REQUIRED)
 
 # Eigen
 find_package(eigen3_cmake_module QUIET)
@@ -42,6 +44,7 @@ ament_target_dependencies(controller_lib
   tf2
   tf2_ros
   tf2_eigen
+  state_machine
 )
 
 # --- Executable ---------------------------------------------------------------
@@ -54,10 +57,12 @@ ament_target_dependencies(controller_node
   std_msgs
   geometry_msgs
   mav_msgs
+  nav_msgs
   trajectory_msgs
   tf2
   tf2_ros
   tf2_eigen
+  state_machine
 )
 
 # --- Install -----------------------------------------------------------------
@@ -90,6 +95,8 @@ ament_export_dependencies(
   rclcpp
   std_msgs
   geometry_msgs
+  nav_msgs
+  state_machine
   tf2
   tf2_ros
   tf2_eigen

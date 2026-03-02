@@ -37,12 +37,21 @@ ControllerNode::ControllerNode()
     std::bind(&ControllerNode::onDesiredState, this, std::placeholders::_1));
 
   current_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
-    "current_state", rclcpp::QoS(10),
+    "current_state_est", rclcpp::QoS(10),
     std::bind(&ControllerNode::onCurrentState, this, std::placeholders::_1));
 
   // Publisher
   motor_pub_ = this->create_publisher<mav_msgs::msg::Actuators>(
     "rotor_speed_cmds", rclcpp::QoS(10));
+  
+  // Node health publisher
+  pub_node_health_ = this->create_publisher<state_machine::msg::Answer>(
+    "statemachine/node_health", 10);
+
+  // 2 Hz heartbeat
+  health_timer_ = this->create_wall_timer(
+    std::chrono::milliseconds(500),
+    std::bind(&ControllerNode::publishNodeHealth, this));
 
   // Timer at hz Hz
   auto period = std::chrono::duration<double>(1.0 / hz);
@@ -75,6 +84,18 @@ ControllerNode::ControllerNode()
        0.0, 0.0, 1.0;
 
   RCLCPP_INFO(this->get_logger(), "controller_node ready (hz=%.1f)", hz);
+}
+
+void ControllerNode::publishNodeHealth()
+{
+  state_machine::msg::Answer msg;
+
+  msg.node_name = "controller";
+  msg.state = 1; // Running
+  msg.info = "controller running";
+  msg.timestamp = this->now();
+
+  pub_node_health_->publish(msg);
 }
 
 // === Callbacks ================================================================

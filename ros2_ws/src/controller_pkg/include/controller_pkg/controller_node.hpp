@@ -9,9 +9,11 @@
 #include <mav_msgs/msg/actuators.hpp>
 #include <nav_msgs/msg/odometry.hpp>
 #include <trajectory_msgs/msg/multi_dof_joint_trajectory.hpp>
+#include <state_machine/msg/answer.hpp>
 
 #include <Eigen/Dense>
 #include <tf2/utils.h>
+
 
 #ifndef PI
 #define PI M_PI
@@ -43,6 +45,10 @@ private:
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr current_sub_;
   rclcpp::Publisher<mav_msgs::msg::Actuators>::SharedPtr motor_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
+
+  rclcpp::Publisher<state_machine::msg::Answer>::SharedPtr pub_node_health_;
+  rclcpp::TimerBase::SharedPtr health_timer_;
+  void publishNodeHealth();
 
   // Controller parameters
   double kx, kv, kr, komega;  // controller gains
