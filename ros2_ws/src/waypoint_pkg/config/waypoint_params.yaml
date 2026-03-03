@@ -1,0 +1,11 @@
+waypoint_node:
+  ros__parameters:
+    # Navigation parameters
+    waypoint_threshold: 0.5      # meters - distance to consider waypoint reached
+    cruise_speed: 2.0            # m/s - cruise velocity
+    publish_rate: 100.0          # Hz - trajectory publish rate
+    takeoff_height: 5.0          # meters - initial takeoff height
+    
+    # Topics
+    odom_topic: "current_state_est"
+    trajectory_topic: "command/trajectory"
