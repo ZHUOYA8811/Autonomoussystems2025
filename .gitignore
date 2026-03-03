@@ -1,0 +1,57 @@
+# --- Packages not for upload ---
+ros2_ws/src/mapping_pkg/
+ros2_ws/src/lantern_detector_pkg/
+ros2_ws/src/takeoff_pkg/
+
+# --- Generated artifacts ---
+frames_2026-03-02_13.41.53.pdf
+frames_2026-03-02_13.41.53.gv
+AutonomousSystems2025.pdf
+octomap_binary.txt
+*.pdf
+*.gv
+
+# --- ROS2 / colcon build outputs ---
+build/
+install/
+log/
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# --- Simulation runtime artifacts ---
+Simulation/
+core
+core.*
+
+# --- Local helper scripts (repo root only) ---
+/start_jazzy_as3.sh
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- C/C++ artifacts ---
+*.o
+*.obj
+*.so
+*.a
+*.out
+
+# --- CMake ---
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+Makefile
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.vscode/
+core*

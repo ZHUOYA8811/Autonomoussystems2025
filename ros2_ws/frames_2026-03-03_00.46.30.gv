@@ -1,0 +1,14 @@
+digraph G {
+"camera" -> "Quadrotor/RGBCameraRight"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"true_body" -> "camera"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "true_body"[label=" Broadcaster: default_authority\nAverage rate: 50.693\nBuffer length: 3.452\nMost recent transform: 1772498790.666862\nOldest transform: 1772498787.214703\n"];
+"Quadrotor/DepthCamera" -> "Quadrotor/Sensors/DepthCamera"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"depth_camera" -> "Quadrotor/DepthCamera"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"true_body" -> "depth_camera"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "body"[label=" Broadcaster: default_authority\nAverage rate: 49.839\nBuffer length: 5.137\nMost recent transform: 1772498790.666862\nOldest transform: 1772498785.530343\n"];
+"camera" -> "Quadrotor/RGBCameraLeft"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1772498790.7246258"[ shape=plaintext ] ;
+}->"world";
+}
