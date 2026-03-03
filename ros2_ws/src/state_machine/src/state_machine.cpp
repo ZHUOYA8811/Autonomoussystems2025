@@ -46,6 +46,19 @@ void StateMachine::onTimer() {
     checkSystemstate();  // 监控系统健康状况
     checkCheckpoints();  // 检查航点到达情况
     handleFlagEvents();  // 处理状态切换逻辑
+
+    // EXPLORING 状态下低频重发 START 给 planner，以便 explorer 晚启动也能收到
+    if (current_mission_state_ == MissionStates::EXPLORING) {
+        const auto now = this->now();
+        const bool should_send =
+            (last_exploring_start_cmd_time_.nanoseconds() == 0) ||
+            ((now - last_exploring_start_cmd_time_).seconds() >= exploring_start_cmd_period_sec_);
+
+        if (should_send) {
+            sendCommand("planner", Commands::START);
+            last_exploring_start_cmd_time_ = now;
+        }
+    }
 }
 
 /**
@@ -217,8 +230,14 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
             }
             // 启动控制器开始起飞
             sendCommand("controller", Commands::START);
-            // 同时也给 sampler 发个指令，让它准备接手后续航行
-            sendCommand("sampler", Commands::START); 
+            // 发送起飞目标给 planner（基于已存入的 checkpoint[0]）
+            if (!active_checkpoint_positions_m_.empty()) {
+                geometry_msgs::msg::Point takeoff_pt;
+                takeoff_pt.x = active_checkpoint_positions_m_[0].x();
+                takeoff_pt.y = active_checkpoint_positions_m_[0].y();
+                takeoff_pt.z = active_checkpoint_positions_m_[0].z();
+                sendCommandWithTarget("planner", Commands::START, takeoff_pt);
+            }
             break;
 
        case MissionStates::TRAVELLING:
@@ -232,8 +251,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                     geometry_msgs::msg::Point goal;
                     goal.x = next_pt.x(); goal.y = next_pt.y(); goal.z = next_pt.z();
 
-                            // 发送指令给采样器开始规划去往这个点的路径
-                   sendCommandWithTarget("sampler", Commands::START, goal);
+                            // 发送指令给 planner 开始规划去往这个点的路径
+                   sendCommandWithTarget("planner", Commands::START, goal);
             
                     RCLCPP_INFO(this->get_logger(), "Navigating to Waypoint #%d", active_checkpoint_index_);
                 }
@@ -272,8 +291,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                 active_checkpoint_positions_m_.push_back(Eigen::Vector3d(home_goal.x, home_goal.y, home_goal.z));
                 active_checkpoint_index_ = 0;
 
-                // 3. 指挥采样器导航回起点
-                sendCommandWithTarget("sampler", Commands::START, home_goal);
+                // 3. 指挥 planner 导航回起点
+                sendCommandWithTarget("planner", Commands::START, home_goal);
 
                 RCLCPP_INFO(this->get_logger(), "Mission Complete. Going Home to: (-38, 10, 8)");
             }
@@ -288,7 +307,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                     active_checkpoint_positions_m_.push_back(Eigen::Vector3d(land_pt.x, land_pt.y, land_pt.z));
                     active_checkpoint_index_ = 0; 
 
-                    sendCommandWithTarget("sampler", Commands::LAND, land_pt);
+                    // 用 START+target 指挥 planner 导航到降落点（LAND 语义 planner 不响应）
+                    sendCommandWithTarget("planner", Commands::START, land_pt);
                     RCLCPP_INFO(this->get_logger(), "Starting final descent to ground.");
                 }
             }
@@ -297,7 +317,7 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
         case MissionStates::DONE:
             {
                 sendCommand("controller", Commands::HOLD);
-                sendCommand("sampler", Commands::HOLD);
+                sendCommand("planner", Commands::HOLD);
                 RCLCPP_INFO(this->get_logger(), "=== MISSION ACCOMPLISHED ===");
             }
             break;

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition, UnlessCondition
@@ -52,11 +53,16 @@ def generate_launch_description():
     )
 
     # Nodes
+    # Set up environment for Simulation.x86_64
+    sim_env = os.environ.copy()
+    sim_env['XDG_RUNTIME_DIR'] = '/tmp/runtime-root'
+    
     simulation_node = Node(
         package="simulation",
         executable="Simulation.x86_64",
         name="Simulation",
         output="screen",
+        env=sim_env,
     )
 
     state_estimate_corruptor = Node(

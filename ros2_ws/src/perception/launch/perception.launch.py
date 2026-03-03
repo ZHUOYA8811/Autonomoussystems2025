@@ -28,8 +28,8 @@ def generate_launch_description():
         ],
         parameters=[{
             'frame_id': world_frame,
-            'resolution': 0.2,
-            'latch': True,
+            'resolution': 0.4,
+            'latch': False,
         }],
         output='screen'
     )

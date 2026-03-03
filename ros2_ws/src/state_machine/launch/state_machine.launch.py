@@ -7,9 +7,10 @@ def generate_launch_description():
     # 1. 定义节点要加载的参数
     # 这里你可以自定义 checkSystemstate 需要监控的节点名单
     mission_params = {
-        'monitored_node_list': ['controller', 'sampler', 'navigator'],
+        'monitored_node_list': ['controller', 'sampler'],
         'takeoff_height': 5.0,
-        'alive_tol_sec': 10.0
+        'alive_tol_sec': 10.0,
+        'checkpoint_reach_dist_m': 2.0,
     }
 
     # 2. 定义状态机节点

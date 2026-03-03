@@ -112,6 +112,8 @@ private:
 
     bool is_checkpoint_reached_ = false;
     double checkpoint_reach_dist_m_ = 0.5;
+    rclcpp::Time last_exploring_start_cmd_time_{0, 0, RCL_ROS_TIME};
+    double exploring_start_cmd_period_sec_ = 1.0;
     
 };
 

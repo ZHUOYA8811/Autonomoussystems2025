@@ -12,11 +12,13 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(mav_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
+find_package(state_machine REQUIRED)
 
 # Eigen
 find_package(eigen3_cmake_module QUIET)
@@ -25,28 +27,26 @@ find_package(Eigen3 REQUIRED)
 # --- Includes ----------------------------------------------------------------
 include_directories(${EIGEN3_INCLUDE_DIRS})
 
-# --- Libraries ----------------------------------------------------------------
-add_library(controller_lib SHARED IMPORTED)
-# Path to the precompiled .so inside the repository
-set_target_properties(controller_lib PROPERTIES
-  IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/lib/libcontroller_lib.so"
-  INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/include"
+# --- Executable ---------------------------------------------------------------
+add_executable(controller_node src/controller_wrapper.cpp src/controller_node.cpp)
+
+target_include_directories(controller_node PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-# --- Executable ---------------------------------------------------------------
-add_executable(controller_node src/controller_wrapper.cpp)
-
-target_link_libraries(controller_node controller_lib)
+target_link_libraries(controller_node Eigen3::Eigen)
 
 ament_target_dependencies(controller_node
   rclcpp
   std_msgs
   geometry_msgs
+  nav_msgs
   mav_msgs
   trajectory_msgs
   tf2
   tf2_ros
   tf2_eigen
+  state_machine
 )
 
 # --- Install -----------------------------------------------------------------
@@ -79,9 +79,11 @@ ament_export_dependencies(
   rclcpp
   std_msgs
   geometry_msgs
+  nav_msgs
   tf2
   tf2_ros
   tf2_eigen
+  state_machine
   Eigen3
 )
 
