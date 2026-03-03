@@ -48,6 +48,32 @@ Inside the container, the workspace is at `/workspace`. Source before running:
 source /workspace/install/setup.bash
 ```
 
+###Ubuntu & ROS 2 Jazzy
+Before building the project, install the required system and ROS 2 dependencies:
+```bash
+sudo apt update
+
+# Core ROS2 perception packages
+sudo apt install -y \
+  ros-jazzy-depth-image-proc \
+  ros-jazzy-octomap-server \
+  ros-jazzy-octomap-msgs \
+  ros-jazzy-cv-bridge \
+  ros-jazzy-image-transport \
+  ros-jazzy-tf2-ros \
+  ros-jazzy-tf2-geometry-msgs \
+  ros-jazzy-tf2-eigen \
+  ros-jazzy-vision-msgs \
+  ros-jazzy-pcl-ros \
+  ros-jazzy-pcl-conversions
+```
+# System libraries
+sudo apt install -y \
+  python3-opencv \
+  libpcl-dev \
+  liboctomap-dev \
+  libnlopt-dev \
+  libgoogle-glog-dev
 ### Build (only needed after source changes)
 
 ```bash
