@@ -56,11 +56,15 @@ void SimpleTrajectoryPlanner::commandCallback(
     }
 
     if (msg->command == 2) {  // START
-        is_active_ = true;
-        RCLCPP_INFO(this->get_logger(), "Trajectory planning activated");
+        if (!is_active_) {
+            is_active_ = true;
+            RCLCPP_INFO(this->get_logger(), "Trajectory planning activated");
+        }
     } else if (msg->command == 3 || msg->command == 6) {  // HOLD or ABORT
-        is_active_ = false;
-        RCLCPP_INFO(this->get_logger(), "Trajectory planning deactivated");
+        if (is_active_) {
+            is_active_ = false;
+            RCLCPP_INFO(this->get_logger(), "Trajectory planning deactivated");
+        }
     }
 }
 

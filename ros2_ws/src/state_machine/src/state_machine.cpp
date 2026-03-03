@@ -47,9 +47,17 @@ void StateMachine::onTimer() {
     checkCheckpoints();  // 检查航点到达情况
     handleFlagEvents();  // 处理状态切换逻辑
 
-    // EXPLORING 状态下持续发 START 给 planner，以便 explorer 晚启动也能收到
+    // EXPLORING 状态下低频重发 START 给 planner，以便 explorer 晚启动也能收到
     if (current_mission_state_ == MissionStates::EXPLORING) {
-        sendCommand("planner", Commands::START);
+        const auto now = this->now();
+        const bool should_send =
+            (last_exploring_start_cmd_time_.nanoseconds() == 0) ||
+            ((now - last_exploring_start_cmd_time_).seconds() >= exploring_start_cmd_period_sec_);
+
+        if (should_send) {
+            sendCommand("planner", Commands::START);
+            last_exploring_start_cmd_time_ = now;
+        }
     }
 }
 

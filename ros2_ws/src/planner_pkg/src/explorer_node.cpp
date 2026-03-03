@@ -76,11 +76,15 @@ void FrontierExplorer::commandCallback(const state_machine::msg::Command::Shared
 
     // Command types: 0=NONE, 1=TAKEOFF, 2=START, 3=HOLD, 4=RETURN_HOME, 5=LAND, 6=ABORT
     if (msg->command == 2) {  // START
-        is_exploring_ = true;
-        RCLCPP_INFO(this->get_logger(), "Received START command - Beginning exploration");
+        if (!is_exploring_) {
+            is_exploring_ = true;
+            RCLCPP_INFO(this->get_logger(), "Received START command - Beginning exploration");
+        }
     } else if (msg->command == 3 || msg->command == 6) {  // HOLD or ABORT
-        is_exploring_ = false;
-        RCLCPP_INFO(this->get_logger(), "Received HOLD/ABORT command - Stopping exploration");
+        if (is_exploring_) {
+            is_exploring_ = false;
+            RCLCPP_INFO(this->get_logger(), "Received HOLD/ABORT command - Stopping exploration");
+        }
     }
 }
 
