@@ -39,7 +39,7 @@ inline bool operator==(const ReachabilityDistance& lhs, const ReachabilityDistan
 
 template <typename PointT>
 void optics(typename pcl::PointCloud<PointT>::Ptr cloud, 
-            int minPts, 
+            size_t minPts, 
             double epsilon,
             std::vector<pcl::PointIndicesPtr>& cluster_indices) {
   
@@ -70,7 +70,7 @@ void optics(typename pcl::PointCloud<PointT>::Ptr cloud,
     }
     
     std::sort(sq_distances.begin(), sq_distances.end());
-    return std::sqrt(sq_distances[minPts - 1]);
+    return std::sqrt(sq_distances[static_cast<int>(minPts) - 1]);
   };
 
   // OPTICS algorithm

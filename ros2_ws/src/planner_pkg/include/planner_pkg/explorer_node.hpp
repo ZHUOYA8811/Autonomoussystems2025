@@ -77,6 +77,8 @@ private:
     int max_search_distance_{400};
     double exploration_rate_{0.3};  // Hz
     double health_report_period_{1.0};  // seconds
+    bool enforce_x_limit_{false};
+    double x_limit_max_{-340.0};
     
     // Control flags
     bool is_exploring_{false};

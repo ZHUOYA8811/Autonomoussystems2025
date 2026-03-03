@@ -1,11 +1,6 @@
 octomap_server:
   ros__parameters:
-    frame_id: Quadrotor/Sensors/DepthCamera   # 关键：直接用点云frame
-    base_frame_id: Quadrotor/Sensors/DepthCamera
-    resolution: 0.20
-    queue_size: 50
-    sensor_model:
-      max_range: 50.0
-    publish_free_space: true
-    filter_ground: false
-    filter_speckles: false
+    use_sim_time: true
+    frame_id: world
+    resolution: 0.05
+    latch: true

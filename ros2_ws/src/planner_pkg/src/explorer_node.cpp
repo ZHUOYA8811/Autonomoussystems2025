@@ -13,6 +13,8 @@ FrontierExplorer::FrontierExplorer() : Node("frontier_explorer_node") {
     this->declare_parameter<int>("max_search_distance", 400);
     this->declare_parameter<double>("exploration_rate", 0.3);
     this->declare_parameter<double>("health_report_period", 1.0);
+    this->declare_parameter<bool>("enforce_x_limit", false);
+    this->declare_parameter<double>("x_limit_max", -340.0);
 
     // Get parameters
     octomap_resolution_ = this->get_parameter("octomap_resolution").as_double();
@@ -22,6 +24,8 @@ FrontierExplorer::FrontierExplorer() : Node("frontier_explorer_node") {
     max_search_distance_ = this->get_parameter("max_search_distance").as_int();
     exploration_rate_ = this->get_parameter("exploration_rate").as_double();
     health_report_period_ = this->get_parameter("health_report_period").as_double();
+    enforce_x_limit_ = this->get_parameter("enforce_x_limit").as_bool();
+    x_limit_max_ = this->get_parameter("x_limit_max").as_double();
 
     // Initialize publishers
     pub_goal_ = this->create_publisher<geometry_msgs::msg::Point>(
@@ -180,7 +184,9 @@ void FrontierExplorer::detectFrontiers() {
         curr_pos_.z() - max_distance_);
     
     octomap::point3d maxPt(
-        std::min(static_cast<double>(curr_pos_.x() + max_distance_), -340.0), 
+        enforce_x_limit_
+            ? std::min(static_cast<double>(curr_pos_.x() + max_distance_), x_limit_max_)
+            : static_cast<double>(curr_pos_.x() + max_distance_),
         curr_pos_.y() + max_distance_, 
         curr_pos_.z() + max_distance_);
 
@@ -246,7 +252,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr FrontierExplorer::generateFrontierCloud() {
 pcl::PointCloud<pcl::PointXYZ>::Ptr FrontierExplorer::identifyLargestCluster(
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
     
-    int max_size = 0;
+    size_t max_size = 0;
     pcl::PointIndicesPtr largest_cluster_indices;
     
     for (const auto &cluster_idx : cluster_indices_) {
@@ -345,8 +351,8 @@ void FrontierExplorer::publishGoal(const pcl::PointXYZ &goal) {
     goal_marker.color.b = 1.0;
     goal_marker.lifetime = rclcpp::Duration::from_seconds(5.0);
 
-    // Only publish if goal is in valid region (x <= -340)
-    if (goal_msg.x <= -340.0) {
+    // Optional x-limit gate (disabled by default)
+    if (!enforce_x_limit_ || goal_msg.x <= x_limit_max_) {
         pub_goal_->publish(goal_msg);
         pub_goal_marker_->publish(goal_marker);
     }

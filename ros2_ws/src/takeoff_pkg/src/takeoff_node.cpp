@@ -12,7 +12,7 @@ TakeoffNode::TakeoffNode()
   this->declare_parameter<double>("takeoff_height", 5.0);
   this->declare_parameter<double>("takeoff_duration", 5.0);
   this->declare_parameter<double>("publish_rate", 100.0);
-  this->declare_parameter<std::string>("odom_topic", "current_state_est");
+  this->declare_parameter<std::string>("odom_topic", "current_state");
   this->declare_parameter<std::string>("trajectory_topic", "command/trajectory");
 
   takeoff_height_ = this->get_parameter("takeoff_height").as_double();

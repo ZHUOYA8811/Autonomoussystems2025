@@ -1,5 +1,23 @@
 cmake_minimum_required(VERSION 3.8)
+
+if(POLICY CMP0144)
+  set(CMAKE_POLICY_DEFAULT_CMP0144 NEW)
+endif()
+
 project(planner_pkg)
+
+if(POLICY CMP0074)
+  cmake_policy(SET CMP0074 NEW)
+endif()
+
+if(POLICY CMP0144)
+  cmake_policy(SET CMP0144 NEW)
+endif()
+
+if(DEFINED FLANN_ROOT)
+  unset(FLANN_ROOT)
+  unset(FLANN_ROOT CACHE)
+endif()
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
@@ -37,6 +55,26 @@ find_package(octomap_msgs REQUIRED)
 
 # Find mav_trajectory_generation
 find_package(mav_trajectory_generation REQUIRED)
+
+get_filename_component(
+  MAV_TRAJECTORY_GENERATION_PREFIX
+  "${mav_trajectory_generation_DIR}/../../.."
+  ABSOLUTE
+)
+
+find_library(
+  GLOG_LIB
+  NAMES glog
+  PATHS "${MAV_TRAJECTORY_GENERATION_PREFIX}/lib"
+  NO_DEFAULT_PATH
+)
+
+find_library(
+  NLOPT_LIB
+  NAMES nlopt
+  PATHS "${MAV_TRAJECTORY_GENERATION_PREFIX}/lib"
+  NO_DEFAULT_PATH
+)
 
 # Include directories
 include_directories(
@@ -87,6 +125,20 @@ target_link_libraries(explorer_node
   ${PCL_LIBRARIES}
   ${OCTOMAP_LIBRARIES}
 )
+
+target_link_directories(
+  trajectory_planner_node
+  PRIVATE
+    "${MAV_TRAJECTORY_GENERATION_PREFIX}/lib"
+)
+
+if(GLOG_LIB)
+  target_link_libraries(trajectory_planner_node ${GLOG_LIB})
+endif()
+
+if(NLOPT_LIB)
+  target_link_libraries(trajectory_planner_node ${NLOPT_LIB})
+endif()
 
 # Install targets
 install(TARGETS

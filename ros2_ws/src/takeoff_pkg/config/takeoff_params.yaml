@@ -1,14 +1,10 @@
 takeoff_node:
   ros__parameters:
-    # Takeoff height relative to start position (meters)
     takeoff_height: 5.0
-    
-    # Trajectory duration (seconds)
     takeoff_duration: 5.0
-    
-    # Trajectory sampling rate (Hz)
     publish_rate: 100.0
-    
-    # Topics
-    odom_topic: "current_state_est"
+
+    # 关键修改
+    odom_topic: "/current_state_est"
+
     trajectory_topic: "command/trajectory"

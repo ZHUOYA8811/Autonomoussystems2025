@@ -29,7 +29,6 @@ find_package(state_machine REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(mav_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(gflags REQUIRED)
 
 ExternalProject_Add(glog_ext
   GIT_REPOSITORY https://github.com/google/glog.git

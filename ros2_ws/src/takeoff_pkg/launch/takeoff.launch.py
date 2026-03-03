@@ -1,62 +1,45 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
 import os
 
 
 def generate_launch_description():
-    # Get package directories
     takeoff_pkg_share = get_package_share_directory('takeoff_pkg')
-    controller_pkg_share = get_package_share_directory('controller_pkg')
-
-    # Config files
     takeoff_config = os.path.join(takeoff_pkg_share, 'config', 'takeoff_params.yaml')
-    controller_config = os.path.join(controller_pkg_share, 'config', 'controller_params.yaml')
 
-    # Declare launch arguments
     takeoff_height_arg = DeclareLaunchArgument(
         'takeoff_height',
         default_value='5.0',
         description='Takeoff height in meters'
     )
 
-    # Include simulation launch file
-    simulation_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            PathJoinSubstitution([FindPackageShare("simulation"), "launch", "simulation.launch.py"])
-        ),
+    # 关键：让你可以从外面指定 odom 来源，默认用 /current_state_est
+    odom_topic_arg = DeclareLaunchArgument(
+        'odom_topic',
+        default_value='/current_state_est',
+        description='Odometry topic to use as current_state for takeoff_node'
     )
 
-    # Controller node
-    controller_node = Node(
-        package='controller_pkg',
-        executable='controller_node',
-        name='controller_node',
-        output='screen',
-        parameters=[controller_config],
-        remappings=[
-            ('current_state', 'current_state_est'),
-        ],
-        emulate_tty=True
-    )
-
-    # Takeoff node
     takeoff_node = Node(
         package='takeoff_pkg',
         executable='takeoff_node',
         name='takeoff_node',
         output='screen',
-        parameters=[takeoff_config],
-        emulate_tty=True
+        emulate_tty=True,
+        parameters=[
+            takeoff_config,
+            {'takeoff_height': LaunchConfiguration('takeoff_height')},
+        ],
+        remappings=[
+            ('current_state', LaunchConfiguration('odom_topic')),
+        ],
     )
 
     return LaunchDescription([
         takeoff_height_arg,
-        simulation_launch,  # Start simulation first
-        controller_node,
+        odom_topic_arg,
         takeoff_node,
     ])

@@ -46,6 +46,24 @@ void StateMachine::onTimer() {
     checkSystemstate();  // 监控系统健康状况
     checkCheckpoints();  // 检查航点到达情况
     handleFlagEvents();  // 处理状态切换逻辑
+
+    // 持续发送命令给 planner，确保命令不丢失
+    if (current_mission_state_ == MissionStates::TAKEOFF ||
+        current_mission_state_ == MissionStates::TRAVELLING ||
+        current_mission_state_ == MissionStates::RETURN_HOME ||
+        current_mission_state_ == MissionStates::LAND) {
+        // 带目标点的导航命令，每个周期都重发
+        if (active_checkpoint_index_ >= 0 && 
+            active_checkpoint_index_ < static_cast<short>(active_checkpoint_positions_m_.size())) {
+            geometry_msgs::msg::Point target_pt;
+            target_pt.x = active_checkpoint_positions_m_[active_checkpoint_index_].x();
+            target_pt.y = active_checkpoint_positions_m_[active_checkpoint_index_].y();
+            target_pt.z = active_checkpoint_positions_m_[active_checkpoint_index_].z();
+            sendCommandWithTarget("planner", Commands::START, target_pt);
+        }
+    } else if (current_mission_state_ == MissionStates::EXPLORING) {
+        sendCommand("planner", Commands::START);
+    }
 }
 
 /**
@@ -68,7 +86,7 @@ void StateMachine::checkSystemstate() {
         }
     }
 
-    if (current_mission_state_ == MissionStates::WAITING && all_nodes_ready) {
+    if (current_mission_state_ == MissionStates::WAITING && all_nodes_ready && has_received_current_pose_) {
         changeState(MissionStates::TAKEOFF, "All monitored modules are ready");
     }
 
@@ -140,9 +158,10 @@ void StateMachine::handleFlagEvents() {
             changeState(MissionStates::TRAVELLING, "Takeoff complete, heading to task point");
         } 
         
-        // 2. 到达任务点 [-320, 9, 16] -> 开始搜索 (EXPLORING)
-        else if (current_mission_state_ == MissionStates::TRAVELLING && reached_id == 1) {
-            changeState(MissionStates::EXPLORING, "Target point reached, starting search");
+        // 2. 到达任务航点 -> 检查是否是最后一个航点，是则开始搜索 (EXPLORING)
+        else if (current_mission_state_ == MissionStates::TRAVELLING && 
+                 active_checkpoint_index_ >= static_cast<short>(active_checkpoint_positions_m_.size())) {
+            changeState(MissionStates::EXPLORING, "Final waypoint reached, starting search");
         }
 
         // 3. 返航到家 -> 开始降落 (LAND) 飞回 index 0 附近
@@ -159,10 +178,8 @@ void StateMachine::handleFlagEvents() {
         is_checkpoint_reached_ = false; 
     }
 
-    // === 第二部分：灯笼计数判定逻辑 ===
-    if (current_mission_state_ == MissionStates::EXPLORING || 
-        current_mission_state_ == MissionStates::TRAVELLING) {
-        
+    // === 第二部分：灯笼计数判定逻辑（仅在 EXPLORING 时生效）===
+    if (current_mission_state_ == MissionStates::EXPLORING) {
         if (latest_lantern_count_ >= kRequiredLanternCount) {
             changeState(MissionStates::RETURN_HOME, "5 lanterns detected, mission success!");
         }
@@ -205,7 +222,11 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                 // Index 0: 垂直起飞点
                 active_checkpoint_positions_m_.push_back(p);
 
-                // Index 1: 硬编码你的任务目标点
+                // 中间航点：通过逐步拉高高度的中间点，引导无人机快速飞往洞口
+                active_checkpoint_positions_m_.push_back(Eigen::Vector3d(-100.0, 10.0, 15.0));
+                active_checkpoint_positions_m_.push_back(Eigen::Vector3d(-200.0, 10.0, 15.0));
+
+                // 最终目标点：洞口入口
                 active_checkpoint_positions_m_.push_back(Eigen::Vector3d(-320.0, 10.0, 15.0));
 
                 active_checkpoint_index_ = 0;
@@ -213,12 +234,18 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                 RCLCPP_INFO(this->get_logger(), 
                     "Takeoff setpoint locked (Index 0): %.2f, %.2f, %.2f", p.x(), p.y(), p.z());
                 RCLCPP_INFO(this->get_logger(), 
-                    "Mission target hardcoded (Index 1): -320.0, 10.0, 15.0");
+                    "Mission route: takeoff -> (-100,10,15) -> (-200,10,15) -> (-320,10,15)");
             }
             // 启动控制器开始起飞
             sendCommand("controller", Commands::START);
-            // 同时也给 sampler 发个指令，让它准备接手后续航行
-            sendCommand("sampler", Commands::START); 
+            // 发送起飞目标给 planner（基于已存入的 checkpoint[0]）
+            if (!active_checkpoint_positions_m_.empty()) {
+                geometry_msgs::msg::Point takeoff_pt;
+                takeoff_pt.x = active_checkpoint_positions_m_[0].x();
+                takeoff_pt.y = active_checkpoint_positions_m_[0].y();
+                takeoff_pt.z = active_checkpoint_positions_m_[0].z();
+                sendCommandWithTarget("planner", Commands::START, takeoff_pt);
+            }
             break;
 
        case MissionStates::TRAVELLING:
@@ -232,8 +259,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                     geometry_msgs::msg::Point goal;
                     goal.x = next_pt.x(); goal.y = next_pt.y(); goal.z = next_pt.z();
 
-                            // 发送指令给采样器开始规划去往这个点的路径
-                   sendCommandWithTarget("sampler", Commands::START, goal);
+                            // 发送指令给 planner 开始规划去往这个点的路径
+                   sendCommandWithTarget("planner", Commands::START, goal);
             
                     RCLCPP_INFO(this->get_logger(), "Navigating to Waypoint #%d", active_checkpoint_index_);
                 }
@@ -272,8 +299,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                 active_checkpoint_positions_m_.push_back(Eigen::Vector3d(home_goal.x, home_goal.y, home_goal.z));
                 active_checkpoint_index_ = 0;
 
-                // 3. 指挥采样器导航回起点
-                sendCommandWithTarget("sampler", Commands::START, home_goal);
+                // 3. 指挥 planner 导航回起点
+                sendCommandWithTarget("planner", Commands::START, home_goal);
 
                 RCLCPP_INFO(this->get_logger(), "Mission Complete. Going Home to: (-38, 10, 8)");
             }
@@ -288,7 +315,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
                     active_checkpoint_positions_m_.push_back(Eigen::Vector3d(land_pt.x, land_pt.y, land_pt.z));
                     active_checkpoint_index_ = 0; 
 
-                    sendCommandWithTarget("sampler", Commands::LAND, land_pt);
+                    // 用 START+target 指挥 planner 导航到降落点（LAND 语义 planner 不响应）
+                    sendCommandWithTarget("planner", Commands::START, land_pt);
                     RCLCPP_INFO(this->get_logger(), "Starting final descent to ground.");
                 }
             }
@@ -297,7 +325,7 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
         case MissionStates::DONE:
             {
                 sendCommand("controller", Commands::HOLD);
-                sendCommand("sampler", Commands::HOLD);
+                sendCommand("planner", Commands::HOLD);
                 RCLCPP_INFO(this->get_logger(), "=== MISSION ACCOMPLISHED ===");
             }
             break;
@@ -377,6 +405,9 @@ void StateMachine::onCurrentStateEst(const nav_msgs::msg::Odometry::SharedPtr ms
  */
 void StateMachine::onLanternDetections(const geometry_msgs::msg::PointStamped::SharedPtr msg) {
     if (!msg) return;
+
+    // 仅在 EXPLORING 状态下才计数灯笼，防止误检触发返航
+    if (current_mission_state_ != MissionStates::EXPLORING) return;
 
     // 逻辑：判断这个点是不是一个新的灯笼（去重逻辑）
     bool is_new = true;

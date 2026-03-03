@@ -30,7 +30,6 @@ ControllerNode::ControllerNode()
   hz(1000.0)
 {
   received_desired = false;
-  received_current = false;
 
   // Subscribers
   desired_sub_ = this->create_subscription<trajectory_msgs::msg::MultiDOFJointTrajectory>(
@@ -45,13 +44,22 @@ ControllerNode::ControllerNode()
   motor_pub_ = this->create_publisher<mav_msgs::msg::Actuators>(
     "rotor_speed_cmds", rclcpp::QoS(10));
 
+  // Node health publisher
+  pub_node_health_ = this->create_publisher<state_machine::msg::Answer>(
+    "statemachine/node_health", 10);
+
+  // 2 Hz heartbeat
+  health_timer_ = this->create_wall_timer(
+    std::chrono::milliseconds(500),
+    std::bind(&ControllerNode::publishNodeHealth, this));
+
   // Timer at hz Hz
   auto period = std::chrono::duration<double>(1.0 / hz);
   timer_ = this->create_wall_timer(
     std::chrono::duration_cast<std::chrono::nanoseconds>(period),
     std::bind(&ControllerNode::controlLoop, this));
 
-  // Controller gains (you can move to parameters if desired)
+  // Controller gains
   this->declare_parameter<double>("kx", 13.1);
   this->declare_parameter<double>("kv", 5.8);
   this->declare_parameter<double>("kr", 9.2);
@@ -78,6 +86,18 @@ ControllerNode::ControllerNode()
   RCLCPP_INFO(this->get_logger(), "controller_node ready (hz=%.1f)", hz);
 }
 
+// === Heartbeat ================================================================
+
+void ControllerNode::publishNodeHealth()
+{
+  state_machine::msg::Answer msg;
+  msg.node_name = "controller";
+  msg.state = 1;
+  msg.info = "controller running";
+  msg.timestamp = this->now();
+  pub_node_health_->publish(msg);
+}
+
 // === Callbacks ================================================================
 
 void ControllerNode::onDesiredState(
@@ -85,28 +105,20 @@ void ControllerNode::onDesiredState(
 {
   const auto & point = des_state_msg->points[0];
 
-  geometry_msgs::msg::Vector3 pos =
-    point.transforms[0].translation;
+  geometry_msgs::msg::Vector3 pos = point.transforms[0].translation;
   xd << pos.x, pos.y, pos.z;
 
-  geometry_msgs::msg::Vector3 vel =
-    point.velocities[0].linear;
+  geometry_msgs::msg::Vector3 vel = point.velocities[0].linear;
   vd << vel.x, vel.y, vel.z;
 
-  geometry_msgs::msg::Vector3 acc =
-    point.accelerations[0].linear;
+  geometry_msgs::msg::Vector3 acc = point.accelerations[0].linear;
   ad << acc.x, acc.y, acc.z;
 
-  geometry_msgs::msg::Quaternion quat =
-    point.transforms[0].rotation;
+  geometry_msgs::msg::Quaternion quat = point.transforms[0].rotation;
   Eigen::Quaterniond q_des(quat.w, quat.x, quat.y, quat.z);
   Eigen::Matrix3d R_des = q_des.toRotationMatrix();
   yawd = std::atan2(R_des(1, 0), R_des(0, 0));
 
-  if (!received_desired) {
-    RCLCPP_INFO(this->get_logger(), "Received first desired state at (%.2f, %.2f, %.2f)",
-                xd.x(), xd.y(), xd.z());
-  }
   received_desired = true;
 }
 
@@ -115,11 +127,6 @@ void ControllerNode::onCurrentState(
 {
   geometry_msgs::msg::Point pos = cur_state_msg->pose.pose.position;
   x << pos.x, pos.y, pos.z;
-
-  if (!received_current) {
-    received_current = true;
-    RCLCPP_INFO(this->get_logger(), "Received first odometry message.");
-  }
 
   geometry_msgs::msg::Vector3 vel = cur_state_msg->twist.twist.linear;
   v << vel.x, vel.y, vel.z;
@@ -137,24 +144,11 @@ void ControllerNode::onCurrentState(
 
 void ControllerNode::controlLoop()
 {
-  // Safety check: only run controller when both current state and desired state are available
-  if (!received_current || !received_desired) {
-    // Publish zero motor commands when not ready
-    static int warn_counter = 0;
-    if (warn_counter++ % 1000 == 0) {  // Print every second (1000Hz / 1000)
-      RCLCPP_WARN(this->get_logger(), 
-                  "Waiting for states: current=%s, desired=%s",
-                  received_current ? "YES" : "NO",
-                  received_desired ? "YES" : "NO");
-    }
-    mav_msgs::msg::Actuators cmd;
-    cmd.angular_velocities.resize(4, 0.0);
-    motor_pub_->publish(cmd);
+  if (!received_desired) {
     return;
   }
 
   Eigen::Vector3d ex, ev, er, eomega;
-
   ex = x - xd;
   ev = v - vd;
 
@@ -183,7 +177,7 @@ void ControllerNode::controlLoop()
   F2W_local << cf,         cf,         cf,         cf,
                cf * d_hat, cf * d_hat, -cf * d_hat, -cf * d_hat,
               -cf * d_hat, cf * d_hat,  cf * d_hat, -cf * d_hat,
-               cd,        -cd,         cd,        -cd;
+               cd,        -cd,         cd,         -cd;
 
   Eigen::Vector4d omega_squared = F2W_local.inverse() * wrench;
 
