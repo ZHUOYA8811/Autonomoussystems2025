@@ -1,0 +1,22 @@
+lantern_detector:
+  ros__parameters:
+    depth_topic: "/realsense/depth/image"
+    depth_info_topic: "/realsense/depth/camera_info"
+    semantic_topic: "/Quadrotor/Sensors/SemanticCamera/image_raw"
+
+    world_frame: "world"
+
+    output_topic: "detected_lanterns"
+    count_topic: "detected_lanterns/counts"
+    marker_topic: "lantern_markers"
+
+    min_depth: 0.1
+    max_depth: 50.0
+    distance_threshold: 2.0
+    min_num_sightings: 30
+    pixel_stride: 2
+    sync_queue_size: 30
+    tf_timeout_s: 0.2
+
+    marker_scale: 0.5
+    marker_color: [1.0, 1.0, 0.0, 1.0]

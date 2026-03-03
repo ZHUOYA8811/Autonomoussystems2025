@@ -1,0 +1,10 @@
+takeoff_node:
+  ros__parameters:
+    takeoff_height: 5.0
+    takeoff_duration: 5.0
+    publish_rate: 100.0
+
+    # 关键修改
+    odom_topic: "/current_state_est"
+
+    trajectory_topic: "command/trajectory"
