@@ -250,11 +250,11 @@ void BasicPlanner::drawMavTrajectory(
   line_strip.ns = "path";
 
   double accumulated_distance = 0.0;
-  Eigen::Vector3d last_position = Eigen::Vector3d::Zero();
+  Eigen::Vector3d last_position = trajectory_points.front().position_W;
   double scale = 0.3;
   double diameter = 0.3;
 
-  for (size_t i = 0; i < trajectory_points.size(); ++i) {
+  for (size_t i = 1; i < trajectory_points.size(); ++i) {
       const mav_msgs::EigenTrajectoryPoint& point = trajectory_points[i];
 
       accumulated_distance += (last_position - point.position_W).norm();
@@ -269,7 +269,7 @@ void BasicPlanner::drawMavTrajectory(
         axes_arrows.markers.resize(3);
 
         // x axis
-        visualization_msgs::msg::Marker arrow_marker = axes_arrows.markers[0];
+        visualization_msgs::msg::Marker& arrow_marker = axes_arrows.markers[0];
         arrow_marker.type = visualization_msgs::msg::Marker::ARROW;
         arrow_marker.action = visualization_msgs::msg::Marker::ADD;
         std_msgs::msg::ColorRGBA color;
@@ -286,7 +286,7 @@ void BasicPlanner::drawMavTrajectory(
         arrow_marker.scale.z = 0;
 
         // y axis
-        visualization_msgs::msg::Marker arrow_marker_y = axes_arrows.markers[1];
+        visualization_msgs::msg::Marker& arrow_marker_y = axes_arrows.markers[1];
         arrow_marker_y.type = visualization_msgs::msg::Marker::ARROW;
         arrow_marker_y.action = visualization_msgs::msg::Marker::ADD;
         std_msgs::msg::ColorRGBA color_y;
@@ -303,7 +303,7 @@ void BasicPlanner::drawMavTrajectory(
         arrow_marker_y.scale.z = 0;
 
         // z axis
-        visualization_msgs::msg::Marker arrow_marker_z = axes_arrows.markers[2];
+        visualization_msgs::msg::Marker& arrow_marker_z = axes_arrows.markers[2];
         arrow_marker_z.type = visualization_msgs::msg::Marker::ARROW;
         arrow_marker_z.action = visualization_msgs::msg::Marker::ADD;
         std_msgs::msg::ColorRGBA color_z;
