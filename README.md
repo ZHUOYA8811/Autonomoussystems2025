@@ -67,39 +67,13 @@ colcon build --packages-select <pkg_name>
 
 ## Launch Sequence
 
-Open separate terminals in the container (`./as3.sh`) and run in order:
 
-### 1 — Simulation (Unity bridge + controller)
-
-```bash
-ros2 launch simulation simulation.launch.py
-```
-
-### 2 — Perception (depth → point cloud → octomap)
+The entire UAV system is integrated into a unified entry point within the system_bringup package. This allows for a stable, single-command startup of the simulation, perception, planning, and control modules.
 
 ```bash
-ros2 launch perception perception.launch.py
+ros2 launch system_bringup bringup.launch.py
 ```
 
-### 3 — Planner + Explorer
-
-```bash
-ros2 launch planner_pkg planner.launch.py
-```
-
-### 4 — Waypoint Mission (sampler)
-
-```bash
-ros2 launch basic_waypoint_pkg waypoint_mission.launch.py
-```
-
-### 5 — State Machine (starts the mission)
-
-```bash
-ros2 launch state_machine state_machine.launch.py
-```
-
-Once both `controller` and `sampler` heartbeats are received, the drone automatically transitions from `WAITING` → `TAKEOFF`.
 
 ---
 
