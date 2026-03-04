@@ -94,9 +94,16 @@ colcon build --packages-select <pkg_name>
 ## Launch Sequence
 
 
-The entire UAV system is integrated into a unified entry point within the system_bringup package. This allows for a stable, single-command startup of the simulation, perception, planning, and control modules.
+The entire UAV system  launch instruction is integrated into a unified entry point within the state_machine package. This allows for a stable command startup of the simulation, perception, planning, and control modules.
 
 ```bash
+ros2 launch system_bringup bringup.launch.py
+```
+If unity simulator has crashe unexpectedly please first initiated the simulation Unity.
+
+```bash
+cd /ros2_ws/install/simulation/lib/simulation/
+./Simulation.x86_64
 ros2 launch system_bringup bringup.launch.py
 ```
 
