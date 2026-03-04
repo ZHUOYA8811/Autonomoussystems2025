@@ -29,7 +29,7 @@ import os
 
 def generate_launch_description():
 
-    # ---- 启动参数 ----
+    # ---- Launch arguments ----
     takeoff_height_arg = DeclareLaunchArgument(
         'takeoff_height', default_value='5.0',
         description='Takeoff height (meters)')

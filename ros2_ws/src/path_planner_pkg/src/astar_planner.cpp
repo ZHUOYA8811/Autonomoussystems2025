@@ -121,13 +121,15 @@ std::vector<Eigen::Vector3d> AStarPlanner::plan(const Eigen::Vector3d& start,
                 continue;
             }
 
-            // 碰撞检查（考虑机器人半径膨胀）
+            // 碰撞检查（球形膨胀，避免正方体膨胀在对角方向过度/不足）
             bool collision = false;
             for (int ix = -inflate; ix <= inflate && !collision; ++ix) {
                 for (int iy = -inflate; iy <= inflate && !collision; ++iy) {
                     for (int iz = -inflate; iz <= inflate && !collision; ++iz) {
+                        // 只检查球内的格子（欧氏距离 <= robot_radius）
+                        if (ix*ix + iy*iy + iz*iz > inflate*inflate) continue;
                         int8_t val = map_.getCell(nx+ix, ny+iy, nz+iz);
-                        if (val == 100) collision = true;
+                        if (val == 100 || val == 50) collision = true;  // 100=障碍物, 50=预膨胀
                     }
                 }
             }
@@ -207,6 +209,53 @@ std::vector<Eigen::Vector3d> AStarPlanner::reconstructPath(
             }
         }
         smoothed.push_back(path.back());
+
+        // ---- 拐角安全膨胀：在尖锐拐弯处插入偏移航点 ----
+        // 当连续两段的夹角 < 150°（cos < 0.87）时，控制器跟踪会切弯，
+        // 在凸出障碍物旁尤其危险。此处在拐点处沿角平分线外侧偏移
+        // 一定距离插入额外航点，迫使无人机绕弯飞行。
+        // [改进] 根据转弯角度动态调整偏移距离：
+        //   - 角度 > 90° (cos < 0)：偏移 2.5 倍半径
+        //   - 角度 > 60° (cos < 0.5)：偏移 2.0 倍半径
+        //   - 角度 > 30° (cos < 0.87)：偏移 1.5 倍半径
+        if (smoothed.size() >= 3) {
+            std::vector<Eigen::Vector3d> cornered;
+            cornered.push_back(smoothed.front());
+
+            for (size_t i = 1; i < smoothed.size() - 1; ++i) {
+                Eigen::Vector3d d1 = (smoothed[i] - smoothed[i-1]).normalized();
+                Eigen::Vector3d d2 = (smoothed[i+1] - smoothed[i]).normalized();
+                double cos_angle = d1.dot(d2);
+
+                if (cos_angle < 0.87) {  // 从0.7改为0.87，更早检测转弯
+                    // 拐弯（< 150°）：插入偏移航点
+                    // 角平分线外侧方向 = -(d1 + d2).normalized()
+                    Eigen::Vector3d bisect = -(d1 + d2);
+                    double bn = bisect.norm();
+                    if (bn > 1e-6) {
+                        bisect /= bn;
+                        // [改进] 根据转弯角度动态计算偏移距离
+                        double offset_mult = 1.5;
+                        if (cos_angle < 0.0) {
+                            offset_mult = 2.5;  // 超过90°转弯
+                        } else if (cos_angle < 0.5) {
+                            offset_mult = 2.0;  // 超过60°转弯
+                        }
+                        double offset_dist = robot_radius_ * offset_mult;
+                        Eigen::Vector3d offset_pt = smoothed[i] + bisect * offset_dist;
+                        // 只有偏移点可通行时才插入
+                        if (map_.isPathFree(smoothed[i-1], offset_pt, robot_radius_ * 0.5) &&
+                            map_.isPathFree(offset_pt, smoothed[i+1], robot_radius_ * 0.5)) {
+                            cornered.push_back(offset_pt);
+                        }
+                    }
+                }
+                cornered.push_back(smoothed[i]);
+            }
+            cornered.push_back(smoothed.back());
+            return cornered;
+        }
+
         return smoothed;
     }
 
