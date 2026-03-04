@@ -19,6 +19,8 @@ StateMachine::StateMachine() : Node("state_machine_node") {
     // 2. 初始化发布者
     pub_state_ = this->create_publisher<std_msgs::msg::String>("statemachine/state", 10);
     pub_cmd_ = this->create_publisher<state_machine::msg::Command>("statemachine/cmd", 10);
+    pub_discovered_lanterns_ = this->create_publisher<geometry_msgs::msg::PoseArray>("discovered_lanterns", 10);
+    pub_lantern_monitor_ = this->create_publisher<std_msgs::msg::Int32MultiArray>("statemachine/lantern_monitor", 10);
     
     // 3. 初始化订阅者
     sub_node_health_ = this->create_subscription<state_machine::msg::Answer>(
@@ -42,6 +44,7 @@ void StateMachine::onTimer() {
     auto state_msg = std_msgs::msg::String();
     state_msg.data = toString(current_mission_state_);
     pub_state_->publish(state_msg);
+    publishLanternMonitor();
 
     checkSystemstate();  // 监控系统健康状况
     checkCheckpoints();  // 检查航点到达情况
@@ -181,9 +184,23 @@ void StateMachine::handleFlagEvents() {
     // === 第二部分：灯笼计数判定逻辑（仅在 EXPLORING 时生效）===
     if (current_mission_state_ == MissionStates::EXPLORING) {
         if (latest_lantern_count_ >= kRequiredLanternCount) {
-            changeState(MissionStates::RETURN_HOME, "5 lanterns detected, mission success!");
+            changeState(
+                MissionStates::RETURN_HOME,
+                std::to_string(kRequiredLanternCount) + " lanterns detected, mission success!");
         }
     }
+}
+
+void StateMachine::publishLanternMonitor() {
+    if (!pub_lantern_monitor_) return;
+
+    std_msgs::msg::Int32MultiArray monitor_msg;
+    monitor_msg.data.reserve(3);
+    monitor_msg.data.push_back(static_cast<int32_t>(latest_lantern_count_));
+    monitor_msg.data.push_back(static_cast<int32_t>(kRequiredLanternCount));
+    monitor_msg.data.push_back(
+        latest_lantern_count_ >= kRequiredLanternCount ? 1 : 0);
+    pub_lantern_monitor_->publish(monitor_msg);
 }
 
 /**
@@ -287,6 +304,9 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
             {
                 sendCommand("controller", Commands::START);
 
+                logDiscoveredLanternSummary("RETURN_HOME");
+                pub_discovered_lanterns_->publish(buildDiscoveredLanternPoseArray());
+
                 // 1. 设置明确的回家目标点
                 geometry_msgs::msg::Point home_goal;
                 home_goal.x = -38.0; 
@@ -326,6 +346,8 @@ void StateMachine::changeState(MissionStates target, const std::string& reason) 
             {
                 sendCommand("controller", Commands::HOLD);
                 sendCommand("planner", Commands::HOLD);
+                logDiscoveredLanternSummary("DONE");
+                pub_discovered_lanterns_->publish(buildDiscoveredLanternPoseArray());
                 RCLCPP_INFO(this->get_logger(), "=== MISSION ACCOMPLISHED ===");
             }
             break;
@@ -346,6 +368,36 @@ bool StateMachine::prepareLandingCheckpoint(geometry_msgs::msg::Point& landing_t
     landing_target_out.y = current_position_m_.y;
     landing_target_out.z = 0.0; 
     return true;
+}
+
+geometry_msgs::msg::PoseArray StateMachine::buildDiscoveredLanternPoseArray() const {
+    geometry_msgs::msg::PoseArray pose_array;
+    pose_array.header.stamp = this->now();
+    pose_array.header.frame_id = "world";
+
+    pose_array.poses.reserve(discovered_lanterns_.size());
+    for (const auto& pt : discovered_lanterns_) {
+        geometry_msgs::msg::Pose pose;
+        pose.position = pt;
+        pose.orientation.w = 1.0;
+        pose_array.poses.push_back(pose);
+    }
+
+    return pose_array;
+}
+
+void StateMachine::logDiscoveredLanternSummary(const std::string& stage_tag) const {
+    const auto lanterns = buildDiscoveredLanternPoseArray();
+    if (lanterns.poses.empty()) {
+        RCLCPP_INFO(this->get_logger(), "[%s] No discovered lantern coordinates yet.", stage_tag.c_str());
+        return;
+    }
+
+    RCLCPP_INFO(this->get_logger(), "[%s] Discovered lanterns (%zu):", stage_tag.c_str(), lanterns.poses.size());
+    for (size_t i = 0; i < lanterns.poses.size(); ++i) {
+        const auto& p = lanterns.poses[i].position;
+        RCLCPP_INFO(this->get_logger(), "  #%zu [%.2f, %.2f, %.2f]", i + 1, p.x, p.y, p.z);
+    }
 }
 
 // 辅助函数：消息下发
@@ -410,8 +462,10 @@ void StateMachine::onLanternDetections(const geometry_msgs::msg::PointStamped::S
     if (current_mission_state_ != MissionStates::EXPLORING) return;
 
     // 逻辑：判断这个点是不是一个新的灯笼（去重逻辑）
+    // 感知端已内置候选确认机制（dedup_radius=7m），此处做轻量二次保护
+    // 注意：此处半径不要比感知端的 dedup_radius 大，否则会漏掉已确认的灯笼
     bool is_new = true;
-    double min_dist_threshold = 5.0; // 假设两个不同灯笼之间至少距离 5 米
+    double min_dist_threshold = 5.0; // 5m二次去重（之前10m太大，会吞掉感知端已确认的不同灯笼）
 
     for (const auto& pos : discovered_lanterns_) {
         double dx = msg->point.x - pos.x;
@@ -430,6 +484,10 @@ void StateMachine::onLanternDetections(const geometry_msgs::msg::PointStamped::S
         latest_lantern_count_ = discovered_lanterns_.size();
         RCLCPP_INFO(this->get_logger(), "New lantern found at [%.2f, %.2f, %.2f]! Total: %zu", 
                     msg->point.x, msg->point.y, msg->point.z, latest_lantern_count_);
+        logDiscoveredLanternSummary("NEW_DISCOVERY");
+        
+        // Publish discovered lanterns as PoseArray topic
+        pub_discovered_lanterns_->publish(buildDiscoveredLanternPoseArray());
     }
 }
 

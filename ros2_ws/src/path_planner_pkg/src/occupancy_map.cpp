@@ -67,10 +67,31 @@ void OccupancyMap3D::updateFromPointCloud(const std::vector<Eigen::Vector3d>& po
 
         if (dist < 0.1 || dist > max_range) continue;
 
-        // 标记终点为占用
+        // 标记终点为占用，并对 26-邻域做 1-格预膨胀（含对角方向，约0.7m缓冲层）
+        // 升级为26-邻域：急转弯时侧面和对角方向的凸出障碍物也能被碰撞检查捕获
+        // 预膨胀格：凡是未知(-1)或自由(0)的邻居都升级为占用，
+        // 光线投射时仍可将其重新清除（val==0 分支）。
         int ex, ey, ez;
         if (worldToGrid(pt.x(), pt.y(), pt.z(), ex, ey, ez)) {
             setCell(ex, ey, ez, 100);
+            // 26-邻域预膨胀（含面、边、角邻居，更厚的安全缓冲）
+            for (int ddx = -1; ddx <= 1; ++ddx) {
+                for (int ddy = -1; ddy <= 1; ++ddy) {
+                    for (int ddz = -1; ddz <= 1; ++ddz) {
+                        if (ddx == 0 && ddy == 0 && ddz == 0) continue;
+                        int nx = ex + ddx, ny = ey + ddy, nz = ez + ddz;
+                        if (inBounds(nx, ny, nz)) {
+                            int8_t cur = getCell(nx, ny, nz);
+                            // 将未知/自由格标为预膨胀(50)，保留实际障碍物(100)不动。
+                            // 光线投射只清除 -1 和 100，不会清除 50，
+                            // 因此 50 层可持续存在直到下一次更新。
+                            if (cur != 100) {
+                                setCell(nx, ny, nz, 50);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         // 用Bresenham 3D光线投射标记自由空间
@@ -106,7 +127,7 @@ bool OccupancyMap3D::isFreeGrid(int gx, int gy, int gz) const
     int8_t val = getCell(gx, gy, gz);
     // 允许通过明确自由和未知区域（只阻挡确认的障碍物）
     // 之前只有 val==0 才可通行，导致A*在未探索洞穴中无法规划
-    return val != 100;  // 0(自由) 和 -1(未知) 都可通行
+    return val != 100 && val != 50;  // 0(自由) 和 -1(未知) 都可通行；50=预膨胀障碍
 }
 
 bool OccupancyMap3D::isPathFree(const Eigen::Vector3d& from,
@@ -128,14 +149,15 @@ bool OccupancyMap3D::isPathFree(const Eigen::Vector3d& from,
         int gx, gy, gz;
         if (!worldToGrid(pt.x(), pt.y(), pt.z(), gx, gy, gz)) return false;
 
-        // 检查膨胀后的区域
+        // 球形膨胀检查（只检查欧氏距离 <= robot_radius 的格子）
         for (int dx = -inflate; dx <= inflate; ++dx) {
             for (int dy = -inflate; dy <= inflate; ++dy) {
                 for (int dz = -inflate; dz <= inflate; ++dz) {
+                    if (dx*dx + dy*dy + dz*dz > inflate*inflate) continue;
                     int nx = gx + dx, ny = gy + dy, nz = gz + dz;
                     if (inBounds(nx, ny, nz)) {
                         int8_t val = getCell(nx, ny, nz);
-                        if (val == 100) return false;  // 碰到障碍物
+                        if (val == 100 || val == 50) return false;  // 碰到障碍物或预膨胀区域
                     }
                 }
             }
@@ -267,7 +289,8 @@ nav_msgs::msg::OccupancyGrid OccupancyMap3D::toOccupancyGrid2D(
             int8_t best = -1;
             for (int z = gz_min; z <= gz_max; ++z) {
                 int8_t val = getCell(x, y, z);
-                if (val == 100) { best = 100; break; }
+                if (val == 100) { best = 100; break; }         // 直接障碍物
+                if (val == 50 && best != 100) { best = 100; }  // 预膨胀层也显示为占用
                 if (val == 0 && best == -1) best = 0;
             }
             grid.data[x + y * size_x_] = best;

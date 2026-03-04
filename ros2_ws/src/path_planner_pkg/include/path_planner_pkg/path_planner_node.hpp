@@ -174,8 +174,11 @@ private:
     int max_iter_;
     double robot_radius_;
     std::vector<RRTNode> tree_;
-    std::mt19937 rng_;
-    std::uniform_real_distribution<double> dist_01_;
+    std::mt19937 rng_;    std::uniform_real_distribution<double> dist_01_;
+
+    // 空间哈希辅助
+    int64_t bucketKey(const Eigen::Vector3d& p) const;
+    void hashInsert(int idx);
 };
 
 // ============================================================
@@ -295,6 +298,12 @@ private:
     rclcpp::Time last_move_time_;   // 上次有效移动的时间
     Eigen::Vector3d last_move_pos_ = Eigen::Vector3d::Zero();  // 上次记录位置
     bool is_stalled_ = false;       // 当前是否卡住
+    int stall_backup_attempts_ = 0; // 卡住后的回退尝试次数
+
+    // 前方障碍预警区（warn zone）：减速系数 + 爬升偏置
+    // 由 onPointCloud 设置，由 publishTrajectory 消费
+    double obstacle_speed_scale_ = 1.0;  // 减速系数 [0.3, 1.0]，1.0=正常速度
+    double obstacle_climb_bias_  = 0.0;  // 目标点 Z 偏置 (m)，0=不爬升
 
     // 根据当前状态返回合适的飞行速度
     double getEffectiveSpeed() const {

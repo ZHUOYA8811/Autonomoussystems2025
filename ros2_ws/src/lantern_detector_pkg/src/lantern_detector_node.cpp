@@ -134,9 +134,9 @@ void LanternDetectorNode::synchronized_callback(const sensor_msgs::msg::Image::C
   cv::cvtColor(sem_bgr, gray, cv::COLOR_BGR2GRAY);
   cv::threshold(gray, mask, 0, 255, cv::THRESH_BINARY);
 
-  // Denoise a bit
-  cv::erode(mask, mask, cv::Mat(), cv::Point(-1,-1), 1);
-  cv::dilate(mask, mask, cv::Mat(), cv::Point(-1,-1), 2);
+  // 轻微降噪 - 减少腐蚀以保留小目标检测（避免错过远处或快速经过的灯笼）
+  // 原: erode 1, dilate 2 -> 改为: 只做轻微膨胀填补空洞
+  cv::dilate(mask, mask, cv::Mat(), cv::Point(-1,-1), 1);
 
   cv::Mat nonzero;
   cv::findNonZero(mask, nonzero);

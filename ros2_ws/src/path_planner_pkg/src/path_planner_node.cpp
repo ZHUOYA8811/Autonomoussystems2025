@@ -156,36 +156,184 @@ void PathPlannerNode::onPointCloud(const sensor_msgs::msg::PointCloud2::SharedPt
         vel = current_vel_;
     }
 
-    // [安全] 增大感知范围到15m，为高速飞行提供更早的避障信息
+    // [安全] 增大感知范围到20m，为高速飞行和急转弯提供更早的避障信息
     {
         std::lock_guard<std::mutex> lock(map_mutex_);
-        map_->updateFromPointCloud(points, sensor_origin, 15.0);
+        map_->updateFromPointCloud(points, sensor_origin, 20.0);
         has_map_ = true;
     }
 
-    // [安全] 紧急近距离障碍检测（虚拟保险杠）
-    // 检查点云中最近的障碍物距离
-    double min_dist = std::numeric_limits<double>::max();
+    // [安全] 紧急近距离障碍检测（速度自适应虚拟保险杠）
+    // 1) 计算点云中沿飞行方向锥形区域内最近的障碍物距离
+    // 2) 停止距离随速度线性增长：max(1.5, speed*0.8) — 5m/s → 4m
+    // 3) [新增] 左右侧方检测 (±70°~±110°)，用于转弯时的侧向保护
+    double min_dist_all = std::numeric_limits<double>::max();
+    double min_dist_cone = std::numeric_limits<double>::max();
+    double min_dist_lateral_left = std::numeric_limits<double>::max();
+    double min_dist_lateral_right = std::numeric_limits<double>::max();
+    Eigen::Vector3d vel_dir = vel.normalized();
+    bool has_vel_dir = (vel.norm() > 0.3);
+
+    // 计算垂直于速度方向的左右向量（用于侧向检测）
+    Eigen::Vector3d left_dir(0, 0, 0);
+    Eigen::Vector3d right_dir(0, 0, 0);
+    if (has_vel_dir) {
+        // 水平面上的左向量
+        left_dir = Eigen::Vector3d(-vel_dir.y(), vel_dir.x(), 0).normalized();
+        right_dir = -left_dir;
+    }
+
     for (const auto& pt : points) {
-        double d = (pt - sensor_origin).norm();
-        if (d > 0.3 && d < min_dist) {  // 忽略太近的噪声
-            min_dist = d;
+        Eigen::Vector3d diff = pt - sensor_origin;
+        double d = diff.norm();
+        if (d < 0.3 || d > 15.0) continue;  // 扩大检测范围到15m，更早发现障碍物（急转弯+高速）
+
+        // 全向最近障碍物
+        if (d < min_dist_all) min_dist_all = d;
+
+        // 飞行方向锥形区域（±70°）内最近障碍物 — 进一步扩大角度到70°
+        if (has_vel_dir && d < 16.0) {  // 扩大到16m：5m/s时warn_dist=12.5m，须留感知余量
+            double cos_angle = diff.dot(vel_dir) / d;
+            if (cos_angle > 0.34) {  // cos(70°) ≈ 0.34，更宽的检测锥
+                if (d < min_dist_cone) min_dist_cone = d;
+            }
+        }
+
+        // 侧向检测（左右各±60°扇形）— 大幅扩大转弯保护范围
+        if (has_vel_dir && d < 13.0) {  // 13m：覆盖侧向warn_dist（5m/s时≈8.75m）加余量
+            Eigen::Vector3d diff_norm = diff / d;
+            double cos_left = diff_norm.dot(left_dir);
+            double cos_right = diff_norm.dot(right_dir);
+            // cos(60°) = 0.5，检测左右±60°内的障碍物
+            if (cos_left > 0.5) {
+                if (d < min_dist_lateral_left) min_dist_lateral_left = d;
+            }
+            if (cos_right > 0.5) {
+                if (d < min_dist_lateral_right) min_dist_lateral_right = d;
+            }
         }
     }
 
-    // 如果最近障碍物 < 1.5m 且正在朝它飞行，紧急悬停
     double speed = vel.norm();
-    if (min_dist < 1.5 && speed > 0.5 && 
+    // 动态停止距离：低速 1.5m → 高速 speed*1.0（急转弯惯性大，需更大制动距离）
+    double stop_dist = std::max(1.5, speed * 1.0);
+    // 侧向停止距离：更保守（急转弯时侧面暴露更多）
+    double lateral_stop_dist = std::max(1.5, speed * 0.7);
+
+    // 条件1：前方锥形区域有障碍且距离 < 停止距离
+    bool cone_emergency = has_vel_dir && (min_dist_cone < stop_dist) && (speed > 0.3);
+    // 条件2：任何方向 < 1.0m（无条件紧急停止）
+    bool proximity_emergency = (min_dist_all < 1.0) && (speed > 0.3);
+    // 条件3：[新增] 侧向有障碍且距离 < 侧向停止距离（转弯保护）
+    bool lateral_emergency = has_vel_dir && (speed > 0.5) &&
+        ((min_dist_lateral_left < lateral_stop_dist) || (min_dist_lateral_right < lateral_stop_dist));
+
+    // 记录侧向信息供日志使用
+    double min_lateral = std::min(min_dist_lateral_left, min_dist_lateral_right);
+
+    if ((cone_emergency || proximity_emergency || lateral_emergency) &&
         state_ != PlannerState::HOLDING && state_ != PlannerState::IDLE) {
+
+        double trigger_dist = cone_emergency ? min_dist_cone : 
+                              (lateral_emergency ? min_lateral : min_dist_all);
+        
+        const char* emergency_type = cone_emergency ? "FRONT" : 
+                                     (lateral_emergency ? "LATERAL" : "PROXIMITY");
+        
         RCLCPP_WARN(this->get_logger(),
-            "[EMERGENCY] Obstacle at %.1fm! Speed=%.1fm/s. Emergency hover!",
-            min_dist, speed);
-        // 发布当前位置作为紧急悬停点
-        std::vector<Eigen::Vector3d> hover = {sensor_origin};
+            "[EMERGENCY-%s] Obstacle at %.1fm (cone=%.1fm, lateral=%.1fm)! Speed=%.1fm/s. Hover!",
+            emergency_type, min_dist_all, min_dist_cone, min_lateral, speed);
+
+        // 智能避障：优先向上避障（洞穴中向上通常最安全），其次横移/后退
+        Eigen::Vector3d hover_pt = sensor_origin;
+        if (trigger_dist > 1.0 && has_vel_dir) {
+            // === 策略1（首选）：向上爬升避障 ===
+            // 洞穴中凸出的障碍物（石笋/钟乳石）向上绕过最快最安全
+            // 爬升量从1.5m增至2.5m，更有效越过凸出障碍
+            Eigen::Vector3d up_pt = sensor_origin + Eigen::Vector3d(0, 0, 2.5) - vel_dir * 0.5;
+            // 检查上方是否安全（用点云简单估计，扩大安全检查半径到1.5m）
+            bool up_clear = true;
+            for (const auto& pt : points) {
+                Eigen::Vector3d diff_up = pt - up_pt;
+                if (diff_up.norm() < 1.5) { up_clear = false; break; }
+            }
+            
+            if (up_clear && sensor_origin.z() < 18.0) {
+                hover_pt = up_pt;
+                RCLCPP_INFO(this->get_logger(), "[AVOID] Ascending +2.5m to z=%.1f (preferred)", hover_pt.z());
+            } else if (lateral_emergency && !cone_emergency) {
+                // === 策略2：侧向障碍 → 向远离障碍物的方向横移 + 向上偏移 ===
+                Eigen::Vector3d dodge_dir = (min_dist_lateral_left < min_dist_lateral_right) 
+                    ? right_dir : left_dir;
+                hover_pt = sensor_origin + dodge_dir * 0.8 + Eigen::Vector3d(0, 0, 1.0) - vel_dir * 0.3;
+                RCLCPP_INFO(this->get_logger(), "[AVOID] Lateral dodge+up: %s side, z=%.1f", 
+                    (min_dist_lateral_left < min_dist_lateral_right) ? "right" : "left", hover_pt.z());
+            } else {
+                // === 策略3：前方障碍 → 后退 + 向上偏移（增大向上偏移量）===
+                hover_pt = sensor_origin - vel_dir * 0.8 + Eigen::Vector3d(0, 0, 1.5);
+                RCLCPP_INFO(this->get_logger(), "[AVOID] Backup+up to z=%.1f", hover_pt.z());
+            }
+        }
+
+        std::vector<Eigen::Vector3d> hover = {hover_pt};
         publishTrajectory(hover);
         // 清空当前路径，强制下一轮重新规划
         current_path_.clear();
         path_index_ = 0;
+    }
+
+    // ---- 预警区（warn zone）：障碍物在 [stop_dist, warn_dist] 之间时预减速 + 爬升 ----
+    // 策略：比硬制动更早介入，先线性降速，同时微微抬升下一目标点高度，
+    //       让无人机在转弯或飞近障碍时有足够时间减速并从上方绕过凸出物。
+    // 注意：紧急区内 min_dist_cone < stop_dist → t_warn ≤ 0 → scale = 0.3（最低速）
+    //       紧急解除后 scale 随距离增大自然恢复，不会瞬间跳回全速。
+    {
+        if (has_vel_dir && speed > 0.3) {
+            // warn_dist = stop_dist 的 2.5 倍（且至少比 stop_dist 大 5m）
+            double warn_dist         = std::max(stop_dist * 2.5, stop_dist + 5.0);
+            double lateral_warn_dist = std::max(lateral_stop_dist * 2.5, lateral_stop_dist + 5.0);
+
+            // 前方 warn zone
+            double t_front = 1.0;
+            if (min_dist_cone < warn_dist) {
+                t_front = (min_dist_cone - stop_dist) / (warn_dist - stop_dist);
+                t_front = std::max(0.0, std::min(1.0, t_front));
+            }
+
+            // 侧向 warn zone（转弯保护）
+            double t_lateral = 1.0;
+            if (min_lateral < lateral_warn_dist) {
+                t_lateral = (min_lateral - lateral_stop_dist) / (lateral_warn_dist - lateral_stop_dist);
+                t_lateral = std::max(0.0, std::min(1.0, t_lateral));
+            }
+
+            // 取最保守的（最小 t = 最需要减速）
+            double t_warn = std::min(t_front, t_lateral);
+
+            double new_scale  = std::max(0.3, t_warn);        // 最低 30% 速度
+            double new_climb  = (1.0 - t_warn) * 2.0;         // 越近爬升越多，最多 +2m
+
+            // 单调递减滤波：scale 只往下走（检测到障碍立即减速），
+            // 往上恢复时以 0.05/帧（约 0.5 m/s² 等效）限速，避免瞬间满速冲回
+            if (new_scale < obstacle_speed_scale_) {
+                obstacle_speed_scale_ = new_scale;   // 立即减速
+            } else {
+                obstacle_speed_scale_ = std::min(new_scale,
+                    obstacle_speed_scale_ + 0.05);   // 缓慢恢复
+            }
+            obstacle_climb_bias_ = new_climb;
+
+            if (new_scale < 0.99) {
+                RCLCPP_DEBUG(this->get_logger(),
+                    "[WARN_ZONE] cone=%.1fm lat=%.1fm  decel=%.0f%%  climb=+%.1fm",
+                    min_dist_cone, min_lateral,
+                    obstacle_speed_scale_ * 100.0, obstacle_climb_bias_);
+            }
+        } else {
+            // 无速度方向时缓慢恢复（避免静止时锁住速度）
+            obstacle_speed_scale_ = std::min(1.0, obstacle_speed_scale_ + 0.05);
+            obstacle_climb_bias_  = 0.0;
+        }
     }
 }
 
@@ -341,6 +489,7 @@ void PathPlannerNode::runExploration()
         last_move_time_ = this->now();
         last_move_pos_ = pos;
         is_stalled_ = false;
+        stall_backup_attempts_ = 0;  // 重置回退尝试计数
     } else {
         double elapsed = (this->now() - last_move_time_).seconds();
         if (elapsed > stall_time_threshold_) {
@@ -350,6 +499,66 @@ void PathPlannerNode::runExploration()
                     dist_since_last, elapsed,
                     movement_threshold_, stall_time_threshold_);
                 is_stalled_ = true;
+            }
+            
+            // [新增] 主动回退逃脱机制 - 当卡住超过阈值时立即后退
+            if (stall_backup_attempts_ < 5) {
+                stall_backup_attempts_++;
+                RCLCPP_WARN(this->get_logger(),
+                    "[STALL ESCAPE] Active backup attempt %d/5", stall_backup_attempts_);
+                
+                // 获取当前速度方向，沿相反方向后退
+                Eigen::Vector3d vel_dir;
+                {
+                    std::lock_guard<std::mutex> lock(odom_mutex_);
+                    vel_dir = current_vel_.normalized();
+                }
+                
+                // 根据尝试次数增加后退距离和角度变化
+                double backup_dist = 1.5 + stall_backup_attempts_ * 0.5;  // 1.5~4.0m
+                double lateral_angle = (stall_backup_attempts_ % 2 == 0) ? 0.5 : -0.5;  // 左右交替
+                
+                Eigen::Vector3d backup_pos = pos;
+                if (vel_dir.norm() > 0.1) {
+                    backup_pos = pos - vel_dir * backup_dist;
+                } else {
+                    // 没有明确速度方向，向+X回退（离开洞穴深处）
+                    backup_pos = Eigen::Vector3d(pos.x() + backup_dist, pos.y(), pos.z());
+                }
+                
+                // 添加侧向偏移避免卡在同一位置
+                backup_pos.y() += lateral_angle * backup_dist * 0.5;
+                backup_pos.z() = std::max(explore_height_ - 2.0, std::min(explore_height_ + 2.0, backup_pos.z()));
+                
+                // 检查回退路径是否安全
+                bool backup_safe = true;
+                {
+                    std::lock_guard<std::mutex> lock(map_mutex_);
+                    if (has_map_ && !map_->isPathFree(pos, backup_pos, robot_radius_ * 0.5)) {
+                        // 回退路径被阻挡，尝试其他方向
+                        for (double angle : {M_PI/4, -M_PI/4, M_PI/2, -M_PI/2, M_PI}) {
+                            Eigen::Vector3d alt_backup(
+                                pos.x() + std::cos(angle) * backup_dist,
+                                pos.y() + std::sin(angle) * backup_dist,
+                                pos.z());
+                            if (map_->isPathFree(pos, alt_backup, robot_radius_ * 0.3)) {
+                                backup_pos = alt_backup;
+                                backup_safe = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                
+                if (backup_safe) {
+                    std::vector<Eigen::Vector3d> backup_path = {backup_pos};
+                    current_path_.clear();
+                    path_index_ = 0;
+                    publishTrajectory(backup_path);
+                    // 重置卡住时间让系统有时间执行回退
+                    last_move_time_ = this->now();
+                    return;  // 跳过本次规划，等待回退完成
+                }
             }
         }
     }
@@ -386,14 +595,40 @@ void PathPlannerNode::runExploration()
             need_replan = true;
         }
 
-        // [安全] 实时碰撞检测：检查当前路径段是否仍然安全
+        // [安全] 实时碰撞检测：检查当前路径段以及后续4段是否仍然安全
+        // 多段前瞻可在转弯前就发现凸出的障碍物，而不是到了弯口才发现
+        // [改进] 在转弯处使用更大的碰撞检查半径
         if (!need_replan && has_map_ && path_index_ < static_cast<int>(current_path_.size())) {
             std::lock_guard<std::mutex> lock(map_mutex_);
-            if (!map_->isPathFree(pos, current_path_[path_index_], robot_radius_)) {
-                RCLCPP_WARN(this->get_logger(),
-                    "[SAFETY] Current path segment blocked by new obstacle! Replanning...");
-                need_replan = true;
-                current_path_.clear();
+            int lookahead_end = std::min(path_index_ + 7,
+                                         static_cast<int>(current_path_.size()));
+            Eigen::Vector3d check_from = pos;
+            Eigen::Vector3d prev_dir(0, 0, 0);
+            
+            for (int li = path_index_; li < lookahead_end; ++li) {
+                // 计算转弯角度以决定使用的碰撞检查半径
+                Eigen::Vector3d curr_dir = (current_path_[li] - check_from).normalized();
+                double effective_radius = robot_radius_;
+                
+                if (prev_dir.norm() > 0.5 && curr_dir.norm() > 0.5) {
+                    double cos_turn = prev_dir.dot(curr_dir);
+                    if (cos_turn < 0.7) {  // 转弯角度 > 45°
+                        // 在急转弯处增大碰撞检查半径 (最多增加80%)
+                        double radius_mult = 1.0 + 0.8 * (0.7 - cos_turn) / 0.7;
+                        effective_radius = robot_radius_ * radius_mult;
+                    }
+                }
+                
+                if (!map_->isPathFree(check_from, current_path_[li], effective_radius)) {
+                    RCLCPP_WARN(this->get_logger(),
+                        "[SAFETY] Path segment %d/%zu blocked (explore lookahead, r=%.2f). Replanning...",
+                        li, current_path_.size(), effective_radius);
+                    need_replan = true;
+                    current_path_.clear();
+                    break;
+                }
+                prev_dir = curr_dir;
+                check_from = current_path_[li];
             }
         }
     }
@@ -777,14 +1012,39 @@ void PathPlannerNode::runNavigation(const Eigen::Vector3d& goal)
             need_replan = true;
         }
 
-        // [安全] 实时碰撞检测：检查当前路径段是否仍然无障碍
+        // [安全] 实时碰撞检测：检查当前路径段以及后续4段是否仍然无障碍
+        // [改进] 在转弯处使用更大的碰撞检查半径
         if (!need_replan && has_map_ && path_index_ < static_cast<int>(current_path_.size())) {
             std::lock_guard<std::mutex> lock(map_mutex_);
-            if (!map_->isPathFree(pos, current_path_[path_index_], robot_radius_)) {
-                RCLCPP_WARN(this->get_logger(),
-                    "[SAFETY] Navigation path blocked by obstacle! Emergency replan.");
-                need_replan = true;
-                current_path_.clear();
+            int lookahead_end = std::min(path_index_ + 7,
+                                         static_cast<int>(current_path_.size()));
+            Eigen::Vector3d check_from = pos;
+            Eigen::Vector3d prev_dir(0, 0, 0);
+            
+            for (int li = path_index_; li < lookahead_end; ++li) {
+                // 计算转弯角度以决定使用的碰撞检查半径
+                Eigen::Vector3d curr_dir = (current_path_[li] - check_from).normalized();
+                double effective_radius = robot_radius_;
+                
+                if (prev_dir.norm() > 0.5 && curr_dir.norm() > 0.5) {
+                    double cos_turn = prev_dir.dot(curr_dir);
+                    if (cos_turn < 0.7) {  // 转弯角度 > 45°
+                        // 在急转弯处增大碰撞检查半径 (最多增加80%)
+                        double radius_mult = 1.0 + 0.8 * (0.7 - cos_turn) / 0.7;
+                        effective_radius = robot_radius_ * radius_mult;
+                    }
+                }
+                
+                if (!map_->isPathFree(check_from, current_path_[li], effective_radius)) {
+                    RCLCPP_WARN(this->get_logger(),
+                        "[SAFETY] Navigation path segment %d blocked (lookahead, r=%.2f). Emergency replan.",
+                        li, effective_radius);
+                    need_replan = true;
+                    current_path_.clear();
+                    break;
+                }
+                prev_dir = curr_dir;
+                check_from = current_path_[li];
             }
         }
     }
@@ -914,8 +1174,28 @@ void PathPlannerNode::publishTrajectory(const std::vector<Eigen::Vector3d>& path
     traj_msg.header.stamp = this->now();
     traj_msg.header.frame_id = "world";
 
-    double effective_speed = getEffectiveSpeed();
+    // 预警区减速：obstacle_speed_scale_ 由 onPointCloud warn zone 实时更新
+    double effective_speed = getEffectiveSpeed() * obstacle_speed_scale_;
+    effective_speed = std::max(0.5, effective_speed);  // 最低 0.5 m/s，防止时间戳重叠
     double t = 0.0;
+
+    // 预警区爬升偏置：仅对末尾目标点（1~2点轨迹）施加Z偏移，
+    // 避免将整条 A* 多点路径整体上移而压入天花板
+    if (obstacle_climb_bias_ > 0.01 && effective_path.size() <= 2) {
+        effective_path.back().z() += obstacle_climb_bias_;
+        effective_path.back().z() = std::min(effective_path.back().z(), 20.0);  // 不超过20m
+    }
+
+    // 预计算每个航点处的转弯角度，用于拐弯减速
+    // cos_angles[i] = cos(路径在第i点的转弯角)，1.0=直飞，-1.0=掉头
+    std::vector<double> cos_angles(effective_path.size(), 1.0);
+    for (size_t i = 1; i + 1 < effective_path.size(); ++i) {
+        Eigen::Vector3d d1 = (effective_path[i] - effective_path[i-1]);
+        Eigen::Vector3d d2 = (effective_path[i+1] - effective_path[i]);
+        if (d1.norm() > 0.01 && d2.norm() > 0.01) {
+            cos_angles[i] = d1.normalized().dot(d2.normalized());
+        }
+    }
 
     for (size_t i = 0; i < effective_path.size(); ++i) {
         trajectory_msgs::msg::MultiDOFJointTrajectoryPoint point;
@@ -941,16 +1221,34 @@ void PathPlannerNode::publishTrajectory(const std::vector<Eigen::Vector3d>& path
 
         point.transforms.push_back(transform);
 
-        // 速度（简化：匀速）
+        // 速度：在拐弯处减速
+        // 查看当前航点和下一个航点的转弯角，取较小的减速因子
         geometry_msgs::msg::Twist velocity;
         if (i + 1 < effective_path.size()) {
             Eigen::Vector3d dir = effective_path[i+1] - effective_path[i];
             double dist = dir.norm();
             if (dist > 0.01) {
                 dir.normalize();
-                velocity.linear.x = dir.x() * effective_speed;
-                velocity.linear.y = dir.y() * effective_speed;
-                velocity.linear.z = dir.z() * effective_speed;
+                // [改进] 减速因子：cos_angle < 0.8 (>37° turn) → 线性降速（更早启动减速）
+                // cos = 1.0 → factor = 1.0 (全速)
+                // cos = 0.5 → factor ≈ 0.4
+                // cos = 0.0 → factor = 0.2 (最低20%速度，更保守)
+                // cos < 0.0 → factor = 0.2 (大角度转弯极慢)
+                double corner_cos = std::min(cos_angles[i], 
+                    (i + 1 < cos_angles.size()) ? cos_angles[i+1] : 1.0);
+                double speed_factor = 1.0;
+                if (corner_cos < 0.8) {  // 从0.7改为0.8，更早开始减速
+                    // 最低速度从0.3降至0.2
+                    speed_factor = std::max(0.2, 0.2 + 0.8 * (corner_cos / 0.8));
+                }
+                // 距离也限制速度：短段减速，避免快速震荡
+                if (dist < 2.5) {  // 从2.0改为2.5
+                    speed_factor = std::min(speed_factor, std::max(0.2, dist / 2.5));
+                }
+                double seg_speed = effective_speed * speed_factor;
+                velocity.linear.x = dir.x() * seg_speed;
+                velocity.linear.y = dir.y() * seg_speed;
+                velocity.linear.z = dir.z() * seg_speed;
             }
         }
         point.velocities.push_back(velocity);
@@ -959,10 +1257,20 @@ void PathPlannerNode::publishTrajectory(const std::vector<Eigen::Vector3d>& path
         geometry_msgs::msg::Twist acceleration;
         point.accelerations.push_back(acceleration);
 
-        // 时间戳
+        // 时间戳（使用段内实际速度计算时间）
         if (i > 0) {
             double seg_dist = (effective_path[i] - effective_path[i-1]).norm();
-            t += seg_dist / effective_speed;
+            // 用该段的减速速度计算时间（与上面速度计算保持一致）
+            double corner_cos_prev = std::min(cos_angles[i-1],
+                (i < cos_angles.size()) ? cos_angles[i] : 1.0);
+            double sf = 1.0;
+            if (corner_cos_prev < 0.8) {  // 与上面减速逻辑一致
+                sf = std::max(0.2, 0.2 + 0.8 * (corner_cos_prev / 0.8));
+            }
+            if (seg_dist < 2.5) {
+                sf = std::min(sf, std::max(0.2, seg_dist / 2.5));
+            }
+            t += seg_dist / (effective_speed * sf);
         }
         point.time_from_start.sec = static_cast<int32_t>(t);
         point.time_from_start.nanosec = static_cast<uint32_t>(

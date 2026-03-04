@@ -84,15 +84,21 @@ private:
     // 简化的降落逻辑：直接设置 Z=0
     bool prepareLandingCheckpoint(geometry_msgs::msg::Point& landing_target_out);
 
+    geometry_msgs::msg::PoseArray buildDiscoveredLanternPoseArray() const;
+    void logDiscoveredLanternSummary(const std::string& stage_tag) const;
+
     // --- 日志与可视化辅助 ---
     std::string toString(MissionStates current_state_est);
     std::string toString(Commands active_command);
     void logEvent(const std::string& event_message);
+    void publishLanternMonitor();
 
     // --- ROS 2 句柄 ---
     rclcpp::TimerBase::SharedPtr periodic_task_timer_;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_state_;
     rclcpp::Publisher<state_machine::msg::Command>::SharedPtr pub_cmd_;
+    rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr pub_discovered_lanterns_;
+    rclcpp::Publisher<std_msgs::msg::Int32MultiArray>::SharedPtr pub_lantern_monitor_;
     rclcpp::Subscription<state_machine::msg::Answer>::SharedPtr sub_node_health_;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr sub_current_state_est_;
     rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr sub_lantern_detections_;
@@ -108,7 +114,7 @@ private:
     double alive_tol_sec_ = 10.0; // 心跳超时阈值
 
     size_t latest_lantern_count_ = 0;
-    const size_t kRequiredLanternCount = 5;    // 目标达成需要的数量：5
+    const size_t kRequiredLanternCount = 4;    // 目标达成需要的数量：4
 
     bool is_checkpoint_reached_ = false;
     double checkpoint_reach_dist_m_ = 0.5;

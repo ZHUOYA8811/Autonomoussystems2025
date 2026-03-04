@@ -12,9 +12,9 @@ lantern_detector:
 
     min_depth: 0.1
     max_depth: 50.0
-    distance_threshold: 2.0
-    min_num_sightings: 30
-    pixel_stride: 2
+    distance_threshold: 3.0
+    min_num_sightings: 10
+    pixel_stride: 1
     sync_queue_size: 30
     tf_timeout_s: 0.2
 

@@ -17,6 +17,10 @@ The FSM transitions through the following stages:
 * **DONE**: Emergency brakes (`HOLD`) applied; mission successfully concluded.
 * **ERROR**: Emergency `HOLD` state triggered if any critical node goes offline during flight.
 
+Coordinate output behavior:
+- On each newly discovered lantern during `EXPLORING`, the node prints the full discovered coordinate list.
+- On `RETURN_HOME` and `DONE`, the node prints a summary list of discovered lantern coordinates.
+
 
 ---
 
@@ -34,6 +38,7 @@ The FSM transitions through the following stages:
 | :--- | :--- | :--- |
 | `statemachine/state` | `std_msgs::msg::String` | Broadcasts the current FSM state for debugging. |
 | `statemachine/cmd` | `state_machine::msg::Command` | High-level commands sent to `controller`, `sampler`, or `planner`. |
+| `discovered_lanterns` | `geometry_msgs::msg::PoseArray` | Real-time list of discovered lantern coordinates (world frame). Updated on each new discovery and at RETURN_HOME/DONE. |
 
 ---
 
